@@ -1,0 +1,351 @@
+@import url(https://fonts.googleapis.com/css?family=Manuale|Special+Elite|Titillium+Web|Saira);
+
+/*contains boxes inside the ultimate size*/
+*{
+  -webkit-box-sizing: border-box;
+  -mox-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  margin-top: 50px;
+  background-color: #ffffff;
+//  background-image: url("https://www.transparenttextures.com/patterns/gray-lines.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+h1 {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+
+}
+
+h3  {
+  font-family: 'Garamond', serif;
+}
+
+p {
+  font-family: 'Garamond', serif;
+  font-size: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+li {
+  display: inline;
+  margin: 2.5px;
+  font-size: 1.3em;
+  padding: 5px;
+  font-family: 'font-awesome', serif;
+}
+
+header  {
+/*  border-bottom: 2px dotted black;*/
+}
+
+footer{
+  background-color:  #0F1E2E;
+  color: #9d9d9d;
+}
+
+.container a {
+  background-color: transparent;
+  color: #386AA3;
+  font-weight: bold;
+}
+
+.container a:hover {
+  color: blue;
+
+}
+
+.sidebar  {
+
+}
+
+.navbar {
+  background-color: #0F1E2E;
+}
+.wrapper  {
+  float: none;
+  margin: 0 auto;
+}
+
+.head {
+  margin-right: -15px;
+  margin-left: -30px;
+  margin-top: 0px;
+  padding: 5px;
+  color: #0F1E2E;
+}
+
+.head ul{
+  text-transform: none;
+  font-size: 1.3em;
+}
+
+.brand{
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 5px;
+}
+
+.callout  {
+  color: #9d9d9d;
+  float: right;
+}
+
+.social a{
+  margin: 2.5px;
+}
+
+.feature {
+  margin-top: 15px;
+
+  padding-left: 30px;
+  padding-bottom: 20px;
+  background-color: #E4EDF6;
+  min-height: 250px;
+  overflow: hidden;
+
+}
+
+.feature img{
+  max-width: 100%;
+  overflow: hidden;
+  float: right;
+  border: 1px solid grey;
+}
+
+.feature hr {
+  border-top: 1px solid #0F1E2E;
+  margin-top: 0px;
+}
+
+.feature h2 {
+  margin-top: 0px;
+  line-height: .65em;
+  font-size: 1.7em;
+}
+
+.feature h3 {
+  margin-top: 15px;
+}
+
+.feature h4 {
+  margin-bottom: 0px;
+}
+
+.infoPod  {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  background-color: white;
+
+/*  border-bottom: 2px solid black;*/
+}
+
+.infoPod img{
+  overflow: hidden;
+  max-width: 100%;
+  float: left;
+  margin-right: 30px;
+  margin-top: 5px;
+}
+
+.infoPod li{
+  display: list-item;
+  list-style-type: decimal;
+}
+
+.main  {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.main img{
+  overflow: hidden;
+  max-width: 100%;
+  float: right;
+  margin-left: 30px;
+  margin-top: 25px;
+  border: 1px solid grey;
+}
+
+.article {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.article img{
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.article h2 {
+  margin-bottom: 2px;
+}
+
+.article h3 {
+  margin-top: 0px;
+  color: #9d9d9d;
+  border-bottom: .5px solid #9d9d9d;
+  padding-bottom: 15px;
+}
+
+.article a{
+  border: none;
+  color: #386AA3;
+}
+
+.article a:hover {
+  background-color: transparent;
+  color: blue;
+  font-weight: bold;
+  border: none;
+}
+
+.article li{
+  display: list-item;
+  list-style-type: decimal;
+}
+
+.comments {
+  margin: 10px;
+  padding: 10px;
+}
+
+.comments button{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.comments h5  {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9d9d9d;
+}
+
+.comments label{
+  color: #9d9d9d;
+}
+
+.comments form{
+  margin-bottom: 5px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #9d9d9d;
+}
+
+.comments .g-recaptcha {
+  margin-top: 5px;
+}
+
+.comment{
+  border-bottom: 2px solid #9d9d9d;
+}
+
+.comment p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 7px;
+}
+
+.title  {
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.author {
+  text-transform: uppercase;
+  color: #9d9d9d;
+  border-bottom: 5px solid #9d9d9d;
+  padding-bottom: 2px;
+}
+
+.content  {
+  margin-top: 7px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 1005px) {
+  .callout  {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .slab {
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .col-xs-6 {
+    width: 100%;
+    text-align: center;
+  }
+  ol  {
+    padding-left: 10px;
+  }
+  .social {
+    text-align: center;
+  }
+  .infoPod {
+    padding: 8px;
+    overflow: hidden;
+  }
+  .article{
+    padding: 0px;
+  }
+}
+
+.social {
+  font-size: 1.75em;
+}
+
+.jumbo {
+  width: 100%;
+}
+
+.image {
+  max-height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.projects {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+  display: block;
+}
+
+.border {
+  border-top: 1px solid black;
+}
+
+/* zocial */
+[class*="fontawesome-"]:before {
+  font-family: 'fontawesome', sans-serif;
+}

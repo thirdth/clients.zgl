@@ -1,1 +1,3 @@
-<h1>Hello World!</h1>
+<?php
+include 'includes/header.php';
+include 'includes/footer.php'; ?>
