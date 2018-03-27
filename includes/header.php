@@ -45,14 +45,14 @@ include_once 'includes/t4l_config.php';
         <div class="collapse navbar-collapse col-md-7" id="myNavbar">
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="/about.php">About</a></li>
-            <li><a href="/services.php">Services</a></li>
-            <li><a href="/articles.php">Articles</a></li>
-						<li><a href="/contact.php">Contact</a></li>
+            <li><a href="/about.php">Clients</a></li>
+            <li><a href="/services.php">Jobs</a></li>
+            <li><a href="/articles.php">Calendar</a></li>
+						<li><a href="/contact.php">Admin</a></li>
           </ul>
         </div>
         <div class="col-md-5 callout">
-          <h3 class="text-right">Efficiency | Productivity | Security</h3>
+          <h3 class="text-right">Protect Your Dreams</h3>
         </div>
       </div>
     </nav>
