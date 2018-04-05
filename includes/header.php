@@ -52,7 +52,7 @@ include_once 'includes/t4l_config.php';
           </ul>
         </div>
         <div class="col-md-5 callout">
-          <h3 class="text-right text-danger">Login</h3>
+          <h3 class="text-right text-danger"><a href="#">Login</a></h3>
         </div>
       </div>
     </nav>
