@@ -345,6 +345,12 @@ footer{
   border-top: 1px solid black;
 }
 
+
+
+.signup {
+  border: 3px solid grey;
+}
+
 /* zocial */
 [class*="fontawesome-"]:before {
   font-family: 'fontawesome', sans-serif;
