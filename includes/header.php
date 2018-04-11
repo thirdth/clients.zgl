@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include_once 'includes/t4l_config.php';
+require_once 'includes/t4l_config.php';
 ?>
 <!-- TODO: create README.md and documentation -->
 <html>
