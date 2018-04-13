@@ -9,7 +9,6 @@ $link = get_connected();
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-printf("Errormessage: %s\n", mysqli_error($link));
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = 'Please enter username.';
