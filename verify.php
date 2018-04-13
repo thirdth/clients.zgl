@@ -1,4 +1,5 @@
 <?php
+require_once 'includes/t4l_config.php';
 // Define variables and initialize with empty values
 $password = $_POST['password'];
 $username = $_POST['username'];
