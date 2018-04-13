@@ -5,7 +5,7 @@
 function get_connected()  {
   static $conn;
   if (!isset($conn))  {
-    $db = parse_ini_file($_SERVER[DOCUMENT_ROOT] . '/config/config.ini');
+    $db = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/config/config.ini');
     $conn = mysqli_connect($db['host'], $db['user'], $db['pass'], $db['name']);
   }
   if (!$conn) {
