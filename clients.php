@@ -8,7 +8,7 @@ print_r($clients);
 <div class="wrapper container">
   <?php
 foreach ($clients as $client){
-  echo $client['FName'];
+  echo $client['FName'] . "</br>";
 }
    ?>
   <a href="addClient.php">Add Client</a>
