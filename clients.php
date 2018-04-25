@@ -1,7 +1,7 @@
 <?php
 include 'includes/garble_cnfg.php';
 protected_page();
-include 'includes/header.php'; ?>
+header_check(); ?>
 
 <?php
 include 'includes/footer.php'; ?>
