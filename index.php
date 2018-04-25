@@ -1,8 +1,8 @@
 <?php
-include 'includes/header.php'; ?>
+include 'includes/garble_cnfg.php';
+header_check(); 
+?>
 
 <?php
-echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
+
 include 'includes/footer.php'; ?>
