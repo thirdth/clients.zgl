@@ -6,6 +6,11 @@ $clients = get_clients();
 print_r($clients);
 ?>
 <div class="wrapper container">
+  <?php
+foreach ($clients as $client){
+  echo $client['FName'];
+}
+   ?>
   <a href="addClient.php">Add Client</a>
 </div>
 <?php echo $clients[0]['FName']; ?>
