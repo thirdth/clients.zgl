@@ -7,14 +7,10 @@ if (!empty($_POST['submit']) && 'Login' == $_POST['submit']) {
   $conn = get_connected();
   if (verify_me($username, $password)) {
     create_session($username, $password);
-    header("Location: calendar.php");
+    header("Location: index.php");
   }else {
     header("Location: login.php?error=1");
     die();
   };
 }
-print_r($all);
-echo '<pre>';
-var_dump($_POST);
-echo '</pre>';
 ?>
