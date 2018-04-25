@@ -103,4 +103,62 @@ function protected_page() {
     die();
   };
 }
+
+// Insert functions
+
+function insert_phone($phone) {
+  $phone = $phone;
+  $conn = get_connected();
+  $query = "INSERT into phone_num (number, phone_type_id)
+              Values ('$phone', '1')";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  mysqli_close($conn);
+  return $last_id;
+}
+
+function insert_email($email) {
+  $email = $email;
+  $conn = get_connected();
+  $query = "INSERT into email (email)
+              Values ('$email')";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  mysqli_close($conn);
+  return $last_id;
+}
+
+function insert_address($street1, $street2, $city, $state, $zip)  {
+  $street1 = $street1;
+  $street2 = $street2;
+  $city = $city;
+  $state = $state;
+  $zip = $zip;
+  $conn = get_connected();
+  $query = "INSERT into addresses
+              (street1, street2, city, state, zip)
+              VALUES ('$street1', '$street2', '$city', '$state', '$zip')";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  mysqli_close($conn);
+  return $last_id;
+}
+
+function insert_client($client_name, $contact, $address_id, $phone_id, $email_id) {
+  $client_name = $client_name;
+  $contact = $contact;
+  $address_id = $address_id;
+  $phone_id = $phone_id;
+  $email_id = $email_id;
+  $conn = get_connected();
+  $query = "INSERT into client
+              (name, contact_name, address_id, phone_id, email_id)
+              VALUES ('$client_name', '$contact', '$address_id', '$phone_id', '$email_id')";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
 ?>

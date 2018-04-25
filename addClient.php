@@ -16,6 +16,10 @@ header_check();
               <span class="help-block"></span>
           </div>
           <div class="form-group">
+              <label>Contact</label>
+              <input type="text" name="contact"class="form-control">
+          </div>
+          <div class="form-group">
               <label>Street 1</label>
               <input type="text" name="street1" class="form-control">
           </div>
