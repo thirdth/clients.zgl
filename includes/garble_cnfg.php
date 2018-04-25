@@ -171,4 +171,13 @@ function get_clients()  {
   mysqli_close($conn);
   return $all;
 }
+
+function get_client_byId($clientId)  {
+  $conn = get_connected();
+  $query = "SELECT * from Client where ID='$clientId'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
 ?>
