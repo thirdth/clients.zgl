@@ -26,7 +26,7 @@ function get_connected()  {
 // login functions
 function get_hash_by_name ($username)  {
   $conn = get_connected();
-  $query = "SELECT hash from users where username = '" . $username . "' limit 1";
+  $query = "SELECT hash from Users where username = '" . $username . "' limit 1";
   $results = mysqli_query($conn, $query);
   $all = mysqli_fetch_array($results, MYSQLI_ASSOC);
   mysqli_close($conn);
@@ -84,7 +84,7 @@ function check_logged_in() {
 function register_user($name, $password, $email)  {
   $conn = get_connected();
   $pw_hash = password_hash($password, PASSWORD_DEFAULT);
-  $sql = "INSERT into users(username, hash, email)
+  $sql = "INSERT into Users(username, hash, email)
             VALUES ('$name', '$pw_hash', '$email')";
 
   if($conn->query($sql) === TRUE) {
