@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'garble_cnfg.php';
-if (!empty($_POST['submit']) && 'Log-in' == $_POST['submit']) {
+if (!empty($_POST['submit']) && 'Login' == $_POST['submit']) {
   $password = $_POST['password'];
   $username = $_POST['username'];
   $conn = get_connected();
