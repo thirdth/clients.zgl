@@ -110,7 +110,7 @@ function insert_phone($phone) {
   $phone = $phone;
   $conn = get_connected();
   $query = "INSERT into Phones (Number, Type)
-              Values ('$phone', '1')";
+              Values ($phone, '1')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   mysqli_close($conn);
