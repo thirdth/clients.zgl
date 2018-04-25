@@ -109,7 +109,7 @@ function protected_page() {
 function insert_phone($phone) {
   $phone = $phone;
   $conn = get_connected();
-  $query = "INSERT into phone_num (number, phone_type_id)
+  $query = "INSERT into Phones (Number, Type)
               Values ('$phone', '1')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
@@ -120,7 +120,7 @@ function insert_phone($phone) {
 function insert_email($email) {
   $email = $email;
   $conn = get_connected();
-  $query = "INSERT into email (email)
+  $query = "INSERT into Emails (Email)
               Values ('$email')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
@@ -135,8 +135,8 @@ function insert_address($street1, $street2, $city, $state, $zip)  {
   $state = $state;
   $zip = $zip;
   $conn = get_connected();
-  $query = "INSERT into addresses
-              (street1, street2, city, state, zip)
+  $query = "INSERT into Addresses
+              (Street1, Street2, City, State, Zip)
               VALUES ('$street1', '$street2', '$city', '$state', '$zip')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
@@ -151,8 +151,8 @@ function insert_client($client_name, $contact, $address_id, $phone_id, $email_id
   $phone_id = $phone_id;
   $email_id = $email_id;
   $conn = get_connected();
-  $query = "INSERT into client
-              (name, contact_name, address_id, phone_id, email_id)
+  $query = "INSERT into Clients
+              (Name, Contact, AddressID, PhoneID, EmailID)
               VALUES ('$client_name', '$contact', '$address_id', '$phone_id', '$email_id')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
