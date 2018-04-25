@@ -30,7 +30,7 @@ function get_hash_by_name ($username)  {
   $results = mysqli_query($conn, $query);
   $all = mysqli_fetch_array($results, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all[hash];
+  return $all['hash'];
 }
 
 function verify_me($username, $password)  {
