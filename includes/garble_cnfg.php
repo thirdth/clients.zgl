@@ -165,7 +165,7 @@ function insert_client($Fname, $Mname, $Lname, $contact, $address_id, $phone_id,
 
 function get_clients()  {
   $conn = get_connected();
-  $query = "SELECT * from Clients ORDER by name asc";
+  $query = "SELECT * from Clients ORDER by Fname asc";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
