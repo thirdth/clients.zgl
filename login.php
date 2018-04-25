@@ -2,7 +2,7 @@
 if ($_GET['error'] == '1')  {
   $error = "**Your information was incorrect. Please try again.";
 }
-include '/includes/garble_cnfg.php';
+include 'includes/garble_cnfg.php';
 if (check_logged_in())  {
   header("Location: clients.php");
 }
