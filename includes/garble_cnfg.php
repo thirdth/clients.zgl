@@ -11,11 +11,8 @@ function header_check() {
 
 // database functions
 function get_connected()  {
-  static $conn;
-  if (!isset($conn))  {
-    $db = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/config/config.ini');
-    $conn = mysqli_connect($db['host'], $db['user'], $db['pass'], $db['name']);
-  }
+  $db = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/config/config.ini');
+  $conn = mysqli_connect($db['host'], $db['user'], $db['pass'], $db['name']);
   if (!$conn) {
     die("Connection Failed: " . mysqli_connect_error());
   }
@@ -109,8 +106,8 @@ function protected_page() {
 function insert_phone($phone) {
   $phone = $phone;
   $conn = get_connected();
-  $query = "INSERT into Phones (Number, Type)
-              Values ($phone, '1')";
+  $query = "INSERT into Phones (Type, Number)
+              Values ('1', '$phone')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   mysqli_close($conn);
