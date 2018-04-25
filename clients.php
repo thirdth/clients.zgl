@@ -10,7 +10,7 @@ $clients = get_clients();
             <?php
           foreach ($clients as $client){
             echo "<div class'col-md-12'>";
-            echo "<h5><a href='/clientPage?ID=" . $client['ID'] . "'>" . $client['FName'] . " " . $client['LName'] . "</a></h5>";
+            echo "<h5><a href='/clientPage.php?ID=" . $client['ID'] . "'>" . $client['FName'] . " " . $client['LName'] . "</a></h5>";
             echo "</div>";
           }
              ?>
