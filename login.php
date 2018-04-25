@@ -1,7 +1,4 @@
 <?php
-if ($_GET['error'] == '1')  {
-  $error = "**Your information was incorrect. Please try again.";
-}
 include 'includes/garble_cnfg.php';
 if (check_logged_in())  {
   header("Location: clients.php");
@@ -16,10 +13,10 @@ include 'includes/header.php';
       <h2>Login</h2>
       <p>Please fill in your credentials to login.</p>
       <form action="/verify.php" method="post">
-          <div class="form-group <?php echo (!empty($error)) ? 'has-error' : ''; ?>">
+          <div class="form-group">
               <label>Username</label>
               <input type="text" name="username"class="form-control">
-              <span class="help-block"><?php echo $error; ?></span>
+              <span class="help-block"></span>
           </div>
           <div class="form-group">
               <label>Password</label>
