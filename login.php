@@ -1,11 +1,10 @@
 <?php
-$username = $_POST['username'];
 if ($_GET['error'] == '1')  {
   $error = "**Your information was incorrect. Please try again.";
 }
 include 'garble_cnfg.php';
 if (check_logged_in())  {
-  header("Location: index.php");
+  header("Location: clients.php");
 }
 include 'includes/header.php';
 ?>
@@ -19,7 +18,7 @@ include 'includes/header.php';
       <form action="/verify.php" method="post">
           <div class="form-group <?php echo (!empty($error)) ? 'has-error' : ''; ?>">
               <label>Username</label>
-              <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
+              <input type="text" name="username"class="form-control">
               <span class="help-block"><?php echo $error; ?></span>
           </div>
           <div class="form-group">
