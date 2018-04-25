@@ -9,7 +9,7 @@ header_check();
   <div class="col-md-6">
       <h2>New Client</h2>
       <p>Please enter Client information.</p>
-      <form action="insertClient.php" method="post">
+      <form action="inserts/insertClient.php" method="post">
           <div class="form-group">
               <label>Name</label>
               <input type="text" name="name"class="form-control">
