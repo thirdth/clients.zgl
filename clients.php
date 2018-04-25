@@ -9,7 +9,9 @@ $clients = get_clients();
     <h3>Clients</h3>
             <?php
           foreach ($clients as $client){
-            echo $client['FName'] . " " . $client['LName'] . "</br>";
+            echo "<div class'col-md-12'>";
+            echo "<h5>" . $client['FName'] . " " . $client['LName'] . "</h5></br>";
+            echo "</div>";
           }
              ?>
   <a href="addClient.php">Add Client</a>
