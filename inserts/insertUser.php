@@ -5,7 +5,7 @@ if(isset($_POST['name']) && isset($_POST['password'])) {
   header("Location: index.php");
   die();
 }else {
-  header("Location: register.php?error=error");
+  header("Location: /register.php?error=error");
   die();
 }
 ?>
