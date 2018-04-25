@@ -10,7 +10,7 @@ $clients = get_clients();
             <?php
           foreach ($clients as $client){
             echo "<div class'col-md-12'>";
-            echo "<h5>" . $client['FName'] . " " . $client['LName'] . "</h5></br>";
+            echo "<h5><a>" . $client['FName'] . " " . $client['LName'] . "</a></h5>";
             echo "</div>";
           }
              ?>
