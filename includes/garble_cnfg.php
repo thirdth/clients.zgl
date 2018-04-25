@@ -141,16 +141,18 @@ function insert_address($street1, $street2, $city, $state, $zip)  {
   return $last_id;
 }
 
-function insert_client($client_name, $contact, $address_id, $phone_id, $email_id) {
-  $client_name = $client_name;
+function insert_client($Fname, $Mname, $Lname, $contact, $address_id, $phone_id, $email_id) {
+  $Fname = $Fname;
+  $Mname = $Mname;
+  $Lname = $Lname;
   $contact = $contact;
   $address_id = $address_id;
   $phone_id = $phone_id;
   $email_id = $email_id;
   $conn = get_connected();
   $query = "INSERT into Clients
-              (Name, Contact, AddressID, PhoneID, EmailID)
-              VALUES ('$client_name', '$contact', '$address_id', '$phone_id', '$email_id')";
+              (Fname, Mname, Lname, Contact, AddressID, PhoneID, EmailID)
+              VALUES ('$Fname', '$Mname', '$Lname', '$contact', '$address_id', '$phone_id', '$email_id')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;

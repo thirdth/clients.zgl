@@ -2,7 +2,9 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 include '../includes/garble_cnfg.php';
-$Name = $_POST['name'];
+$Fname = $_POST['Fname'];
+$Mname = $_POST['Mname'];
+$Lname = $_POST['Lname'];
 $Contact = $_POST['contact'];
 $Street1 = $_POST['street1'];
 $Street2 = $_POST['street2'];
@@ -16,7 +18,7 @@ $PhoneID = insert_phone($Phone);
 $EmailID = insert_email($Email);
 $AddressID = insert_address($Street1, $Street2, $City, $State, $Zip);
 
-$result = insert_client($Name, $Contact, $AddressID, $PhoneID, $EmailID);
+$result = insert_client($Fname, $Mname, $Lname, $Contact, $AddressID, $PhoneID, $EmailID);
 
 if ($result)  {
   header("Location: clients.php");

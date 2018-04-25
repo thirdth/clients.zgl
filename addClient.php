@@ -11,8 +11,18 @@ header_check();
       <p>Please enter Client information.</p>
       <form action="inserts/insertClient.php" method="post">
           <div class="form-group">
-              <label>Name</label>
-              <input type="text" name="name"class="form-control">
+              <label>First Name</label>
+              <input type="text" name="Fname"class="form-control">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group">
+              <label>Middle Name</label>
+              <input type="text" name="Mname"class="form-control">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="Lname"class="form-control">
               <span class="help-block"></span>
           </div>
           <div class="form-group">
