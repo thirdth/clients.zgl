@@ -21,7 +21,7 @@ $AddressID = insert_address($Street1, $Street2, $City, $State, $Zip);
 $result = insert_client($Fname, $Mname, $Lname, $Contact, $AddressID, $PhoneID, $EmailID);
 
 if ($result)  {
-  header("Location: clients.php");
+  header("Location: ../clients.php");
 } else {
   echo "something went wrong" . mysqli_error($conn);
 }
