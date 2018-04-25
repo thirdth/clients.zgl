@@ -46,8 +46,8 @@ function create_session($username, $password) {
   $_SESSION['username'] = $username;
   $_SESSION['password'] = $password;
   if (isset($_POST['remember']))  {
-    setcookie("octnname", $_SESSION['username'], time()+60*60*24*100, "/");
-    setcookie("octnpassword", $_SESSION['password'], time()+60*60*24*100, "/"); //TODO: may need to encode this password for storing
+    setcookie("zglname", $_SESSION['username'], time()+60*60*24*100, "/");
+    setcookie("zglpassword", $_SESSION['password'], time()+60*60*24*100, "/"); //TODO: may need to encode this password for storing
     return;
   }
   return;
@@ -59,8 +59,8 @@ function clear_session_cookies()  {
   unset($_SESSION['password']);
   session_unset();
   session_destroy();
-  setcookie("octnname", "", time()-60*60*24*100, "/");
-  setcookie("octnpassword", "", time()-60*60*24*100, "/");
+  setcookie("zglname", "", time()-60*60*24*100, "/");
+  setcookie("zglpassword", "", time()-60*60*24*100, "/");
   return;
 }
 
@@ -68,9 +68,9 @@ function check_logged_in() {
   session_start();
   if(isset($_SESSION['username']) && isset($_SESSION['password']))  {
     return true;
-  } else if(isset($_COOKIE['octnname']) && isset($_COOKIE['octnpassword'])) {
-    if(verify_me($_COOKIE['octnname'], $_COOKIE['octnpassword'])) {
-      create_session($_COOKIE['octnname'], $_COOKIE['octnpassword']);
+  } else if(isset($_COOKIE['zglname']) && isset($_COOKIE['zglpassword'])) {
+    if(verify_me($_COOKIE['zglname'], $_COOKIE['zglpassword'])) {
+      create_session($_COOKIE['zglname'], $_COOKIE['zglpassword']);
       return true;
     } else {
       clear_session_cookies();
