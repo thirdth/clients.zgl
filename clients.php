@@ -5,12 +5,15 @@ header_check();
 $clients = get_clients();
 ?>
 <div class="wrapper container">
-  <?php
-foreach ($clients as $client){
-  echo $client['FName'] . " " . $client['LName'] . "</br>";
-}
-   ?>
+  <div class="col-md-4">
+    <h3>Clients</h3>
+            <?php
+          foreach ($clients as $client){
+            echo $client['FName'] . " " . $client['LName'] . "</br>";
+          }
+             ?>
   <a href="addClient.php">Add Client</a>
+  </div>
 </div>
 
 
