@@ -1,4 +1,5 @@
 <?php
+$username = $_POST['username'];
 if ($_GET['error'] == '1')  {
   $error = "**Your information was incorrect. Please try again.";
 }
@@ -21,10 +22,9 @@ include 'includes/header.php';
               <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
               <span class="help-block"><?php echo $error; ?></span>
           </div>
-          <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+          <div class="form-group">
               <label>Password</label>
               <input type="password" name="password" class="form-control">
-              <span class="help-block"><?php echo $password_err; ?></span>
           </div>
           <div class="form-group">
               <input type="submit" class="btn btn-primary" value="Login">
