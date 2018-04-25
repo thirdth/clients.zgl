@@ -14,4 +14,7 @@ if (!empty($_POST['submit']) && 'Login' == $_POST['submit']) {
   };
 }
 print_r($all);
+echo '<pre>';
+var_dump($_SESSION);
+echo '</pre>';
 ?>
