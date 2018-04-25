@@ -5,5 +5,5 @@ if(!isset($_SESSION)) {
 $error = $_GET['error'];
 include 'header.php';
 
-include 'registerTemplate.php';
+include 'includes/registerTemplate.php';
 include 'footer.php'; ?>
