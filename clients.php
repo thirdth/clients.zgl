@@ -8,6 +8,7 @@ print_r($clients);
 <div class="wrapper container">
   <a href="addClient.php">Add Client</a>
 </div>
+<?php echo $clients[0][Fname]; ?>
 
 
 
