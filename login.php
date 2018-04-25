@@ -1,7 +1,7 @@
 <?php
 include 'includes/garble_cnfg.php';
 if (check_logged_in())  {
-  header("Location: clients.php");
+  header("Location: index.php");
 }
 include 'includes/header.php';
 ?>
