@@ -12,7 +12,7 @@ include 'includes/header.php';
   <div class="col-md-6">
       <h2>Login</h2>
       <p>Please fill in your credentials to login.</p>
-      <form action="/verify.php" method="post">
+      <form action="verify.php" method="post">
           <div class="form-group">
               <label>Username</label>
               <input type="text" name="username"class="form-control">
@@ -22,8 +22,11 @@ include 'includes/header.php';
               <label>Password</label>
               <input type="password" name="password" class="form-control">
           </div>
+          <div class="col-md-6">
+            <input type="checkbox" name="remember">Remember me
+          </div>
           <div class="form-group">
-              <input type="submit" class="btn btn-primary" value="Login">
+              <input type="submit" class="btn btn-primary" name="submit" value="Login">
           </div>
           <p>Don't have an account? <a href="signup.php">Sign up now</a>.</p>
       </form>
