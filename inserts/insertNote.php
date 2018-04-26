@@ -3,10 +3,10 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 include '../includes/garble_cnfg.php';
 $matterID = $_POST['matterID'];
-$text = $_POST['text'];
+$body = $_POST['body'];
 print_r($_SESSION);
 
-$result = insert_note($matterID, $text);
+$result = insert_note($matterID, $body);
 
 if ($result)  {
   header("Location: ../matter.php" . $matterID);
