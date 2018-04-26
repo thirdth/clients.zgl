@@ -161,7 +161,7 @@ function insert_client($Fname, $Mname, $Lname, $contact, $address_id, $phone_id,
   }
 }
 
-// gets
+// Get Info Functions
 
 function get_clients()  {
   $conn = get_connected();
@@ -175,6 +175,33 @@ function get_clients()  {
 function get_client_byId($clientId)  {
   $conn = get_connected();
   $query = "SELECT * from Clients where ID='$clientId'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
+
+function get_address_byID($addressID) {
+  $conn = get_connected();
+  $query = "SELECT * from Addresses where ID='$addressID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
+
+function get_phone_byID($phoneID) {
+  $conn = get_connected();
+  $query = "SELECT * from Addresses where ID='$phoneID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
+
+function get_email_byID($emailID) {
+  $conn = get_connected();
+  $query = "SELECT * from Addresses where ID='$emailID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);

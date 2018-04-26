@@ -4,6 +4,12 @@ protected_page();
 header_check();
 $clientID = $_GET['ID'];
 $client = get_client_byId($clientID);
+$addressID = $client['AddressID'];
+$phoneID = $client['PhoneID'];
+$emailID = $client['EmailID'];
+$address = get_address_byID($addressID);
+$phone = get_phone_byID($phoneID);
+$email = get_email_byID($emailID);
 // TODO: add matters here
 ?>
 <div class="wrapper container">
@@ -12,11 +18,11 @@ $client = get_client_byId($clientID);
     </hr>
     <div class="col-md-4">
       <h4><?php echo $client['FName'] . " " . $client['LName']; ?></h4>
-      <p><?php echo $client['Street1']; ?></p>
-      <p><?php echo $client['Street2']; ?></p>
-      <p><?php echo $client['City'] . ", " . $client['State'] . " " . $client['Zip']; ?></p>
-      <p><?php echo $client['Phone']; ?></p>
-      <p><?php echo $client['Email']; ?></p>
+      <p><?php echo $address['Street1']; ?></p>
+      <p><?php echo $address['Street2']; ?></p>
+      <p><?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></p>
+      <p><?php echo $phone['Number']; ?></p>
+      <p><?php echo $email['Email']; ?></p>
       </hr>
       <a href='editClient.php?ID=" . $clientID . "'>Edit Client</a>
     </div>
