@@ -19,7 +19,9 @@ $email = get_email_byID($emailID);
     <div class="col-md-4">
       <h3><?php echo $client['FName'] . " " . $client['LName']; ?></h3>
       <p><?php echo $address['Street1']; ?></br>
-      <?php echo $address['Street2']; ?></br>
+      <?php if ($address['Street2']){
+        echo $address['Street2'] . "</br>";
+      } ?>
       <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
       <?php echo $phone['Number']; ?></br>
       <?php echo $email['Email']; ?></p>
