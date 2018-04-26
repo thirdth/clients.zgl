@@ -15,15 +15,15 @@ $email = get_email_byID($emailID);
 <div class="wrapper container">
   <div class="col-md-12">
     <h3 class="text-center">Client Information</h3>
-    </hr>
+    <hr>
     <div class="col-md-4">
-      <h4><?php echo $client['FName'] . " " . $client['LName']; ?></h4>
+      <h3><?php echo $client['FName'] . " " . $client['LName']; ?></h3>
       <p><?php echo $address['Street1']; ?></p>
       <p><?php echo $address['Street2']; ?></p>
       <p><?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></p>
       <p><?php echo $phone['Number']; ?></p>
       <p><?php echo $email['Email']; ?></p>
-      </hr>
+      <hr>
       <a href='editClient.php?ID=" . $clientID . "'>Edit Client</a>
     </div>
     <div class="col-md-4">
