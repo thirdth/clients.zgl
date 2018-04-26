@@ -8,7 +8,7 @@ $body = $_POST['body'];
 $result = insert_note($matterID, $body);
 
 if ($result)  {
-  header("Location: ../matter.php" . $matterID);
+  header("Location: ../matter.php?ID=" . $matterID);
 } else {
   echo "something went wrong" . mysqli_error($conn);
 }
