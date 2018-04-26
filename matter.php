@@ -36,7 +36,7 @@ $notes = get_notes_byID($matterID);
       <small class="text-center">Notes:</small>
       <p><?php
       foreach ($notes as $note) {
-        echo $note['Body'] . "</br>";
+        echo "<p>" . $note['Body'] . "</p>";
       }
       ?></p>
       <form class="form-group" action="inserts/insertNote.php" method="POST">
@@ -45,7 +45,7 @@ $notes = get_notes_byID($matterID);
           <textarea class="form-control" rows="3" name="body"></textarea>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary" name="submit">add Note</button>
+          <button type="submit" class="btn btn-primary pull-right" name="submit">add Note</button>
         </div>
       </form>
     </div>
