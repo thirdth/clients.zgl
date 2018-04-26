@@ -17,6 +17,7 @@ $email = get_email_byID($emailID);
 <div class="wrapper container">
   <div class="col-md-12">
     <h3 class="text-center">Matter Information</h3>
+    <h3 class="text-center"><?php echo $matter['Name']; ?></h3>
     <hr>
     <div class="col-md-4">
       <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
