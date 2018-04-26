@@ -15,6 +15,7 @@ $client = get_client_byId($clientID);
   </div>
   </hr>
   <a href='editClient.php?ID=" . $clientID . "'>Edit Client</a>
+  </div>
 </div>
 
 
