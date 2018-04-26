@@ -297,4 +297,14 @@ function get_email_byID($emailID) {
   mysqli_close($conn);
   return $all[0];
 }
+
+function get_matters_byClientID($clientID)  {
+  $clientID = $clientID;
+  $conn = get_connected();
+  $query = "SELECT * from Matters where ClientID = '$clientID' ORDER by Name asc";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all;
+}
 ?>
