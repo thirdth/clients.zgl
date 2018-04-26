@@ -4,6 +4,7 @@ protected_page();
 header_check();
 $matterID = $_GET['ID'];
 $matter = get_matter_byId($matterID);
+print_r($matter);
 $addressID = $matter['AddressID'];
 $phoneID = $matter['PhoneID'];
 $emailID = $matter['EmailID'];
