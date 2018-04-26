@@ -37,7 +37,7 @@ $notes = get_notes_byID($matterID);
       <p><?php
       if ($notes) {
         foreach ($notes as $note) {
-          echo $note['Body'] . "</br>";
+          print_r($note);
         }
       }
       ?></p>
