@@ -322,9 +322,18 @@ function get_matters_byClientID($clientID)  {
   return $all;
 }
 
-function get_matter_byId($matterId)  {
+function get_matter_byId($matterID)  {
   $conn = get_connected();
-  $query = "SELECT * from Matters where ID='$matterId'";
+  $query = "SELECT * from Matters where ID='$matterID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
+
+function get_person_byID($personID) {
+  $conn = get_connected();
+  $query = "SELECT * from People where ID='$personID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
