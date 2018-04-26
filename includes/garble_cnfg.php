@@ -202,8 +202,11 @@ function insert_note($matterID, $text) {
               (MatterID, Text)
               VALUES ('$matterID', '$text')";
   $result = mysqli_query($conn, $query);
-  $last_id = mysqli_insert_id($conn);
-  return $last_id;
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
 }
 
 // Update functions
