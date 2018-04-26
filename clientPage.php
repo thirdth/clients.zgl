@@ -18,11 +18,11 @@ $email = get_email_byID($emailID);
     <hr>
     <div class="col-md-4">
       <h3><?php echo $client['FName'] . " " . $client['LName']; ?></h3>
-      <p><?php echo $address['Street1']; ?></p>
-      <p><?php echo $address['Street2']; ?></p>
-      <p><?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></p>
-      <p><?php echo $phone['Number']; ?></p>
-      <p><?php echo $email['Email']; ?></p>
+      <p><?php echo $address['Street1']; ?></br>
+      <?php echo $address['Street2']; ?></br>
+      <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
+      <?php echo $phone['Number']; ?></br>
+      <?php echo $email['Email']; ?></p>
       <hr>
       <a href='editClient.php?ID=" . $clientID . "'>Edit Client</a>
     </div>
