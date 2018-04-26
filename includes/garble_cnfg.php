@@ -373,7 +373,6 @@ function delete_note($noteID) {
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   $matterID = $all['MatterID'];
   $sql = "DELETE from Notes where ID='$noteID'";
-  $sql = "DELETE FROM MyGuests WHERE id=3";
   if ($conn->query($sql) === TRUE) {
       echo "Record deleted successfully";
   } else {
