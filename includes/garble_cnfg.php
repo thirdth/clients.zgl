@@ -377,6 +377,7 @@ function delete_note($noteID) {
   } else {
       echo "Error updating record: " . $conn->error;
   }
+  mysqli_close($conn);
 }
 
 ?>
