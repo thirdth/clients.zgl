@@ -35,7 +35,7 @@ $matters = get_matters_byClientID($clientID);
       <?php
     foreach ($matters as $matter){
       echo "<div class'col-md-12'>";
-      echo "<h5><a href='/clientPage.php?ID=" . $matter['ID'] . "'>" . $matter['Name'] . "</a></h5>";
+      echo "<h5><a href='/matter.php?ID=" . $matter['ID'] . "'>" . $matter['Name'] . "</a></h5>";
       echo "</div>";
     }
        ?>
