@@ -321,4 +321,14 @@ function get_matters_byClientID($clientID)  {
   mysqli_close($conn);
   return $all;
 }
+
+function get_matter_byId($matterId)  {
+  $conn = get_connected();
+  $query = "SELECT * from Matters where ID='$matterId'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
+
 ?>
