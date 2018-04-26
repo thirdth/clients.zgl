@@ -31,8 +31,8 @@ $email = get_email_byID($emailID);
       <hr>
       <a href='editMatter.php?ID=<?php echo $MatterID; ?>'>Edit Matter</a>
     </div>
-    <div class="col-md-4">
-      <h3 class="text-center">Notes:</h3>
+    <div class="col-md-8">
+      <small class="text-center">Notes:</small>
       <p><?php echo $matter['Notes']; ?></p>
     </div>
   </div>
