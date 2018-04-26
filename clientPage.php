@@ -12,6 +12,11 @@ $client = get_client_byId($clientID);
     </hr>
     <div class="col-md-4">
       <h4><?php echo $client['FName'] . " " . $client['LName']; ?></h4>
+      <p><?php echo $client['Street1']; ?></p>
+      <p><?php echo $client['Street2']; ?></p>
+      <p><?php echo $client['City'] . ", " . $client['State'] . " " . $client['Zip']; ?></p>
+      <p><?php echo $client['Phone']; ?></p>
+      <p><?php echo $client['Email']; ?></p>
       </hr>
       <a href='editClient.php?ID=" . $clientID . "'>Edit Client</a>
     </div>
