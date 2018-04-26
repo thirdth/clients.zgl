@@ -19,7 +19,7 @@ $email = get_email_byID($emailID);
     <h3 class="text-center">Matter Information</h3>
     <hr>
     <div class="col-md-4">
-      <h3><?php echo $matter['FName'] . " " . $matter['LName']; ?></h3>
+      <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
       <p><?php echo $address['Street1']; ?></br>
       <?php if ($address['Street2']){
         echo $address['Street2'] . "</br>";
