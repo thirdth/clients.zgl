@@ -4,7 +4,9 @@ ini_set('display_errors', 'On');
 include '../includes/garble_cnfg.php';
 $matterID = $_POST['matterID'];
 $body = $_POST['body'];
-print_r($_SESSION);
+echo '<pre>';
+var_dump($_SESSION);
+echo '</pre>';
 
 $result = insert_note($matterID, $body);
 

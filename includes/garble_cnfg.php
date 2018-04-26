@@ -194,7 +194,7 @@ function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id
   return $last_id;
 }
 
-function insert_note($matterID, $text) {
+function insert_note($matterID, $body) {
   $matterID = $matterID;
   $body = $body;
   $conn = get_connected();
