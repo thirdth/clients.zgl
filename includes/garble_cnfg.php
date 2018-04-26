@@ -249,7 +249,7 @@ function get_client_byId($clientId)  {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all;
+  return $all[0];
 }
 
 function get_address_byID($addressID) {
@@ -258,7 +258,7 @@ function get_address_byID($addressID) {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all;
+  return $all[0];
 }
 
 function get_phone_byID($phoneID) {
@@ -267,7 +267,7 @@ function get_phone_byID($phoneID) {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all;
+  return $all[0];
 }
 
 function get_email_byID($emailID) {
@@ -276,6 +276,6 @@ function get_email_byID($emailID) {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all;
+  return $all[0];
 }
 ?>
