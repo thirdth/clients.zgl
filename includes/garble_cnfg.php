@@ -372,7 +372,7 @@ function delete_note($noteID) {
   $rslt = mysqli_query($conn, $qry);
   $query = "DELETE from Notes where ID = '$noteID'";
   if ($conn->query($query) === TRUE) {
-      header("Location: ../matter.php?ID=" . $rslt . );
+      header("Location: ../matter.php?ID=" . $rslt);
       die();
   } else {
       echo "Error updating record: " . $conn->error;
