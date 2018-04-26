@@ -371,7 +371,7 @@ function delete_note($noteID) {
   $query = "SELECT * from Notes where ID='$noteID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  $matterID = $all['MatterID'];
+  print_r($all);
   $sql = "DELETE from Notes where ID='$noteID'";
   if ($conn->query($sql) === TRUE) {
       echo "Record deleted successfully";
