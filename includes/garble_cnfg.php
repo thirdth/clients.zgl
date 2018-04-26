@@ -62,7 +62,7 @@ function clear_session_cookies()  {
 }
 
 function check_logged_in() {
-  if (!$_SESSION) {
+  if (!isset($_SESSION))  {
     session_start();
   }
   if(isset($_SESSION['username']) && isset($_SESSION['password']))  {
