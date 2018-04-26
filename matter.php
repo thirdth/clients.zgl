@@ -38,7 +38,7 @@ $notes = get_notes_byID($matterID);
       <small class="text-center">Notes:</small>
       <p><?php
       foreach ($notes as $note) {
-        echo "<p>" . $note['Body'] . "<a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a></p><hr>";
+        echo "<p><small>" . $note['Body'] . "<a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a></p></small><hr>";
       }
       ?></p>
       <form class="form-group" action="inserts/insertNote.php" method="POST">
