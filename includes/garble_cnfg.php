@@ -192,7 +192,7 @@ function get_address_byID($addressID) {
 
 function get_phone_byID($phoneID) {
   $conn = get_connected();
-  $query = "SELECT * from Addresses where ID='$phoneID'";
+  $query = "SELECT * from Phones where ID='$phoneID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
@@ -201,7 +201,7 @@ function get_phone_byID($phoneID) {
 
 function get_email_byID($emailID) {
   $conn = get_connected();
-  $query = "SELECT * from Addresses where ID='$emailID'";
+  $query = "SELECT * from Emails where ID='$emailID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
