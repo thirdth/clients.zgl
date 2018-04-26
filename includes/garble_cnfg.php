@@ -212,7 +212,7 @@ function update_address($street1, $street2, $city, $state, $zip, $clientId)  {
 
 function update_client($clientId, $FName, $MName, $LName, $contact, $address_id, $phone_id, $email_id) {
   $clientId = $clientId;
-  $Fname = $Fname;
+  $FName = $FName;
   $MName = $MName;
   $LName = $LName;
   $contact = $contact;
