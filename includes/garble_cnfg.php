@@ -195,12 +195,12 @@ function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id
 }
 
 function insert_note($matterID, $text) {
-  $matterID = $MatterID;
-  $Text = $text;
+  $matterID = $matterID;
+  $text = $text;
   $conn = get_connected();
   $query = "INSERT into Notes
               (MatterID, Text)
-              VALUES ('$MatterID', '$Text')";
+              VALUES ('$matterID', '$text')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   return $last_id;
