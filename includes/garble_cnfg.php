@@ -169,7 +169,7 @@ function insert_matter($Name, $clientID, $AdverseID, $Notes) {
   $conn = get_connected();
   $query = "INSERT into Matters
               (Name, AdverseID, ClientID, Notes)
-              VALUES ('$Name', '$AdverseID', '$ClientID', '$Notes')";
+              VALUES ('$Name', '$AdverseID', '$clientID', '$Notes')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;
@@ -190,11 +190,7 @@ function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id
               (Fname, Mname, Lname, AddressID, PhoneID, EmailID)
               VALUES ('$Fname', '$Mname', '$Lname', '$address_id', '$phone_id', '$email_id')";
   $result = mysqli_query($conn, $query);
-  if ($result)  {
-    return $last_id;
-  } else {
-    print(mysqli_error($conn));
-  }
+  return $last_id;
 }
 
 // Update functions
