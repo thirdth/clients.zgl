@@ -22,7 +22,7 @@ $AddressID = update_address($Street1, $Street2, $City, $State, $Zip, $ClientID);
 $result = update_client($ClientID, $Fname, $Mname, $Lname, $Contact, $AddressID, $PhoneID, $EmailID);
 
 if ($result)  {
-  header("Location: ../clientPage.php?ID=<?php echo $ClientID; ?>");
+  header("Location: ../clientPage.php?ID=" .  $ClientID);
 } else {
   echo "something went wrong" . mysqli_error($conn);
 }
