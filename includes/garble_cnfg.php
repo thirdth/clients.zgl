@@ -371,15 +371,15 @@ function delete_note($noteID) {
   $query = "SELECT * from Notes where ID='$noteID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  print_r($all);
+  $matterID = $all[0];
   $sql = "DELETE from Notes where ID='$noteID'";
   if ($conn->query($sql) === TRUE) {
-      echo "Record deleted successfully";
+      $conn->close();
+      header("Location: ../matter?ID=" . $matterID['MatterID']);
   } else {
+      $conn->close();
       echo "Error deleting record: " . $conn->error;
   }
-
-  $conn->close();
 
 }
 
