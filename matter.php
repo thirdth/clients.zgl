@@ -43,7 +43,7 @@ $notes = get_notes_byID($matterID);
       ?></p>
       <form action"inserts/insertNote.php" method="POST">
         <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
-        <input type="textarea" name="text">
+        <input type="textarea" name="body">
         <input type="submit" class="btn btn-primary" name="submit" value="add Note">
       </form>
     </div>

@@ -196,10 +196,10 @@ function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id
 
 function insert_note($matterID, $text) {
   $matterID = $matterID;
-  $text = $text;
+  $body = $body;
   $conn = get_connected();
   $query = "INSERT into Notes
-              (MatterID, Text)
+              (MatterID, Body)
               VALUES ('$matterID', '$text')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
