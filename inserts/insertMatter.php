@@ -17,8 +17,9 @@ $clientID = $_POST['clientID'];
 $PhoneID = insert_phone($Phone);
 $EmailID = insert_email($Email);
 $AddressID = insert_address($Street1, $Street2, $City, $State, $Zip);
+$AdverseID = insert_person($Fname, $Mname, $LName, $AddressID, $PhoneID, $EmailID);
 
-$result = insert_matter($Name, $Adverse, $AddressID, $PhoneID, $EmailID, $Notes);
+$result = insert_matter($Name, $clientID, $AdverseID, $Notes);
 
 if ($result)  {
   header("Location: ../clientPage.php?ID=" . $clientID);

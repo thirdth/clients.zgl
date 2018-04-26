@@ -14,12 +14,12 @@ $clientID = $_GET['ID'];
             <input type="hidden" name="clientID" value="<?php echo $clientID; ?>">
           <div class="form-group">
               <label>Name</label>
-              <input type="text" name="Name"class="form-control">
+              <input type="text" name="Name" class="form-control">
               <span class="help-block"></span>
           </div>
           <div class="form-group">
               <label>Adverse</label>
-              <input type="text" name="Adverse"class="form-control">
+              <input type="text" name="Adverse" class="form-control">
           </div>
           <div class="form-group">
               <label>Street 1</label>

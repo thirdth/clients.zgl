@@ -161,20 +161,37 @@ function insert_client($Fname, $Mname, $Lname, $contact, $address_id, $phone_id,
   }
 }
 
-function insert_matter($Name, $Adverse, $address_id, $phone_id, $email_id, $Notes) {
+function insert_matter($Name, $clientID, $AdverseID, $Notes) {
   $Name = $Name;
-  $Adverse = $Adverse;
-  $address_id = $address_id;
-  $phone_id = $phone_id;
-  $email_id = $email_id;
+  $AdverseID = $AdverseID;
+  $clientID = $clientID;
   $Notes = $Notes;
   $conn = get_connected();
   $query = "INSERT into Matters
-              (Name, Adverse, AddressID, PhoneID, EmailID, Notes)
-              VALUES ('$Name', '$Adverse', '$address_id', '$phone_id', '$email_id', '$Notes')";
+              (Name, AdverseID, ClientID, Notes)
+              VALUES ('$Name', '$AdverseID', '$ClientID', '$Notes')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
+
+function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id) {
+  $Fname = $Fname;
+  $Mname = $Mname;
+  $Lname = $Lname;
+  $address_id = $address_id;
+  $phone_id = $phone_id;
+  $email_id = $email_id;
+  $conn = get_connected();
+  $query = "INSERT into People
+              (Fname, Mname, Lname, AddressID, PhoneID, EmailID)
+              VALUES ('$Fname', '$Mname', '$Lname', '$address_id', '$phone_id', '$email_id')";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $last_id;
   } else {
     print(mysqli_error($conn));
   }
