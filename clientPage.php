@@ -26,7 +26,7 @@ $email = get_email_byID($emailID);
       <?php echo $phone['Number']; ?></br>
       <?php echo $email['Email']; ?></p>
       <hr>
-      <a href='editClient.php?ID=' . $clientID . >Edit Client</a>
+      <a href='editClient.php?ID='<?php echo $clientID; ?>>Edit Client</a>
     </div>
     <div class="col-md-4">
       <h3 class="text-center">Case Files:</h3>
