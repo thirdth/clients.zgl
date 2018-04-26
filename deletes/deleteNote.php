@@ -5,5 +5,5 @@ include '../includes/garble_cnfg.php';
 $noteID = $_GET['ID'];
 
 $result = delete_note($noteID);
-
+$conn->close();
 ?>
