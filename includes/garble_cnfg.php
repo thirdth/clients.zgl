@@ -360,8 +360,6 @@ function get_notes_byId($matterID)  {
   mysqli_close($conn);
   if ($all) {
     return $all[0];
-  } else {
-    die();
   }
 }
 
