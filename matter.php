@@ -35,11 +35,7 @@ $notes = get_notes_byID($matterID);
     <div class="col-md-8">
       <small class="text-center">Notes:</small>
       <p><?php
-      if ($notes) {
-        foreach ($notes as $note) {
-          print_r($note);
-        }
-      }
+      print_r($notes);
       ?></p>
       <form action="inserts/insertNote.php" method="POST">
         <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
