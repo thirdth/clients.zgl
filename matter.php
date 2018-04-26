@@ -11,8 +11,6 @@ $address = get_address_byID($addressID);
 $phone = get_phone_byID($phoneID);
 $email = get_email_byID($emailID);
 // TODO: add matters here
-
-$matters = get_matters_byClientID($clientID);
 ?>
 <div class="wrapper container">
   <div class="col-md-12">
@@ -32,14 +30,6 @@ $matters = get_matters_byClientID($clientID);
     </div>
     <div class="col-md-4">
       <h3 class="text-center">Case Files:</h3>
-      <?php
-    foreach ($matters as $matter){
-      echo "<div class'col-md-12'>";
-      echo "<h5><a href='/clientPage.php?ID=" . $matter['ID'] . "'>" . $matter['Name'] . "</a></h5>";
-      echo "</div>";
-    }
-       ?>
-       <a href="/addMatter.php?ID=<?php echo $clientID; ?>">Add Matter</a>
     </div>
   </div>
 </div>

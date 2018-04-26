@@ -161,6 +161,25 @@ function insert_client($Fname, $Mname, $Lname, $contact, $address_id, $phone_id,
   }
 }
 
+function insert_matter($Name, $Adverse, $address_id, $phone_id, $email_id, $Notes) {
+  $Name = $Name;
+  $Adverse = $Adverse;
+  $address_id = $address_id;
+  $phone_id = $phone_id;
+  $email_id = $email_id;
+  $Notes = $Notes;
+  $conn = get_connected();
+  $query = "INSERT into Clients
+              (Name, Adverse, AddressID, PhoneID, EmailID, Notes)
+              VALUES ('$Fname', '$Adverse', '$address_id', '$phone_id', '$email_id', '$Notes')";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
+
 // Update functions
 
 function update_phone($phone, $clientId)  {
