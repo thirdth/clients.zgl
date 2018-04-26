@@ -190,6 +190,7 @@ function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id
               (Fname, Mname, Lname, AddressID, PhoneID, EmailID)
               VALUES ('$Fname', '$Mname', '$Lname', '$address_id', '$phone_id', '$email_id')";
   $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
   return $last_id;
 }
 
