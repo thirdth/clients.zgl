@@ -62,7 +62,9 @@ function clear_session_cookies()  {
 }
 
 function check_logged_in() {
-  session_start();
+  if (!$_SESSION) {
+    session_start();
+  }
   if(isset($_SESSION['username']) && isset($_SESSION['password']))  {
     return true;
   } else if(isset($_COOKIE['zglname']) && isset($_COOKIE['zglpassword'])) {
