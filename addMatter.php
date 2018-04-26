@@ -18,8 +18,16 @@ $clientID = $_GET['ID'];
               <span class="help-block"></span>
           </div>
           <div class="form-group">
-              <label>Adverse</label>
-              <input type="text" name="Adverse" class="form-control">
+              <label>Adverse First</label>
+              <input type="text" name="AdverseFirst" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Adverse Middle</label>
+              <input type="text" name="AdverseMiddle" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Adverse Last</label>
+              <input type="text" name="AdverseLast" class="form-control">
           </div>
           <div class="form-group">
               <label>Street 1</label>
