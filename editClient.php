@@ -18,7 +18,7 @@ $email = get_email_byID($emailID);
       <h2>New Client</h2>
       <p>Please enter Client information.</p>
       <form action="edits/updateClient.php" method="post">
-          <input type="hidden" name="ID" value="<?php echo $clientID; ?>"
+          <input type="hidden" name="ID" value="<?php echo $clientID; ?>">
           <div class="form-group">
               <label>First Name</label>
               <input type="text" name="Fname"class="form-control" value="<?php echo $client['FName']; ?>">
