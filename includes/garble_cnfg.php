@@ -370,7 +370,7 @@ function delete_note($noteID) {
   $conn = get_connected();
   $qry = "SELECT MatterID from Notes where ID='$noteID'";
   $rslt = mysqli_query($conn, $qry);
-  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  $all = mysqli_fetch_all($rslt, MYSQLI_ASSOC);
   $query = "DELETE from Notes where ID = '$noteID'";
   if ($conn->query($query) === TRUE) {
       mysqli_close($conn);
