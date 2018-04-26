@@ -9,9 +9,8 @@ $client = get_client_byId($clientID);
 <div class="wrapper container">
   <div class="col-md-12">
     <h3>Client Information</h3>
-  </div>
+  </hr>
   <div class="col-md-4">
-    <hr>
     <h4><?php echo $client['FName'] . " " . $client['LName']; ?></h4>
   </div>
   </hr>
