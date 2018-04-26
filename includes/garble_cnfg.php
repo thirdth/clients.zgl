@@ -200,7 +200,7 @@ function insert_note($matterID, $body) {
   $conn = get_connected();
   $query = "INSERT into Notes
               (MatterID, Body)
-              VALUES ('$matterID', '$text')";
+              VALUES ('$matterID', '$body')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;
