@@ -368,18 +368,19 @@ function get_notes_byId($matterID)  {
 
 function delete_note($noteID) {
   $conn = get_connected();
-  $qry = "SELECT MatterID from Notes where ID='$noteID'";
-  $rslt = mysqli_query($conn, $qry);
-  $all = mysqli_fetch_all($rslt, MYSQLI_ASSOC);
-  $query = "DELETE from Notes where ID = '$noteID'";
-  if ($conn->query($query) === TRUE) {
-      mysqli_close($conn);
-      header("Location: ../matter.php?ID=" . $all[0]);
-      die();
+  $query = "SELECT * from Notes where ID='$noteID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  $matterID = $all['MatterID'];
+  $sql = "DELETE from Notes where ID='$noteID'";
+  $sql = "DELETE FROM MyGuests WHERE id=3";
+  if ($conn->query($sql) === TRUE) {
+      echo "Record deleted successfully";
   } else {
-      mysqli_close($conn);
-      echo "Error updating record: " . $conn->error;
+      echo "Error deleting record: " . $conn->error;
   }
+
+  $conn->close();
 
 }
 
