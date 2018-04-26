@@ -364,4 +364,19 @@ function get_notes_byId($matterID)  {
   return $all;
 }
 
+// Delete functions
+
+function delete_note($noteID) {
+  $conn = get_connected();
+  $qry = "SELECT MatterID from Notes where ID='$noteID'";
+  $rslt = mysqli_query($conn, $qry);
+  $query = "DELETE from Notes where ID = '$noteID'";
+  if ($conn->query($query) === TRUE) {
+      header("Location: ../matter.php?ID=" . $rslt . );
+      die();
+  } else {
+      echo "Error updating record: " . $conn->error;
+  }
+}
+
 ?>
