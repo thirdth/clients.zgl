@@ -375,7 +375,7 @@ function delete_note($noteID) {
   $sql = "DELETE from Notes where ID='$noteID'";
   if ($conn->query($sql) === TRUE) {
       $conn->close();
-      header("Location: ../matter?ID=" . $matterID['MatterID']);
+      header("Location: ../matter.php?ID=" . $matterID['MatterID']);
   } else {
       $conn->close();
       echo "Error deleting record: " . $conn->error;
