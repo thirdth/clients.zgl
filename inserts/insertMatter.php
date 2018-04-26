@@ -11,7 +11,7 @@ $State = $_POST['state'];
 $Zip = $_POST['zip'];
 $Phone = $_POST['phone'];
 $Email = $_POST['email'];
-$Notes = $_POST['notes'];
+$Notes = $_POST['Notes'];
 $clientID = $_POST['clientID'];
 
 $PhoneID = insert_phone($Phone);

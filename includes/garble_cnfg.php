@@ -169,9 +169,9 @@ function insert_matter($Name, $Adverse, $address_id, $phone_id, $email_id, $Note
   $email_id = $email_id;
   $Notes = $Notes;
   $conn = get_connected();
-  $query = "INSERT into Clients
+  $query = "INSERT into Matters
               (Name, Adverse, AddressID, PhoneID, EmailID, Notes)
-              VALUES ('$Fname', '$Adverse', '$address_id', '$phone_id', '$email_id', '$Notes')";
+              VALUES ('$Name', '$Adverse', '$address_id', '$phone_id', '$email_id', '$Notes')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;
