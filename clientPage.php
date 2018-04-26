@@ -10,6 +10,8 @@ print_r($client);
 <div class="wrapper container">
   <div class="col-md-4">
     <h3>Client Information</h3>
+    <hr>
+    <h2><?php echo $client[FName]; ?></h2>
 
   <a href='editClient.php?ID=" . $clientID . "'>Edit Client</a>
   </div>
