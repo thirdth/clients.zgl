@@ -194,6 +194,18 @@ function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id
   return $last_id;
 }
 
+function insert_note($matterID, $text) {
+  $matterID = $MatterID;
+  $Text = $text;
+  $conn = get_connected();
+  $query = "INSERT into Notes
+              (MatterID, Text)
+              VALUES ('$MatterID', '$Text')";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  return $last_id;
+}
+
 // Update functions
 
 function update_phone($phone, $clientId)  {
@@ -334,6 +346,15 @@ function get_matter_byId($matterID)  {
 function get_person_byID($personID) {
   $conn = get_connected();
   $query = "SELECT * from People where ID='$personID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
+
+function get_notes_byId($matterID)  {
+  $conn = get_connected();
+  $query = "SELECT * from Notes where ID='$matterID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
