@@ -4,17 +4,18 @@ protected_page();
 header_check();
 $clientID = $_GET['ID'];
 $client = get_client_byId($clientID);
-print_r($client);
 // TODO: add matters here
 ?>
 <div class="wrapper container">
-  <div class="col-md-4">
+  <div class="col-md-12">
     <h3>Client Information</h3>
+  </div>
+  <div class="col-md-4">
     <hr>
     <h4><?php echo $client['FName'] . " " . $client['LName']; ?></h4>
-
-  <a href='editClient.php?ID=" . $clientID . "'>Edit Client</a>
   </div>
+  </hr>
+  <a href='editClient.php?ID=" . $clientID . "'>Edit Client</a>
 </div>
 
 
