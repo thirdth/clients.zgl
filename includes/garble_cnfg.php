@@ -354,7 +354,7 @@ function get_person_byID($personID) {
 
 function get_notes_byId($matterID)  {
   $conn = get_connected();
-  $query = "SELECT * from Notes where ID='$matterID'";
+  $query = "SELECT * from Notes where MatterID='$matterID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
