@@ -54,9 +54,12 @@ $claims = get_claims_byID($matterID);
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
               <div class="input-group col-md-3">
                 <label>Amount</label>
-                <span class="input-group-addon" id="basic-addon1">$</span>
-                <input type="text" class="form-control" name="Amount" aria-describedby="basic-addon1">
-              </div>
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <span class="input-group-addon">.00</span>
+                </div>
+                </div>
               <div class="form-group col-md-7">
                 <label>Memo</label>
                 <input type="text" class="form-control" name="Description">
