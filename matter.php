@@ -46,6 +46,7 @@ $claims = get_claims_byID($matterID);
             $xactions = get_xaction_byClaimID($claim['ID']);
             $xactionTotal = [];
             foreach ($xactions as $xaction) {
+              global $xactionTotal;
               echo "<form class='form-group'>
                       <div class='form-group col-md-10'>
                         <label>Note</label>
