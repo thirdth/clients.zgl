@@ -76,6 +76,8 @@ $claims = get_claims_byID($matterID);
                 <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</button>
               </div>
             </form>
+          </div>
+          <div class="col-md-12">
             <?php
             echo "  <div class='col-md-12'><a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a></div>
                   </div>";
