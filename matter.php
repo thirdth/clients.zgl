@@ -45,9 +45,12 @@ $claims = get_claims_byID($matterID);
                     </p>";
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
-              echo "<div class='col-md-12'>
-                      <p>Amount: " . $xaction['Amount'] . " Memo: " . $xaction['Note'] . "</p>
-                    </div>";
+              echo "<form class='form-group'>
+                      <label>Note</label>
+                      <input type='text' value=" . $xaction['Note'] . " readonly>
+                      <label>Amont</label>
+                      <input type='text' value=" . $xaction['Amount'] . " readonly>
+                    </form>";
             }
             ?>
             <hr>
