@@ -59,7 +59,7 @@ $claims = get_claims_byID($matterID);
                   <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                 </div>
                 </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-7">
                 <label>Memo</label>
                 <input type="text" class="form-control" name="Description">
               </div>
