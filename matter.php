@@ -51,20 +51,22 @@ $claims = get_claims_byID($matterID);
             echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
                   </div>";
             ?>
-            <form class="form-group" action="inserts/insertClaim.php" method="POST">
+            <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
               <div class="form-inline">
+                <label>Amount</label>
+                <input type="text" class="form-control" name="Amount">
                 <label>Description</label>
-                <input type="text" class="form-control" name="description">
-                <label>Incident Date</label>
-                <input type="text" class="form-control" name="incidentDate">
+                <input type="text" class="form-control" name="Description">
+                <label>Note</label>
+                <input type="text" class="form-control" name="Note">
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Claim</button>
               </div>
             </form>
             <?php
-            
+
           }
 
          ?>
