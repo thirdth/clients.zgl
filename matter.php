@@ -48,11 +48,11 @@ $claims = get_claims_byID($matterID);
               echo "<form class='form-group'>
                       <div class='form-group col-md-9'>
                         <label>Note</label>
-                        <input type='text' value='" . $xaction['Note'] . "' readonly>
+                        <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
                       </div>
                       <div class='form-group col-md-3'>
                         <label>Amount</label>
-                        <input type='text' value='" . $xaction['Amount'] . "' readonly>
+                        <input type='text' class='form-control' value='" . $xaction['Amount'] . "' readonly>
                       </div>
                     </form>";
             }
