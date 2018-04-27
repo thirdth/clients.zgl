@@ -45,7 +45,7 @@ $claims = get_claims_byID($matterID);
                     </p>";
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
-              echo "<form class='form-group' style='border-bottom: 1px dotted grey'>
+              echo "<form class='form-group'>
                       <div class='form-group col-md-10'>
                         <label>Note</label>
                         <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
@@ -57,7 +57,7 @@ $claims = get_claims_byID($matterID);
                     </form>";
             }
             ?>
-            <hr>
+          </hr>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="claimID" value="<?php echo $claim['ID']; ?>">
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
