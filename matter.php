@@ -44,9 +44,7 @@ $claims = get_claims_byID($matterID);
                     Description: " . $claim['Description'] . "
                     </p>";
             $xactions = get_xaction_byClaimID($claim['ID']);
-            $xactionTotal = [];
             foreach ($xactions as $xaction) {
-              global $xactionTotal;
               echo "<form class='form-group'>
                       <div class='form-group col-md-10'>
                         <label>Note</label>
@@ -57,10 +55,8 @@ $claims = get_claims_byID($matterID);
                         <input type='text' class='form-control text-right' value='" . $xaction['Amount'] . "' readonly>
                       </div>
                     </form>";
-              $xactionTotal += $xaction['Amount'];
             }
             ?>
-           <p><?php echo $xactionTotal; ?></p>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="claimID" value="<?php echo $claim['ID']; ?>">
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
