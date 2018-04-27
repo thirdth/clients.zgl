@@ -227,15 +227,15 @@ function insert_claim($matterID, $description, $incidentDate) {
   }
 }
 
-function insert_xaction($claimID, $description, $amount, $type) {
+function insert_xaction($claimID, $note, $amount, $type) {
   $claimID = $claimID;
-  $description = $description;
+  $note = $note;
   $amount = $amount;
   $type = $type;
   $conn = get_connected();
   $query = "INSERT into Xactions
-              (ClaimID, Description, Amount, CategoryID)
-              VALUES ('$claimID', '$description', '$amount', '$type')";
+              (ClaimID, Note, Amount, CategoryID)
+              VALUES ('$claimID', '$note', '$amount', '$type')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;
