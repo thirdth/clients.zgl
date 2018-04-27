@@ -61,6 +61,7 @@ $claims = get_claims_byID($matterID);
               <div class="form-group col-md-8">
                 <label>Description</label>
                 <input type="text" class="form-control" name="Description">
+              </div>
               <div class="form-group col-md-9">
                 <label>Note</label>
                 <input type="text" class="form-control" name="Note">
