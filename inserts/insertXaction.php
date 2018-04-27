@@ -8,7 +8,7 @@ $description = $_POST['memo'];
 $amount = $_POST['amount'];
 $type = $_POST['type'];
 
-$result = insert_xaction($claimID, $descripton, $amount, $type);
+$result = insert_xaction($claimID, $description, $amount, $type);
 
 if ($result)  {
   header("Location: ../matter.php?ID=" . $matterID);
