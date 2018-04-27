@@ -49,7 +49,7 @@ $claims = get_claims_byID($matterID);
               echo $xaction['ID'] . "</br>";
             }
             echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
-                  </div>";
+                  ";
             ?>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
@@ -65,6 +65,7 @@ $claims = get_claims_byID($matterID);
                 <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Claim</button>
               </div>
             </form>
+          </div>
             <?php
 
           }
