@@ -60,17 +60,17 @@ $claims = get_claims_byID($matterID);
                 <label>Description</label>
                 <input type="text" class="form-control" name="Description">
               </div>
-              <div class="form-group col-md-9">
+              <div class="form-group col-md-12">
                 <label>Note</label>
                 <input type="text" class="form-control" name="Note">
               </div>
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-12">
                 <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</button>
               </div>
             </form>
           </div>
             <?php
-            echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
+            echo "  <div class='col-md-12'><a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a></div>
                   ";
           }
 
