@@ -57,8 +57,12 @@ $claims = get_claims_byID($matterID);
                     ";
             }
             ?>
-              <label>Total</label>
-              <input type="text" class="form-control" value="0.00" readonly>
+              <div class="col-md-2 form-group">
+                <label>Total</label>
+              </div>
+              <div class-"col-md-10 form-group">
+                <input type="text" class="form-control" value="0.00" readonly>
+              </div>
             </form>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="claimID" value="<?php echo $claim['ID']; ?>">
