@@ -32,10 +32,10 @@ $claims = get_claims_byID($matterID);
       <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
       <?php echo $phone['Number']; ?></br>
       <?php echo $email['Email']; ?></p>
+      <a class="pull-right" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
       <hr>
-      <a href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
     </div>
-    <div class="col-md-12 border-top">
+    <div class="col-md-12">
       <div class="col-md-12">
         <small class="text-center">Claims:</small>
         <?php
@@ -50,6 +50,21 @@ $claims = get_claims_byID($matterID);
             }
             echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
                   </div>";
+            ?>
+            <form class="form-group" action="inserts/insertClaim.php" method="POST">
+              <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
+              <div class="form-inline">
+                <label>Description</label>
+                <input type="text" class="form-control" name="description">
+                <label>Incident Date</label>
+                <input type="text" class="form-control" name="incidentDate">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Claim</button>
+              </div>
+            </form>
+            <?php
+            
           }
 
          ?>
