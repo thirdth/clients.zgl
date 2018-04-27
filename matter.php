@@ -49,7 +49,7 @@ $claims = get_claims_byID($matterID);
               echo $xaction['ID'] . "</br>";
             }
             echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
-                  </div>";
+                  </div><hr>";
           }
 
          ?>
