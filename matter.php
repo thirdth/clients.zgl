@@ -53,7 +53,7 @@ $claims = get_claims_byID($matterID);
              <input type="text" class="form-control" name="incidentDate">
            </div>
            <div class="form-group">
-             <button type="submit" class="btn btn-primary pull-right" name="submit">add Note</button>
+             <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Claim</button>
            </div>
          </form>
        </div>
