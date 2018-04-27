@@ -44,7 +44,7 @@ $claims = get_claims_byID($matterID);
                     <p>Claim No: " . $claim['ID'] . "</br>
                     Description: " . $claim['Description'] . "
                     </p>
-                    <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-sm-success pull-right'>edit Claim</a>
+                    <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success pull-right'>edit Claim</a>
                   </div>";
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
