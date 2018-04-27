@@ -43,17 +43,21 @@ $claims = get_claims_byID($matterID);
                     <p>Claim No: " . $claim['ID'] . " Create Date: " . $claim['CreatedDate'] . " Last Edit: " . $claim['EditedDate'] . "</br>
                     Description: " . $claim['Description'] . "
                     </p>
-                  <form class='form-group'>";
+                  <form class='form-group'>
+                    <div class='col-md-10'>
+                      <label>Memo</label>
+                    </div>
+                    <div class='col-md-2'>
+                      <label>Amount</label>
+                    </div>";
             $xactionTotal = 0;
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
               echo "
                       <div class='form-group col-md-10'>
-                        <label>Note</label>
                         <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
                       </div>
                       <div class='form-group col-md-2'>
-                        <label>Amount</label>
                         <input type='text' class='form-control text-right' value='" . $xaction['Amount'] . "' readonly>
                       </div>
                     ";
