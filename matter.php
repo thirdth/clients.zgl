@@ -41,10 +41,11 @@ $claims = get_claims_byID($matterID);
         <?php
           foreach ($claims as $claim) {
             echo "<div class='col-md-12 claim'>
-                    <p>Claim No: " . $claim['ID'] . "</br>
+                    <p>Claim No: " . $claim['ID'] . "</br><hr>
                     Description: " . $claim['Description'] . "
                     </p>
                     <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
+                    <hr>
                   </div>";
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
