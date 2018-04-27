@@ -73,7 +73,7 @@ $claims = get_claims_byID($matterID);
                 </select>
               </div>
               <div class="form-group col-md-12">
-                <a href="inserts/insertXaction.php?ID=<?php echo $claimID; ?>" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</a>
+                <a href="inserts/insertXaction.php?ID=<?php echo $claim['ID']; ?>" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</a>
               </div>
             </form>
           </div>
