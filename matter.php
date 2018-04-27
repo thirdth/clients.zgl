@@ -41,16 +41,15 @@ $claims = get_claims_byID($matterID);
         <?php
           foreach ($claims as $claim) {
             echo "<div class='col-md-12 claim'>
-                    <p>Claim No: " . $claim['ID'] . " Create Date: " . $claim['CreatedDate'] . " Last Edit: " . $claim['EditedDate'] . "</br><hr>
+                    <p>Claim No: " . $claim['ID'] . " Create Date: " . $claim['CreatedDate'] . " Last Edit: " . $claim['EditedDate'] . "</br>
                     Description: " . $claim['Description'] . "
-                    </p>
-                    <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
-                    <hr>
-                  </div>";
+                    </p>";
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
               echo $xaction['ID'] . "</br>";
             }
+            echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
+                  </div>";
           }
 
          ?>
