@@ -391,6 +391,15 @@ function get_claims_byId($matterID)  {
   return $all;
 }
 
+function get_xaction_byClaimId($claimID)  {
+  $conn = get_connected();
+  $query = "SELECT * from Xactions where ClaimID='$claimID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all;
+}
+
 
 
 // Delete functions
