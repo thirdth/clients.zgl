@@ -52,7 +52,7 @@ $claims = get_claims_byID($matterID);
             <hr>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
-              <div class="form-group col-md-3">
+              <div class="input-group col-md-3">
                 <label>Amount</label>
                 <span class="input-group-addon" id="basic-addon1">$</span>
                 <input type="text" class="form-control" name="Amount" aria-describedby="basic-addon1">
