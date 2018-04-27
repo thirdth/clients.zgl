@@ -227,6 +227,23 @@ function insert_claim($matterID, $description, $incidentDate) {
   }
 }
 
+function insert_xaction($claimID, $description, $amount, $type) {
+  $claimID = $claimID;
+  $description = $description;
+  $amount = $amount;
+  $type = $type;
+  $conn = get_connected();
+  $query = "INSERT into Xactions
+              (ClaimID, Description, Amount, CategoryID)
+              VALUES ('$claimID', '$description', '$amount', '$type')";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
+
 // Update functions
 
 function update_phone($phone, $clientId)  {
