@@ -55,7 +55,7 @@ $claims = get_claims_byID($matterID);
               <div class="form-group col-md-3">
                 <label>Amount</label>
                 <span class="input-group-addon" id="basic-addon1">$</span>
-                <input type="text" class="form-control" name="Amount">
+                <input type="text" class="form-control" name="Amount" aria-describedby="basic-addon1">
               </div>
               <div class="form-group col-md-7">
                 <label>Memo</label>
