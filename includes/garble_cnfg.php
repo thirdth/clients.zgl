@@ -211,6 +211,22 @@ function insert_note($matterID, $body) {
   }
 }
 
+function insert_claim($matterID, $description, $incidentDate) {
+  $matterID = $matterID;
+  $description = $description;
+  $incidentDate = $incidentDate;
+  $conn = get_connected();
+  $query = "INSERT into Claims
+              (MatterID, Description, IncidentDate)
+              VALUES ('$matterID', '$description', '$incidentDate')";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
+
 // Update functions
 
 function update_phone($phone, $clientId)  {
@@ -365,6 +381,17 @@ function get_notes_byId($matterID)  {
   mysqli_close($conn);
   return $all;
 }
+
+function get_claims_byId($matterID)  {
+  $conn = get_connected();
+  $query = "SELECT * from Claims where MatterID='$matterID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all;
+}
+
+
 
 // Delete functions
 
