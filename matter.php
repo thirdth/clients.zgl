@@ -62,7 +62,7 @@ $claims = get_claims_byID($matterID);
               </div>
               <div class="form-group col-md-3">
                 <label>Type</label>
-                <select multiple class="form-control" id="Type">
+                <select class="form-control" id="Type">
                   <option value="0">Damages</option>
                   <option value="1">Attorney Fees</option>
                   <option value="2">Costs</option>
