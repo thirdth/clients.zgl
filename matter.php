@@ -55,16 +55,16 @@ $claims = get_claims_byID($matterID);
                 <label>Amount</label>
                 <div class="input-group">
                   <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control" aria-label="Amount">
+                  <input type="text" class="form-control" aria-label="amount" name="amount">
                 </div>
                 </div>
               <div class="form-group col-md-7">
                 <label>Memo</label>
-                <input type="text" class="form-control" name="Description">
+                <input type="text" class="form-control" name="description">
               </div>
               <div class="form-group col-md-2">
                 <label>Type</label>
-                <select class="form-control" id="Type">
+                <select class="form-control" id="type">
                   <option value="0">Damages</option>
                   <option value="1">Attorney Fees</option>
                   <option value="2">Costs</option>
