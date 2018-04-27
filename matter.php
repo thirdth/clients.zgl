@@ -43,7 +43,7 @@ $claims = get_claims_byID($matterID);
                     <p>Claim No: " . $claim['ID'] . " Create Date: " . $claim['CreatedDate'] . " Last Edit: " . $claim['EditedDate'] . "</br>
                     Description: " . $claim['Description'] . "
                     </p>";
-            $xactionTotal = 35;
+            $xactionTotal = 0;
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
               echo "<form class='form-group'>
@@ -56,6 +56,7 @@ $claims = get_claims_byID($matterID);
                         <input type='text' class='form-control text-right' value='" . $xaction['Amount'] . "' readonly>
                       </div>
                     ";
+              $xactionTotal += $xaction['Amount'];
             }
             ?>
               <div class="col-md-8">
