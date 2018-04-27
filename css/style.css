@@ -101,8 +101,9 @@ footer{
 }
 
 .claim{
-  border: 1px solid black;
+  border: .5px solid black;
   border-radius: 5px;
+  margin-bottom: 3px;
 }
 
 .feature {
