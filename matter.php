@@ -41,6 +41,23 @@ $claims = get_claims_byID($matterID);
         <?php
           foreach ($claims as $claim) {
             echo $claim['ID'] . "</br>";
+            $xactions = get_xaction_byClaimID($claim['ID']);
+            foreach ($xactions as $xaction) {
+              echo $xaction['ID'] . "</br>";
+            }
+            echo <<<END  <form class="form-group" action="inserts/insertXaction.php" method="POST">
+                      <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
+                      <div class="form-inline">
+                        <label>Amount</label>
+                        <input type="text" class="form-control" name="xaction">
+                        <label>Xaction Date</label>
+                        <input type="text" class="form-control" name="xactionDate">
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Xaction</button>
+                      </div>
+                    </form>
+END;
           }
 
          ?>
