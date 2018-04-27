@@ -57,7 +57,7 @@ $claims = get_claims_byID($matterID);
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
               $phpdate = strtotime($xaction['CreatedDate']);
-              $date = date('Y-m-d', $phpdate);
+              $date = date('M-DD-Y', $phpdate);
               echo "  <div class='form-group col-md-2'>
                         <input type='text' class='form-control' value='" . $date . "' readonly>
                       </div>
