@@ -47,7 +47,9 @@ $claims = get_claims_byID($matterID);
          <form class="form-group" action="inserts/insertClaim.php" method="POST">
            <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
            <div class="form-inline">
-             <textarea class="form-control" rows="2" name="description"></textarea>
+             <label>Description</label>
+             <input type="text" class="form-control" name="description">
+             <label>Incident Date</label>
              <input type="text" class="form-control" name="incidentDate">
            </div>
            <div class="form-group">
