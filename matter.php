@@ -51,7 +51,7 @@ $claims = get_claims_byID($matterID);
             <hr>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="claimID" value="<?php echo $claim['ID']; ?>">
-              <input type="hidden" name="claimID" value="<?php echo $matterID; ?>">
+              <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
               <div class="form-group col-md-3">
                 <label>Amount</label>
                 <div class="input-group">
@@ -65,7 +65,7 @@ $claims = get_claims_byID($matterID);
               </div>
               <div class="form-group col-md-2">
                 <label>Type</label>
-                <select class="form-control" id="type">
+                <select class="form-control" name="type">
                   <option value="0">Damages</option>
                   <option value="1">Attorney Fees</option>
                   <option value="2">Costs</option>
@@ -73,7 +73,7 @@ $claims = get_claims_byID($matterID);
                 </select>
               </div>
               <div class="form-group col-md-12">
-                <a href="inserts/insertXaction.php?ID=<?php echo $claim['ID']; ?>" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</a>
+                <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</button>
               </div>
             </form>
           </div>
