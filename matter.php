@@ -51,6 +51,7 @@ $claims = get_claims_byID($matterID);
             echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
                   ";
             ?>
+            <hr>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
               <div class="form-inline">
