@@ -4,11 +4,11 @@ ini_set('display_errors', 'On');
 include '../includes/garble_cnfg.php';
 $claimID = $_POST['claimID'];
 $matterID = $_POST['matterID'];
-$description = $_POST['memo'];
+$note = $_POST['memo'];
 $amount = $_POST['amount'];
 $type = $_POST['type'];
 
-$result = insert_xaction($claimID, $description, $amount, $type);
+$result = insert_xaction($claimID, $note, $amount, $type);
 
 if ($result)  {
   header("Location: ../matter.php?ID=" . $matterID);
