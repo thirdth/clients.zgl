@@ -37,7 +37,7 @@ $claims = get_claims_byID($matterID);
     </div>
     <div class="col-md-12">
       <div class="col-md-12">
-        <small class="text-center">Claims:</small>
+        <strong class="text-center">Claims:</strong>
         <?php
           foreach ($claims as $claim) {
             echo "<div class='col-md-12 claim'>
