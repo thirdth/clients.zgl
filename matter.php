@@ -45,7 +45,9 @@ $claims = get_claims_byID($matterID);
                     </p>";
             $xactions = get_xaction_byClaimID($claim['ID']);
             foreach ($xactions as $xaction) {
-              echo $xaction['ID'] . "</br>";
+              echo "<div class='col-md-12'>
+                      <p>Amount: " . $xaction['Amount'] . " Memo: " . $xaction['Note'] . "</p>
+                    </div>";
             }
             ?>
             <hr>
