@@ -57,10 +57,12 @@ $claims = get_claims_byID($matterID);
                     ";
             }
             ?>
-              <div class="form-group col-md-3">
+              <div class="col-md-8">
+              </div>
+              <div class="form-group col-md-2">
                 <label>Total</label>
               </div>
-              <div class="form-group col-md-9">
+              <div class="form-group col-md-2">
                 <input type="text" class="form-control" value="0.00" readonly>
               </div>
             </form>
