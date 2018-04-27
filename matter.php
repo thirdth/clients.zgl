@@ -20,7 +20,6 @@ $claims = get_claims_byID($matterID);
 ?>
 <div class="wrapper container">
   <div class="col-md-12">
-    <h3 class="text-center">Matter Information</h3>
     <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong></h3>
     <hr>
     <div class="col-md-12">
