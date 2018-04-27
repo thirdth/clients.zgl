@@ -53,7 +53,7 @@ $claims = get_claims_byID($matterID);
           }
 
          ?>
-       </hr>
+       <hr>
          <form class="form-group" action="inserts/insertClaim.php" method="POST">
            <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
            <div class="form-inline">
