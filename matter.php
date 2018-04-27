@@ -40,7 +40,7 @@ $claims = get_claims_byID($matterID);
         <small class="text-center">Claims:</small>
         <?php
           foreach ($claims as $claim) {
-            echo "<div class='col-md-12'>
+            echo "<div class='col-md-12 claim'>
                     <p>Claim No: " . $claim['ID'] . "</br>
                     Description: " . $claim['Description'] . "
                     </p>
