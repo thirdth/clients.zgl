@@ -58,17 +58,6 @@ footer{
   color: #9d9d9d;
 }
 
-.container a {
-  background-color: transparent;
-  color: #386AA3;
-  font-weight: bold;
-}
-
-.container a:hover {
-  color: blue;
-
-}
-
 .sidebar  {
 
 }
