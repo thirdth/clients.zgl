@@ -56,7 +56,7 @@ $claims = get_claims_byID($matterID);
                 <label>Amount</label>
                 <div class="input-group">
                   <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input type="text" class="form-control" aria-label="Amount">
                 </div>
                 </div>
               <div class="form-group col-md-7">
@@ -73,7 +73,7 @@ $claims = get_claims_byID($matterID);
                 </select>
               </div>
               <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</button>
+                <a href="inserts/insertXaction.php?ID=<?php echo $claimID; ?>" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</a>
               </div>
             </form>
           </div>
