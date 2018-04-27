@@ -35,7 +35,7 @@ $claims = get_claims_byID($matterID);
       <hr>
       <a href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 border-top">
       <div class="col-md-12">
         <small class="text-center">Claims:</small>
         <?php
@@ -53,7 +53,7 @@ $claims = get_claims_byID($matterID);
           }
 
          ?>
-         <form class="form-group border-top" action="inserts/insertClaim.php" method="POST">
+         <form class="form-group" action="inserts/insertClaim.php" method="POST">
            <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
            <div class="form-inline">
              <label>Description</label>
