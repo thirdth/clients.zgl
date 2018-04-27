@@ -65,7 +65,7 @@ $claims = get_claims_byID($matterID);
                 <label>Total</label>
               </div>
               <div class="form-group col-md-2">
-                <input type="text" class="form-control text-right" value="<?php echo numberformat($xactionTotal, 2); ?>" readonly>
+                <input type="text" class="form-control text-right" value="<?php echo number_format($xactionTotal, 2); ?>" readonly>
               </div>
             </form>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
