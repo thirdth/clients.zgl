@@ -48,17 +48,15 @@ $claims = get_claims_byID($matterID);
             foreach ($xactions as $xaction) {
               echo $xaction['ID'] . "</br>";
             }
-            echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
-                  ";
             ?>
             <hr>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-3">
                 <label>Amount</label>
                 <input type="text" class="form-control" name="Amount">
               </div>
-              <div class="form-group col-md-8">
+              <div class="form-group col-md-9">
                 <label>Description</label>
                 <input type="text" class="form-control" name="Description">
               </div>
@@ -72,7 +70,8 @@ $claims = get_claims_byID($matterID);
             </form>
           </div>
             <?php
-
+            echo "  <a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a>
+                  ";
           }
 
          ?>
