@@ -23,7 +23,7 @@ $claims = get_claims_byID($matterID);
     <h3 class="text-center">Matter Information</h3>
     <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong></h3>
     <hr>
-    <div class="col-md-4">
+    <div class="col-md-12">
       <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
       <p><?php echo $address['Street1']; ?></br>
       <?php if ($address['Street2']){
@@ -35,7 +35,7 @@ $claims = get_claims_byID($matterID);
       <hr>
       <a href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-12">
       <div class="col-md-12">
         <small class="text-center">Claims:</small>
         <?php
