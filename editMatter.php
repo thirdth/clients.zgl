@@ -37,8 +37,8 @@ $advAddress = get_address_byID($adverse['AddressID']);
           <a href='editClient.php?ID=<?php echo $clientID; ?>'>Edit Client</a>
         </div>
         <div class="col-md-8 OtherParties">
-          <h3>Parties</h3>
-          
+          <h3 class="text-center">Parties</h3>
+
         </div>
       </div>
       <hr>
