@@ -57,8 +57,10 @@ $claims = get_claims_byID($matterID);
             foreach ($xactions as $xaction) {
               $phpdate = strtotime($xaction['CreatedDate']);
               $date = date('M-d-Y', $phpdate);
-              echo "<div class='col-md-12'>
-                      <div class='form-group col-md-2'>
+              echo "<div class='col-md-12'>"
+              echo "  <div class='col-md-12'><a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a></div>
+                    </div>";
+              echo "  <div class='form-group col-md-2'>
                         <input type='text' class='form-control' value='" . $date . "' readonly>
                       </div>
                       <div class='form-group col-md-5'>
@@ -117,8 +119,7 @@ $claims = get_claims_byID($matterID);
           </div>
           <div class="col-md-12">
             <?php
-            echo "  <div class='col-md-12'><a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a></div>
-                  </div>";
+
           }
 
          ?>
