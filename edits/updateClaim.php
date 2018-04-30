@@ -8,5 +8,13 @@ $claimID = $_POST['ID'];
 $description = $_POST['Description'];
 $typeID = $_POST['Type'];
 $matterID = $_POST['matterID'];
-print($matterID);
+
+$result = update_claim($claimID, $description, $typeID);
+
+if ($result)  {
+  header("Location: ../matter.php?ID=" .  $matterID);
+} else {
+  echo "something went wrong" . mysqli_error($conn);
+}
+
 ?>
