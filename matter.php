@@ -20,20 +20,23 @@ $claims = get_claims_byID($matterID);
 ?>
 <div class="wrapper container">
   <div class="col-md-12">
-    <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong></h3>
-    <hr>
-    <div class="col-md-12">
-      <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
-      <p><?php echo $address['Street1']; ?></br>
-      <?php if ($address['Street2']){
-        echo $address['Street2'] . "</br>";
-      } ?>
-      <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
-      <?php echo $phone['Number']; ?></br>
-      <?php echo $email['Email']; ?></p>
+      <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong></h3>
+      <hr>
+      <div class="col-md-3">
+        <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
+        <p><?php echo $address['Street1']; ?></br>
+        <?php if ($address['Street2']){
+          echo $address['Street2'] . "</br>";
+        } ?>
+        <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
+        <?php echo $phone['Number']; ?></br>
+        <?php echo $email['Email']; ?></p>
       <a class="pull-right" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
       <hr>
-    </div>
+      </div>
+      <div class='col-md-9'>
+        12
+      </div>
     <div class="col-md-12">
       <div class="col-md-12">
         <strong class="text-center">Claims:</strong>
