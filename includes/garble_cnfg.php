@@ -376,12 +376,12 @@ function update_claim($claimId, $description, $typeID) {
 }
 
 function update_person_byID($ID, $AddressID, $PhoneID, $EmailID)  {
-  $ID = $ID,
-  $FName = $FName,
-  $LName = $LName,
-  $AddressID = $AddressID,
-  $PhoneID = $PhoneID,
-  $EmailID = $EmailID,
+  $ID = $ID;
+  $FName = $FName;
+  $LName = $LName;
+  $AddressID = $AddressID;
+  $PhoneID = $PhoneID;
+  $EmailID = $EmailID;
   $conn = get_connected();
   $query = "UPDATE People
               SET FName = '$FName', LName = '$LName', AddressID = '$AddressID', PhoneID = '$PhoneID', EmailID = '$EmailID'
