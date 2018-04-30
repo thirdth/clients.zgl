@@ -90,6 +90,7 @@ $claims = get_claims_byID($matterID);
                 <input type="text" class="form-control text-right" value="<?php echo number_format($xactionTotal, 2); ?>" readonly>
               </div>
             </form>
+            <hr>
             <form class="form-group" action="inserts/insertXaction.php" method="POST">
               <input type="hidden" name="claimID" value="<?php echo $claim['ID']; ?>">
               <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
