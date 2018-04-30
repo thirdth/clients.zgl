@@ -324,7 +324,7 @@ function update_claim($claimId, $description, $typeID) {
   $conn = get_connected();
   $query = "UPDATE Claims
               SET Description='$description', TypeID='$typeID'
-              WHERE id='$claimId'";
+              WHERE ID='$claimId'";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;
