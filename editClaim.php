@@ -5,7 +5,7 @@ include 'includes/garble_cnfg.php';
 protected_page();
 header_check();
 $claimID = $_GET['ID'];
-$matterID = $_GET['MatterID'];
+$matterID = $_GET['matterID'];
 $claim = get_claim_byID($claimID);
 print_r($claim);
 $Description = $claim['Description'];
@@ -17,9 +17,9 @@ $Type = $claim['TypeID'];
   <div class="col-md-6">
       <h2>Edit Claim</h2>
       <p>Please enter Claim information.</p>
-      <form action="inserts/updateClaim.php" method="post">
+      <form action="edits/updateClaim.php" method="post">
           <div class="form-group">
-              <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
+              <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
               <label>Description</label>
               <input type="text" name="Description" class="form-control" value="<?php echo $Description; ?>">
               <span class="help-block"></span>

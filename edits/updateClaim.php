@@ -5,7 +5,7 @@ include '../includes/garble_cnfg.php';
 $claimID = $_POST['ID'];
 $description = $_POST['Description'];
 $typeID = $_POST['Type'];
-$matterID = $_POST['MatterID']
+$matterID = $_POST['matterID']
 
 $result = update_claim($claimID, $description, $typeID);
 
