@@ -17,7 +17,8 @@ body {
 }
 
 hr{
-  border-top: 1px solid #000000;
+  border: 1px solid #000000;
+  background-color: #ffffff;
 }
 
 h1 {
