@@ -33,7 +33,7 @@ $advAddress = get_address_byID($adverse['AddressID']);
           <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
           <?php echo $phone['Number']; ?></br>
           <?php echo $email['Email']; ?></p>
-          <a href='editClient.php?ID=<?php echo $clientID; ?>'>Edit Client</a>
+          <a href='editClient.php?ID=<?php echo $matter['ClientID']; ?>'>Edit Client</a>
         </div>
         <div class="col-md-8 OtherParties">
           <h3 class="text-center">Parties</h3>
