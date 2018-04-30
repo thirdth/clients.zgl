@@ -286,7 +286,7 @@ function update_email($email, $clientId)  {
   return $emailId;
 }
 
-function update_email_byID($email, $emailId)  {
+function update_email_byID($emailId, $email)  {
   $email = $email;
   $emailId = $emailId;
   $conn = get_connected();
@@ -375,7 +375,24 @@ function update_claim($claimId, $description, $typeID) {
   }
 }
 
-
+function update_person_byID($ID, $AddressID, $PhoneID, $EmailID)  {
+  $ID = $ID,
+  $FName = $FName,
+  $LName = $LName,
+  $AddressID = $AddressID,
+  $PhoneID = $PhoneID,
+  $EmailID = $EmailID,
+  $conn = get_connected();
+  $query = "UPDATE People
+              SET FName = '$FName', LName = '$LName', AddressID = '$AddressID', PhoneID = '$PhoneID', EmailID = '$EmailID'
+              WHERE ID = '$ID'";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysql_error($conn));
+  }
+}
 
 // Get Info Functions
 
