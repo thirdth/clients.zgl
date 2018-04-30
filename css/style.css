@@ -16,6 +16,10 @@ body {
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
+hr{
+  border: 1px solid #000000;
+}
+
 h1 {
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
@@ -104,12 +108,6 @@ footer{
   margin-top: 8px;
   margin-bottom: 8px;
   background-color: #fafafa;
-}
-
-.claim hr{
-  border-top: 1px solid #0F1E2E;
-  margin-top: 0px;
-  border: 1px;
 }
 
 .feature {
