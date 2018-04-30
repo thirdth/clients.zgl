@@ -41,7 +41,7 @@ $claims = get_claims_byID($matterID);
         }
         ?></p>
         <form class="form-group" action="inserts/insertNote.php" method="POST">
-          <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
+          <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
           <div class="form-group">
             <textarea class="form-control" rows="3" name="body"></textarea>
           </div>
@@ -59,7 +59,7 @@ $claims = get_claims_byID($matterID);
             echo "<div class='col-md-12 claim'>
                     <div class='col-md-12'>
                       <p>Description: " . $claim['Description'] . "
-                      <a href='/editClaim.php?ID=" . $claim['ID'] . "&MatterID=" . $MatterID . "' class=' pull-right'>edit Claim</a>
+                      <a href='/editClaim.php?ID=" . $claim['ID'] . "&MatterID=" . $matterID . "' class=' pull-right'>edit Claim</a>
                       </p>
                     </div>
                   <form class='form-group'>
