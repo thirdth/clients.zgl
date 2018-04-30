@@ -4,4 +4,6 @@ ini_set('display_errors', 'On');
 include '../includes/garble_cnfg.php';
 print_r($_POST);
 
+$claimID = $_POST['ID'];
+print($claimID);
 ?>
