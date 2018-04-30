@@ -41,6 +41,7 @@ $claims = get_claims_byID($matterID);
           foreach ($claims as $claim) {
             echo "<div class='col-md-12 claim'>
                     <p>Description: " . $claim['Description'] . "
+                    <div class='col-md-12'><a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a></div>
                     </p>
                   <form class='form-group'>
                     <div class='col-md-2'>
@@ -117,8 +118,7 @@ $claims = get_claims_byID($matterID);
           </div>
           <div class="col-md-12">
             <?php
-            echo "  <div class='col-md-12'><a href='/edits/editClaim.php?ID=?" . $claim['ID'] . "' class='btn btn-success btn-sm pull-right'>edit Claim</a></div>
-                  </div>";
+          echo "  </div>"
           }
 
          ?>
