@@ -1,8 +1,3 @@
-<?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-require_once 'includes/t4l_config.php';
-?>
 <!-- TODO: create README.md and documentation -->
 <html>
   <head>
