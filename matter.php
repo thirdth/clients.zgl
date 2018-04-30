@@ -57,16 +57,16 @@ $claims = get_claims_byID($matterID);
             foreach ($xactions as $xaction) {
               $phpdate = strtotime($xaction['CreatedDate']);
               $date = date('M-d-Y', $phpdate);
-              echo "  <div class='form-group col-md-1'>
+              echo "  <div class='form-group col-md-2'>
                         <input type='text' class='form-control' value='" . $date . "' readonly>
                       </div>
-                      <div class='form-group col-md-6'>
+                      <div class='form-group col-md-4'>
                         <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
                       </div>
                       <div class='form-group col-md-2'>
                         <input type='text' class='form-control text-right' value='" . $xaction['Amount'] . "' readonly>
                       </div>
-                      <div class='form-group col-md-1'>
+                      <div class='form-group col-md-2'>
                         <input type='text' class='form-control text-right' value='" . $xaction['CategoryID'] . "' readonly>
                       </div>
                       <div class='form-group col-md-2'>
