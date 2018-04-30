@@ -109,6 +109,7 @@ footer{
 .claim hr{
   border-top: 1px solid #0F1E2E;
   margin-top: 0px;
+  border: 1px;
 }
 
 .feature {
