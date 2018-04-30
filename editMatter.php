@@ -37,6 +37,7 @@ $advAddress = get_address_byID($adverse['AddressID']);
         </div>
       </div>
       <hr>
+      <h3>Matter Information</h3>
       <form action="edits/updateMatter.php" method="post">
           <div class="form-group">
               <input type="hidden" name="ID" value="<?php echo $matterID; ?>">
