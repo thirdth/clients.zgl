@@ -572,7 +572,7 @@ function delete_matter($matterID) {
   $query = "DELETE from Matters where ID='$matterID'";
   if ($conn->query($query) === TRUE) {
       mysqli_close($conn);
-      header("Location: ../clients.php);
+      header("Location: ../clients.php");
   } else {
       echo "Error deleting record: " . $conn->error;
   }
