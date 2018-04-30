@@ -4,6 +4,9 @@ ini_set('display_errors', 'On');
 include 'includes/garble_cnfg.php';
 protected_page();
 header_check();
+$claimID = $_GET['ID'];
+$claim = get_claim_byID($claimID);
+print_r($claim);
 ?>
 <div class="wrapper container">
   <div class="col-md-3">
