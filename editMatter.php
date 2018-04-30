@@ -48,6 +48,31 @@ $parties = get_people_byMatter($matterID);
               <input type="text" name="LName" class="form-control" value="<?php echo $adverse['LName']; ?>">
               <span class="help-block"></span>
           </div>
+          <div class="form-group col-md-12">
+              <label>Street</label>
+              <input type="text" name="Street1" class="form-control" value="<?php echo $advAddress['Street1']; ?>">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group col-md-12">
+              <label>Street 2</label>
+              <input type="text" name="Street2" class="form-control" value="<?php echo $advAddress['Street2']; ?>">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group col-md-6">
+              <label>City</label>
+              <input type="text" name="City" class="form-control" value="<?php echo $advAddress['City']; ?>">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group col-md-2">
+              <label>State</label>
+              <input type="text" name="State" class="form-control" value="<?php echo $advAddress['State']; ?>">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group col-md-4">
+              <label>Zip</label>
+              <input type="text" name="Zip" class="form-control" value="<?php echo $advAddress['Zip']; ?>">
+              <span class="help-block"></span>
+          </div>
         </div>
       </div>
       <hr>
