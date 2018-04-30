@@ -13,6 +13,7 @@ $phone = get_phone_byID($client['PhoneID']);
 $email = get_email_byID($client['EmailID']);
 $adverse = get_person_byID($matter['AdverseID']);
 $advAddress = get_address_byID($adverse['AddressID']);
+$parties = get_people_byMatter($matterID);
 
 ?>
 <div class="wrapper container-fluid">
@@ -37,6 +38,9 @@ $advAddress = get_address_byID($adverse['AddressID']);
         </div>
         <div class="col-md-8 OtherParties">
           <h3 class="text-center">Parties</h3>
+          <?php print_r($parties);
+
+          ?>
 
         </div>
       </div>

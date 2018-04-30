@@ -408,6 +408,15 @@ function get_person_byID($personID) {
   return $all[0];
 }
 
+function get_people_byMatter($matterID) {
+  $conn = get_connected();
+  $query = "SELECT * from People where MatterID='$matterID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all;
+}
+
 function get_notes_byId($matterID)  {
   $conn = get_connected();
   $query = "SELECT * from Notes where MatterID='$matterID'";
