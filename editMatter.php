@@ -73,10 +73,12 @@ $advAddress = get_address_byID($adverse['AddressID']);
                 <span class="help-block"></span>
             </div>
             <div class="form-group col-md-4">
+                <input type="hidden" name="advAddressID" value="<?php echo $phone['ID']; ?>">
                 <label>Phone</label>
-                <input type="text" name="Phone" class="form-control" value="<?php echo $phone['Number']; ?>">
+                <input type="text" name="PhoneID" class="form-control" value="<?php echo $phone['Number']; ?>">
             </div>
             <div class="form-group col-md-6">
+                <input type="hidden" name="EmailID" value="<?php echo $email['ID']; ?>">
                 <label>Email</label>
                 <input type="text" name="Email" class="form-control" value="<?php echo $email['Email']; ?>">
             </div>

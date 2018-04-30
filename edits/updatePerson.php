@@ -12,7 +12,9 @@ $Street2 = $_POST['Street2'];
 $City = $_POST['City'];
 $State = $_POST['State'];
 $Zip = $_POST['Zip'];
+$advPhoneID = $_POST['PhoneID'];
 $Phone = $_POST['Phone'];
+$advEmailID = $_POST['EmailID'];
 $Email = $_POST['Email'];
 
 $AddressID = update_address_byID($advAddressID, $Street1, $Street2, $City, $State, $Zip);
