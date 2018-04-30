@@ -6,7 +6,7 @@ print_r($_POST);
 $claimID = $_POST['ID'];
 $description = $_POST['Description'];
 $typeID = $_POST['Type'];
-$matterID = $_POST['matterID']
+$matterID = $_POST['MatterID']
 
 $result = update_claim($claimID, $description, $typeID);
 
