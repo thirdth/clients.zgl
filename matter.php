@@ -36,7 +36,7 @@ $claims = get_claims_byID($matterID);
         <small class="text-center">Notes:</small>
         <p><?php
         foreach ($notes as $note) {
-          echo "<p><small>" . $note['Body'] . "<a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a></p></small><hr>";
+          echo "<p><small>" . $note['Body'] . "<a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a></p></small>";
         }
         ?></p>
         <form class="form-group" action="inserts/insertNote.php" method="POST">
