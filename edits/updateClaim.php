@@ -8,4 +8,5 @@ $description = $_POST['Description'];
 $typeID = $_POST['Type'];
 $matterID = $_POST['matterID']
 
+echo $claimID . ", " . $description . ". " . $typeID . ", " . $matterID;
 ?>
