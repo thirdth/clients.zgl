@@ -318,7 +318,7 @@ function update_address($street1, $street2, $city, $state, $zip, $clientId)  {
   return $addressId;
 }
 
-function update_address_byID($addressID, $street1, $street2, $city, $state, $zip,)  {
+function update_address_byID($addressID, $street1, $street2, $city, $state, $zip)  {
   $street1 = $street1;
   $street2 = $street2;
   $city = $city;
