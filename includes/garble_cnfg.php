@@ -566,4 +566,16 @@ function delete_claim($claimID, $matterID) {
   $conn->close();
 }
 
+function delete_matter($matterID) {
+  $matterID = $matterID;
+  $conn = get_connected();
+  $query = "DELETE from Matters where ID='$matterID'";
+  if ($conn->query($query) === TRUE) {
+      mysqli_close($conn);
+      header("Location: ../clients.php);
+  } else {
+      echo "Error deleting record: " . $conn->error;
+  }
+}
+
 ?>
