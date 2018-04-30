@@ -315,6 +315,22 @@ function update_client($clientId, $FName, $MName, $LName, $contact, $address_id,
   }
 }
 
+function update_claim($claimId, $description, $typeID) {
+  $claimId = $claimId;
+  $description = $description;
+  $typeID = $typeID;
+  $conn = get_connected();
+  $query = "UPDATE Claims
+              SET Description='$description', TypeID='$typeID'
+              WHERE id='$claimId'";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
+
 // Get Info Functions
 
 function get_clients()  {
