@@ -13,6 +13,8 @@ $phone = get_phone_byID($client['PhoneID']);
 $email = get_email_byID($client['EmailID']);
 $adverse = get_person_byID($matter['AdverseID']);
 $advAddress = get_address_byID($adverse['AddressID']);
+$advPhone = get_phone_byID($adverse['PhoneID']);
+$advEmail = get_email_byID($adverse['EmailID']);
 
 
 ?>
@@ -78,14 +80,14 @@ $advAddress = get_address_byID($adverse['AddressID']);
                 <span class="help-block"></span>
             </div>
             <div class="form-group col-md-4">
-                <input type="hidden" name="PhoneID" value="<?php echo $phone['ID']; ?>">
+                <input type="hidden" name="PhoneID" value="<?php echo $advPhone['ID']; ?>">
                 <label>Phone</label>
-                <input type="text" name="Phone" class="form-control" value="<?php echo $phone['Number']; ?>">
+                <input type="text" name="Phone" class="form-control" value="<?php echo $advPhone['Number']; ?>">
             </div>
             <div class="form-group col-md-6">
-                <input type="hidden" name="EmailID" value="<?php echo $email['ID']; ?>">
+                <input type="hidden" name="EmailID" value="<?php echo $advEmail['ID']; ?>">
                 <label>Email</label>
-                <input type="text" name="Email" class="form-control" value="<?php echo $email['Email']; ?>">
+                <input type="text" name="Email" class="form-control" value="<?php echo $advEmail['Email']; ?>">
             </div>
             <button type="submit" class="btn btn-success btn-sm pull-right" name="submitPerson" value="submitPerson">Edit Info</button>
           </form>
