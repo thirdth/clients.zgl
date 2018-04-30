@@ -7,5 +7,6 @@ print_r($_POST);
 $claimID = $_POST['ID'];
 $description = $_POST['Description'];
 $typeID = $_POST['Type'];
-print($typeID);
+$matterID = $_POST['matterID'];
+print($matterID);
 ?>
