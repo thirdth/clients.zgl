@@ -429,7 +429,9 @@ function get_phone_byID($phoneID) {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all[0];
+  if ($all) {
+    return $all[0];
+  }
 }
 
 function get_email_byID($emailID) {
@@ -438,7 +440,9 @@ function get_email_byID($emailID) {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all[0];
+  if ($all) {
+    return $all[0];
+  }
 }
 
 function get_matters_byClientID($clientID)  {
