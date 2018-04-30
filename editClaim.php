@@ -31,7 +31,7 @@ $Type = $claim['TypeID'];
               <span class="help-block"></span>
           </div>
           <div class="form-group">
-              <button type="submit" class="btn btn-success" name="submit" value="Submit"></button>
+              <button type="submit" class="btn btn-success" name="submit" value="Submit">Submit</button>
           </div>
       </form>
     </div>
