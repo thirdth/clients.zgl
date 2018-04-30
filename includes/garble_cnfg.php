@@ -414,7 +414,7 @@ function get_claim_byId($claimID)  {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all;
+  return $all[0];
 }
 
 function get_xaction_byClaimId($claimID)  {
