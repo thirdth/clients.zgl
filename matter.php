@@ -19,7 +19,7 @@ $claims = get_claims_byID($matterID);
 // TODO: add matters here
 ?>
 <div class="wrapper container-fluid">
-  <div class="col-md-2">
+  <div class="col-md-2 sidebar">
     sidebar column
   </div>
   <div class='col-md-10'>
