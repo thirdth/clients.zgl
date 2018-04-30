@@ -6,5 +6,6 @@ print_r($_POST);
 
 $claimID = $_POST['ID'];
 $description = $_POST['Description'];
-print($description);
+$typeID = $_POST['Type'];
+print($typeID);
 ?>
