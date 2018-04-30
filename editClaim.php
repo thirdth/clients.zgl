@@ -32,6 +32,7 @@ $Type = $claim['TypeID'];
           </div>
           <div class="form-group">
               <button type="submit" class="btn btn-success" name="submit" value="Submit">Submit</button>
+              <a href="deletes/deleteClaim.php?ID=<?php echo $claimID; ?>&matterID=<?php echo $matterID; ?>" class="btn btn-danger btn-sm pull-right">delete Claim</a>
           </div>
       </form>
     </div>

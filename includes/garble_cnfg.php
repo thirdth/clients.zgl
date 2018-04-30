@@ -478,4 +478,18 @@ function delete_xaction($xactionID, $matterID) {
   $conn->close();
 }
 
+function delete_claim($claimID, $matterID) {
+  $conn = get_connected();
+  $claimID = $claimID;
+  $matterID = $matterID;
+  $sql = "DELETE from Claims where ID='$claimID'";
+  if ($conn->query($sql) === TRUE) {
+      mysqli_close($conn);
+      header("Location: ../matter.php?ID=" . $matterID);
+  } else {
+      echo "Error deleting record: " . $conn->error;
+  }
+  $conn->close();
+}
+
 ?>
