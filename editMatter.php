@@ -12,7 +12,7 @@ $adverse = get_person_byID($matter['AdverseID']);
 
 ?>
 <div class="wrapper container-fluid">
-  <div class="col-md-2">
+  <div class="col-md-2 sidebar">
     sidebar
   </div>
   <div class="col-md-10">
