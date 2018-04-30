@@ -22,9 +22,10 @@ $advAddress = get_address_byID($adverse['AddressID']);
   <div class="col-md-10">
       <h3 class="text-center"><strong>Edit: <?php echo $matter['Name']; ?></strong></h3>
       <div class='col-md-12'>
-        <h3>Client Information</h3>
+        <h3>Parties</h3>
         <hr>
         <div class="col-md-4">
+          <h3 class="text-center"><strong>Client Information</strong></h3>
           <h3><?php echo $client['FName'] . " " . $client['LName']; ?></h3>
           <p><?php echo $address['Street1']; ?></br>
           <?php if ($address['Street2']){
