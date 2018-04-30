@@ -38,10 +38,16 @@ $parties = get_people_byMatter($matterID);
         </div>
         <div class="col-md-8 OtherParties">
           <h3 class="text-center">Parties</h3>
-          <?php print_r($parties);
-
-          ?>
-
+          <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="FName" class="form-control" value="<?php echo $adverse['FName']; ?>">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="LName" class="form-control" value="<?php echo $adverse['LName']; ?>">
+              <span class="help-block"></span>
+          </div>
         </div>
       </div>
       <hr>
@@ -56,16 +62,6 @@ $parties = get_people_byMatter($matterID);
           <div class="form-group">
               <label>Notes</label>
               <input type="text" name="Notes" class="form-control" value="<?php echo $matter['Notes']; ?>">
-              <span class="help-block"></span>
-          </div>
-          <div class="form-group">
-              <label>First Name</label>
-              <input type="text" name="FName" class="form-control" value="<?php echo $adverse['FName']; ?>">
-              <span class="help-block"></span>
-          </div>
-          <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" name="LName" class="form-control" value="<?php echo $adverse['LName']; ?>">
               <span class="help-block"></span>
           </div>
           <div class="form-group">
