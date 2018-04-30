@@ -61,7 +61,7 @@ $claims = get_claims_byID($matterID);
                       <div class='form-group col-md-2'>
                         <input type='text' class='form-control' value='" . $date . "' readonly>
                       </div>
-                      <div class='form-group col-md-4'>
+                      <div class='form-group col-md-5'>
                         <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
                       </div>
                       <div class='form-group col-md-2'>
@@ -70,7 +70,7 @@ $claims = get_claims_byID($matterID);
                       <div class='form-group col-md-2'>
                         <input type='text' class='form-control text-right' value='" . $xaction['CategoryID'] . "' readonly>
                       </div>
-                      <div class='form-group col-md-2'>
+                      <div class='form-group col-md-1'>
                         <a href='/deletes/deleteXaction.php?ID=" . $xaction['ID'] . "&matterID=" . $matterID. "' class='btn btn-sm btn-danger pull-right'>delete</a>
                       </div>
                     </div>
