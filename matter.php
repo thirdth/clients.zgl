@@ -31,6 +31,7 @@ $claims = get_claims_byID($matterID);
         <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
         <?php echo $phone['Number']; ?></br>
         <?php echo $email['Email']; ?></p>
+        <a class="pull-right" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
       </div>
       <div class='col-md-9 notes'>
         <small class="text-center">Notes:</small>
@@ -49,7 +50,6 @@ $claims = get_claims_byID($matterID);
           </div>
         </form>
       </div>
-      <a class="pull-right" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
       <hr>
     <div class="col-md-12">
       <div class="col-md-12">
