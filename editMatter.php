@@ -36,7 +36,7 @@ $adverse = get_person_byID($matter['AdverseID']);
           </div>
           <div class="form-group">
               <label>First Name</label>
-              <input type="text" name="FName" class="form-control" value="<?php echo $adverse['Fname']; ?>">
+              <input type="text" name="FName" class="form-control" value="<?php echo $adverse['FName']; ?>">
               <span class="help-block"></span>
           </div>
           <div class="form-group">
