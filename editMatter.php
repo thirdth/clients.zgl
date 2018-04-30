@@ -19,6 +19,7 @@ $adverse = get_person_byID($matter['AdverseID']);
       <h3 class="text-center"><strong>Edit: <?php echo $matter['Name']; ?></strong></h3>
       <div class='col-md-12'>
         <h3>Client Information</h3>
+        <p><?php echo $client['Name']; ?></p>
         <a href="editClient.php?ID=<?php echo $matter['ClientID']; ?>" class="btn btn-success btn-sm">Edit Client</a>
       </div>
       <hr>
