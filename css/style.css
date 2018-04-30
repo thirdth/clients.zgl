@@ -94,7 +94,8 @@ footer{
   border-right: 1px solid lightgrey;
   height: 100%;
   background-color: #224468;
-  margin-top: -15px; 
+  margin-top: -15px;
+  margin-left: -15px;
 }
 
 .client {
