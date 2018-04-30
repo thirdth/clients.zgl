@@ -31,9 +31,8 @@ $claims = get_claims_byID($matterID);
         <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
         <?php echo $phone['Number']; ?></br>
         <?php echo $email['Email']; ?></p>
-
       </div>
-      <div class='col-md-9'>
+      <div class='col-md-9 notes'>
         <small class="text-center">Notes:</small>
         <p><?php
         foreach ($notes as $note) {
@@ -154,9 +153,6 @@ $claims = get_claims_byID($matterID);
            </div>
          </form>
        </div>
-      </div>
-      <div class="col-md-12">
-
       </div>
     </div>
   </div>
