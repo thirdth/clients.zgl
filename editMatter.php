@@ -85,7 +85,7 @@ $advAddress = get_address_byID($adverse['AddressID']);
               <span class="help-block"></span>
           </div>
           <div class="form-group col-md-6">
-            <select name="Type" value="<?php echo $matter['CategoryID']; ?>">
+            <select class="form-group" name="Type" value="<?php echo $matter['CategoryID']; ?>">
               <option value="0">Landord/Tenant</option>
               <option value="1">Breach of Contract</option>
               <option value="2">Tort</option>
