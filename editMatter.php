@@ -37,13 +37,13 @@ $parties = get_people_byMatter($matterID);
           <a href='editClient.php?ID=<?php echo $matter['ClientID']; ?>'>Edit Client</a>
         </div>
         <div class="col-md-8 OtherParties">
-          <h3 class="text-center">Parties</h3>
-          <div class="form-group">
+          <h3 class="text-center">Adverse</h3>
+          <div class="form-group col-md-6">
               <label>First Name</label>
               <input type="text" name="FName" class="form-control" value="<?php echo $adverse['FName']; ?>">
               <span class="help-block"></span>
           </div>
-          <div class="form-group">
+          <div class="form-group col-md-6">
               <label>Last Name</label>
               <input type="text" name="LName" class="form-control" value="<?php echo $adverse['LName']; ?>">
               <span class="help-block"></span>
