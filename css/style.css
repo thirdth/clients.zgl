@@ -93,6 +93,7 @@ footer{
 .sidebar  {
   border-right: 1px solid lightgrey;
   height: 100%;
+  position: fixed;
   background-color: #3E4A57;
   margin-top: -15px;
   margin-left: -15px;
