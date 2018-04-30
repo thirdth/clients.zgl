@@ -95,6 +95,10 @@ footer{
   height: 100%;
 }
 
+.client {
+  border-right: 1px solid lightgrey;
+}
+
 .brand{
   font-weight: bold;
   font-size: 1.5em;
