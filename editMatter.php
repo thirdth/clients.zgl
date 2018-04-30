@@ -16,7 +16,7 @@ $adverse = get_person_byID($matter['AdverseID']);
     sidebar
   </div>
   <div class="col-md-10">
-      <h2>Edit: <?php echo $matter['Name']; ?></h2>
+      <h3 class="text-center"><strong>Edit: <?php echo $matter['Name']; ?></strong></h3>
       <div class='col-md-12'>
         <h3>Client Information</h3>
         <a href="editClient.php?ID=<?php echo $matter['ClientID']; ?>" class="btn btn-success btn-sm">Edit Client</a>
