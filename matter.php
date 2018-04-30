@@ -100,7 +100,7 @@ $claims = get_claims_byID($matterID);
                   <input type="text" class="form-control" aria-label="amount" name="amount">
                 </div>
                 </div>
-              <div class="form-group col-md-7">
+              <div class="form-group col-md-5">
                 <label>Memo</label>
                 <input type="text" class="form-control" name="memo">
               </div>
@@ -113,7 +113,7 @@ $claims = get_claims_byID($matterID);
                   <option value="3">Misc.</option>
                 </select>
               </div>
-              <div class="form-group col-md-12">
+              <div class="form-group col-md-2">
                 <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Transaction</button>
               </div>
             </form>
