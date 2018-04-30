@@ -57,7 +57,8 @@ $claims = get_claims_byID($matterID);
             foreach ($xactions as $xaction) {
               $phpdate = strtotime($xaction['CreatedDate']);
               $date = date('M-d-Y', $phpdate);
-              echo "  <div class='form-group col-md-2'>
+              echo "<div class='col-md-12'>
+                      <div class='form-group col-md-2'>
                         <input type='text' class='form-control' value='" . $date . "' readonly>
                       </div>
                       <div class='form-group col-md-4'>
@@ -72,6 +73,7 @@ $claims = get_claims_byID($matterID);
                       <div class='form-group col-md-2'>
                         <a href='/deletes/deleteXaction.php?ID=" . $xaction['ID'] . "&MatterID=" . $matterID. "' class='btn btn-sm btn-danger pull-right'>delete</a>
                       </div>
+                    </div>
                     ";
               $xactionTotal += $xaction['Amount'];
             }
