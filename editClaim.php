@@ -8,7 +8,7 @@ $claimID = $_GET['ID'];
 $claim = get_claim_byID($claimID);
 print_r($claim);
 $Description = $claim['Description'];
-$Type = $claim['CategoryID'];
+$Type = $claim['TypeID'];
 ?>
 <div class="wrapper container">
   <div class="col-md-3">
