@@ -4,6 +4,7 @@ ini_set('display_errors', 'On');
 include '../includes/garble_cnfg.php';
 
 $matterID = $_POST['ID'];
+$ID = $_POST['AdverseID'];
 $FName = $_POST['FName'];
 $LName = $_POST['LName'];
 $advAddressID = $_POST['advAddressID'];
@@ -22,7 +23,7 @@ $PhoneID = update_phone_byID($advPhoneID, $Phone);
 $EmailID = update_email_byID($advEmailID, $Email);
 
 
-$result = update_person_byID($FName, $LName, $AddressID, $PhoneID, $EmailID);
+$result = update_person_byID($ID, $FName, $LName, $AddressID, $PhoneID, $EmailID);
 
 if ($result)  {
   header("Location: ../matter.php?ID=" .  $matterID);
