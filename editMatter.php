@@ -74,7 +74,7 @@ $advAddress = get_address_byID($adverse['AddressID']);
                 <input type="text" name="Zip" class="form-control" value="<?php echo $advAddress['Zip']; ?>">
                 <span class="help-block"></span>
             </div>
-            <button type="submit" class="btn btn-success btn-sm" name="submitPerson" value="submitPerson">Submit</button>
+            <button type="submit" class="btn btn-success btn-sm pull-right" name="submitPerson" value="submitPerson">Edit Info</button>
           </form>
         </div>
       </div>
