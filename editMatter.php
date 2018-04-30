@@ -26,22 +26,22 @@ $adverse = get_person_byID($matter['AdverseID']);
           <div class="form-group">
               <input type="hidden" name="ID" value="<?php echo $matterID; ?>">
               <label>Name:</label>
-              <input type="text" name="Name" class="form-control" value="<?php echo $Name; ?>">
+              <input type="text" name="Name" class="form-control" value="<?php echo $matter['Name']; ?>">
               <span class="help-block"></span>
           </div>
           <div class="form-group">
               <label>Notes</label>
-              <input type="text" name="Notes" class="form-control" value="<?php echo $Notes; ?>">
+              <input type="text" name="Notes" class="form-control" value="<?php echo $matter['Notes']; ?>">
               <span class="help-block"></span>
           </div>
           <div class="form-group">
               <label>First Name</label>
-              <input type="text" name="FName" class="form-control" value="<?php echo $Adverse['Fname']; ?>">
+              <input type="text" name="FName" class="form-control" value="<?php echo $adverse['Fname']; ?>">
               <span class="help-block"></span>
           </div>
           <div class="form-group">
               <label>Last Name</label>
-              <input type="text" name="LName" class="form-control" value="<?php echo $Adverse['LName']; ?>">
+              <input type="text" name="LName" class="form-control" value="<?php echo $adverse['LName']; ?>">
               <span class="help-block"></span>
           </div>
           <div class="form-group">
