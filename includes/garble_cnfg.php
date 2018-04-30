@@ -324,7 +324,7 @@ function update_address_byID($addressID, $street1, $street2, $city, $state, $zip
   $city = $city;
   $state = $state;
   $zip = $zip;
-  $addressId = $addressId;
+  $addressId = $addressID;
   $conn = get_connected();
   $query = "UPDATE Addresses
               SET Street1='$street1', Street2='$street2', City='$city', State='$state',
@@ -375,7 +375,7 @@ function update_claim($claimId, $description, $typeID) {
   }
 }
 
-function update_person_byID($ID, $AddressID, $PhoneID, $EmailID)  {
+function update_person_byID($ID, $FName, $LName, $AddressID, $PhoneID, $EmailID)  {
   $ID = $ID;
   $FName = $FName;
   $LName = $LName;
