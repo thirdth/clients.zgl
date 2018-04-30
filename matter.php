@@ -71,7 +71,7 @@ $claims = get_claims_byID($matterID);
                         <input type='text' class='form-control text-right' value='" . $xaction['CategoryID'] . "' readonly>
                       </div>
                       <div class='form-group col-md-2'>
-                        <a href='/deletes/deleteXaction.php?ID=" . $xaction['ID'] . "&MatterID=" . $matterID. "' class='btn btn-sm btn-danger pull-right'>delete</a>
+                        <a href='/deletes/deleteXaction.php?ID=" . $xaction['ID'] . "&matterID=" . $matterID. "' class='btn btn-sm btn-danger pull-right'>delete</a>
                       </div>
                     </div>
                     ";
