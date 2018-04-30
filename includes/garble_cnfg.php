@@ -437,4 +437,20 @@ function delete_note($noteID) {
   $conn->close();
 }
 
+function delete_note($xactionID, $matterID) {
+  $conn = get_connected();
+  $query = "SELECT * from Xactions where ID='$xactionID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  $matterID = $matterID;
+  $sql = "DELETE from Notes where ID='$noteID'";
+  if ($conn->query($sql) === TRUE) {
+      mysqli_close($conn);
+      header("Location: ../matter.php?ID=" . $matterID);
+  } else {
+      echo "Error deleting record: " . $conn->error;
+  }
+  $conn->close();
+}
+
 ?>

@@ -40,8 +40,7 @@ $claims = get_claims_byID($matterID);
         <?php
           foreach ($claims as $claim) {
             echo "<div class='col-md-12 claim'>
-                    <p>Claim No: " . $claim['ID'] . " Create Date: " . $claim['CreatedDate'] . " Last Edit: " . $claim['EditedDate'] . "</br>
-                    Description: " . $claim['Description'] . "
+                    <p>Description: " . $claim['Description'] . "
                     </p>
                   <form class='form-group'>
                     <div class='col-md-2'>
@@ -58,14 +57,20 @@ $claims = get_claims_byID($matterID);
             foreach ($xactions as $xaction) {
               $phpdate = strtotime($xaction['CreatedDate']);
               $date = date('M-d-Y', $phpdate);
-              echo "  <div class='form-group col-md-2'>
+              echo "  <div class='form-group col-md-1'>
                         <input type='text' class='form-control' value='" . $date . "' readonly>
                       </div>
-                      <div class='form-group col-md-8'>
+                      <div class='form-group col-md-2'>
                         <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
                       </div>
                       <div class='form-group col-md-2'>
                         <input type='text' class='form-control text-right' value='" . $xaction['Amount'] . "' readonly>
+                      </div>
+                      <div class='form-group col-md-1'>
+                        <input type='text' class='form-control text-right' value='" . $xaction['Type'] . "' readonly>
+                      </div>
+                      <div class='form-group col-md-2'>
+                        <a href='/deletes/deleteXaction.php?ID=" . $xaction['ID'] . "&MatterID=" . $matterID. "' class='btn btn-sm btn-danger pull-right'>delete</a>
                       </div>
                     ";
               $xactionTotal += $xaction['Amount'];
