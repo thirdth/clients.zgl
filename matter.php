@@ -19,10 +19,10 @@ $claims = get_claims_byID($matterID);
 // TODO: add matters here
 ?>
 <div class="wrapper container-fluid">
-  <div class="col-md-3">
+  <div class="col-md-2">
     sidebar column
   </div>
-  <div class='col-md-9'>
+  <div class='col-md-10'>
     <div class="col-md-12">
         <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong></h3>
         <hr>
