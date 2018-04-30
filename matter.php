@@ -114,7 +114,7 @@ $claims = get_claims_byID($matterID);
                 </select>
               </div>
               <div class="form-group col-md-2">
-                <button type="submit" class="btn btn-sm btn-primary pull-right pt-2" name="submit">add Transaction</button>
+                <button type="submit" class="btn btn-sm btn-primary pull-right" style="margin-top: 20px;" name="submit">add Transaction</button>
               </div>
             </form>
           </div>
