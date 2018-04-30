@@ -60,7 +60,7 @@ $claims = get_claims_byID($matterID);
               echo "  <div class='form-group col-md-1'>
                         <input type='text' class='form-control' value='" . $date . "' readonly>
                       </div>
-                      <div class='form-group col-md-2'>
+                      <div class='form-group col-md-6'>
                         <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
                       </div>
                       <div class='form-group col-md-2'>
