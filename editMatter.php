@@ -38,47 +38,50 @@ $advAddress = get_address_byID($adverse['AddressID']);
         </div>
         <div class="col-md-8 OtherParties">
           <h3 class="text-center">Adverse</h3>
-          <div class="form-group col-md-6">
-              <label>First Name</label>
-              <input type="text" name="FName" class="form-control" value="<?php echo $adverse['FName']; ?>">
-              <span class="help-block"></span>
-          </div>
-          <div class="form-group col-md-6">
-              <label>Last Name</label>
-              <input type="text" name="LName" class="form-control" value="<?php echo $adverse['LName']; ?>">
-              <span class="help-block"></span>
-          </div>
-          <div class="form-group col-md-12">
-              <label>Street</label>
-              <input type="text" name="Street1" class="form-control" value="<?php echo $advAddress['Street1']; ?>">
-              <span class="help-block"></span>
-          </div>
-          <div class="form-group col-md-12">
-              <label>Street 2</label>
-              <input type="text" name="Street2" class="form-control" value="<?php echo $advAddress['Street2']; ?>">
-              <span class="help-block"></span>
-          </div>
-          <div class="form-group col-md-6">
-              <label>City</label>
-              <input type="text" name="City" class="form-control" value="<?php echo $advAddress['City']; ?>">
-              <span class="help-block"></span>
-          </div>
-          <div class="form-group col-md-2">
-              <label>State</label>
-              <input type="text" name="State" class="form-control" value="<?php echo $advAddress['State']; ?>">
-              <span class="help-block"></span>
-          </div>
-          <div class="form-group col-md-4">
-              <label>Zip</label>
-              <input type="text" name="Zip" class="form-control" value="<?php echo $advAddress['Zip']; ?>">
-              <span class="help-block"></span>
-          </div>
+          <form action="/updatePerson.php" method="POST">
+            <div class="form-group col-md-6">
+                <label>First Name</label>
+                <input type="text" name="FName" class="form-control" value="<?php echo $adverse['FName']; ?>">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Last Name</label>
+                <input type="text" name="LName" class="form-control" value="<?php echo $adverse['LName']; ?>">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label>Street</label>
+                <input type="text" name="Street1" class="form-control" value="<?php echo $advAddress['Street1']; ?>">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label>Street 2</label>
+                <input type="text" name="Street2" class="form-control" value="<?php echo $advAddress['Street2']; ?>">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label>City</label>
+                <input type="text" name="City" class="form-control" value="<?php echo $advAddress['City']; ?>">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-2">
+                <label>State</label>
+                <input type="text" name="State" class="form-control" value="<?php echo $advAddress['State']; ?>">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Zip</label>
+                <input type="text" name="Zip" class="form-control" value="<?php echo $advAddress['Zip']; ?>">
+                <span class="help-block"></span>
+            </div>
+            <button type="submit" class="btn btn-success btn-sm" name="submitPerson" value="submitPerson">Submit</button>
+          </form>
         </div>
       </div>
       <hr>
       <h3>Matter Information</h3>
       <form action="edits/updateMatter.php" method="post">
-          <div class="form-group col-md-12">
+          <div class="form-group">
               <input type="hidden" name="ID" value="<?php echo $matterID; ?>">
               <label>Caption:</label>
               <input type="text" name="Name" class="form-control" value="<?php echo $matter['Name']; ?>">
