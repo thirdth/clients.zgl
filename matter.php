@@ -18,141 +18,146 @@ $notes = get_notes_byID($matterID);
 $claims = get_claims_byID($matterID);
 // TODO: add matters here
 ?>
-<div class="wrapper container">
-  <div class="col-md-12">
-      <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong></h3>
-      <hr>
-      <div class="col-md-3">
-        <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
-        <p><?php echo $address['Street1']; ?></br>
-        <?php if ($address['Street2']){
-          echo $address['Street2'] . "</br>";
-        } ?>
-        <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
-        <?php echo $phone['Number']; ?></br>
-        <?php echo $email['Email']; ?></p>
-        <a class="pull-right" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
-      </div>
-      <div class='col-md-9 notes'>
-        <small class="text-center">Notes:</small>
-        <p><?php
-        foreach ($notes as $note) {
-          echo "<p><small>" . $note['Body'] . "<a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a></p></small>";
-        }
-        ?></p>
-        <form class="form-group" action="inserts/insertNote.php" method="POST">
-          <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
-          <div class="form-group">
-            <textarea class="form-control" rows="3" name="body"></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-sm pull-right" name="submit">add Note</button>
-          </div>
-        </form>
-      </div>
-      <hr>
+<div class="wrapper container-fluid">
+  <div class="col-md-3">
+    sidebar column
+  </div>
+  <div class='col-md-9'>
     <div class="col-md-12">
-      <div class="col-md-12">
-        <strong class="text-center">Claims:</strong>
-        <?php
-          foreach ($claims as $claim) {
-            echo "<div class='col-md-12 claim'>
-                    <div class='col-md-12'>
-                      <p>Description: " . $claim['Description'] . "
-                      <a href='/editClaim.php?ID=" . $claim['ID'] . "&MatterID=" . $matterID . "' class=' pull-right'>edit Claim</a>
-                      </p>
-                    </div>
-                  <form class='form-group'>
-                    <div class='col-md-2'>
-                      <label>Date</label>
-                    </div>
-                    <div class='col-md-8'>
-                      <label>Memo</label>
-                    </div>
-                    <div class='col-md-2'>
-                      <label>Amount</label>
-                    </div>";
-            $xactionTotal = 0;
-            $xactions = get_xaction_byClaimID($claim['ID']);
-            foreach ($xactions as $xaction) {
-              $phpdate = strtotime($xaction['CreatedDate']);
-              $date = date('M-d-Y', $phpdate);
-              echo "<div class='col-md-12'>
-                      <div class='form-group col-md-2'>
-                        <input type='text' class='form-control' value='" . $date . "' readonly>
-                      </div>
-                      <div class='form-group col-md-5'>
-                        <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
-                      </div>
-                      <div class='form-group col-md-2'>
-                        <input type='text' class='form-control text-right' value='" . $xaction['Amount'] . "' readonly>
-                      </div>
-                      <div class='form-group col-md-2'>
-                        <input type='text' class='form-control text-right' value='" . $xaction['CategoryID'] . "' readonly>
-                      </div>
-                      <div class='form-group col-md-1'>
-                        <a href='/deletes/deleteXaction.php?ID=" . $xaction['ID'] . "&matterID=" . $matterID. "' class='btn btn-sm btn-danger pull-right'>delete</a>
-                      </div>
-                    </div>
-                    ";
-              $xactionTotal += $xaction['Amount'];
-            }
-            ?>
-              <div class="col-md-8">
-              </div>
-              <div class="form-group col-md-2">
-                <label>Total</label>
-              </div>
-              <div class="form-group col-md-2">
-                <input type="text" class="form-control text-right" value="<?php echo number_format($xactionTotal, 2); ?>" readonly>
-              </div>
-            </form>
-            <hr>
-            <form class="form-group" action="inserts/insertXaction.php" method="POST">
-              <input type="hidden" name="claimID" value="<?php echo $claim['ID']; ?>">
-              <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
-              <div class="form-group col-md-3">
-                <label>Amount</label>
-                <div class="input-group">
-                  <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control" aria-label="amount" name="amount">
-                </div>
-                </div>
-              <div class="form-group col-md-5">
-                <label>Memo</label>
-                <input type="text" class="form-control" name="memo">
-              </div>
-              <div class="form-group col-md-2">
-                <label>Type</label>
-                <select class="form-control" name="type">
-                  <option value="0">Damages</option>
-                  <option value="1">Attorney Fees</option>
-                  <option value="2">Costs</option>
-                  <option value="3">Misc.</option>
-                </select>
-              </div>
-              <div class="form-group col-md-2">
-                <button type="submit" class="btn btn-sm btn-primary pull-right" style="margin-top: 25px;" name="submit">add Transaction</button>
-              </div>
-            </form>
-          </div>
-            <?php
+        <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong></h3>
+        <hr>
+        <div class="col-md-3">
+          <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
+          <p><?php echo $address['Street1']; ?></br>
+          <?php if ($address['Street2']){
+            echo $address['Street2'] . "</br>";
+          } ?>
+          <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
+          <?php echo $phone['Number']; ?></br>
+          <?php echo $email['Email']; ?></p>
+          <a class="pull-right" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
+        </div>
+        <div class='col-md-9 notes'>
+          <small class="text-center">Notes:</small>
+          <p><?php
+          foreach ($notes as $note) {
+            echo "<p><small>" . $note['Body'] . "<a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a></p></small>";
           }
+          ?></p>
+          <form class="form-group" action="inserts/insertNote.php" method="POST">
+            <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
+            <div class="form-group">
+              <textarea class="form-control" rows="3" name="body"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-sm pull-right" name="submit">add Note</button>
+            </div>
+          </form>
+        </div>
+        <hr>
+      <div class="col-md-12">
+        <div class="col-md-12">
+          <strong class="text-center">Claims:</strong>
+          <?php
+            foreach ($claims as $claim) {
+              echo "<div class='col-md-12 claim'>
+                      <div class='col-md-12'>
+                        <p>Description: " . $claim['Description'] . "
+                        <a href='/editClaim.php?ID=" . $claim['ID'] . "&MatterID=" . $matterID . "' class=' pull-right'>edit Claim</a>
+                        </p>
+                      </div>
+                    <form class='form-group'>
+                      <div class='col-md-2'>
+                        <label>Date</label>
+                      </div>
+                      <div class='col-md-8'>
+                        <label>Memo</label>
+                      </div>
+                      <div class='col-md-2'>
+                        <label>Amount</label>
+                      </div>";
+              $xactionTotal = 0;
+              $xactions = get_xaction_byClaimID($claim['ID']);
+              foreach ($xactions as $xaction) {
+                $phpdate = strtotime($xaction['CreatedDate']);
+                $date = date('M-d-Y', $phpdate);
+                echo "<div class='col-md-12'>
+                        <div class='form-group col-md-2'>
+                          <input type='text' class='form-control' value='" . $date . "' readonly>
+                        </div>
+                        <div class='form-group col-md-5'>
+                          <input type='text' class='form-control' value='" . $xaction['Note'] . "' readonly>
+                        </div>
+                        <div class='form-group col-md-2'>
+                          <input type='text' class='form-control text-right' value='" . $xaction['Amount'] . "' readonly>
+                        </div>
+                        <div class='form-group col-md-2'>
+                          <input type='text' class='form-control text-right' value='" . $xaction['CategoryID'] . "' readonly>
+                        </div>
+                        <div class='form-group col-md-1'>
+                          <a href='/deletes/deleteXaction.php?ID=" . $xaction['ID'] . "&matterID=" . $matterID. "' class='btn btn-sm btn-danger pull-right'>delete</a>
+                        </div>
+                      </div>
+                      ";
+                $xactionTotal += $xaction['Amount'];
+              }
+              ?>
+                <div class="col-md-8">
+                </div>
+                <div class="form-group col-md-2">
+                  <label>Total</label>
+                </div>
+                <div class="form-group col-md-2">
+                  <input type="text" class="form-control text-right" value="<?php echo number_format($xactionTotal, 2); ?>" readonly>
+                </div>
+              </form>
+              <hr>
+              <form class="form-group" action="inserts/insertXaction.php" method="POST">
+                <input type="hidden" name="claimID" value="<?php echo $claim['ID']; ?>">
+                <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
+                <div class="form-group col-md-3">
+                  <label>Amount</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" class="form-control" aria-label="amount" name="amount">
+                  </div>
+                  </div>
+                <div class="form-group col-md-5">
+                  <label>Memo</label>
+                  <input type="text" class="form-control" name="memo">
+                </div>
+                <div class="form-group col-md-2">
+                  <label>Type</label>
+                  <select class="form-control" name="type">
+                    <option value="0">Damages</option>
+                    <option value="1">Attorney Fees</option>
+                    <option value="2">Costs</option>
+                    <option value="3">Misc.</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <button type="submit" class="btn btn-sm btn-primary pull-right" style="margin-top: 25px;" name="submit">add Transaction</button>
+                </div>
+              </form>
+            </div>
+              <?php
+            }
 
-         ?>
-         <form class="form-group" action="inserts/insertClaim.php" method="POST">
-           <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
-           <div class="form-inline">
-             <label>Description</label>
-             <input type="text" class="form-control" name="description">
-             <label>Incident Date</label>
-             <input type="text" class="form-control" name="incidentDate">
-           </div>
-           <div class="form-group">
-             <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Claim</button>
-           </div>
-         </form>
-       </div>
+           ?>
+           <form class="form-group" action="inserts/insertClaim.php" method="POST">
+             <input type="hidden" name="matterID" value="<?php echo $matterID; ?>">
+             <div class="form-inline">
+               <label>Description</label>
+               <input type="text" class="form-control" name="description">
+               <label>Incident Date</label>
+               <input type="text" class="form-control" name="incidentDate">
+             </div>
+             <div class="form-group">
+               <button type="submit" class="btn btn-sm btn-primary pull-right" name="submit">add Claim</button>
+             </div>
+           </form>
+         </div>
+        </div>
       </div>
     </div>
   </div>
