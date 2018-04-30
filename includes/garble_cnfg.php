@@ -437,7 +437,7 @@ function delete_note($noteID) {
   $conn->close();
 }
 
-function delete_note($xactionID, $matterID) {
+function delete_xaction($xactionID, $matterID) {
   $conn = get_connected();
   $query = "SELECT * from Xactions where ID='$xactionID'";
   $result = mysqli_query($conn, $query);
