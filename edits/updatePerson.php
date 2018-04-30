@@ -20,7 +20,7 @@ $PhoneID = update_phone_byID($advPhoneID, $Phone);
 $EmailID = update_email_byID($advEmailID, $Email);
 
 
-$result = update_claim($FName, $LName, $AddressID, $PhoneID, $EmailID);
+$result = update_person_byID($FName, $LName, $AddressID, $PhoneID, $EmailID);
 
 if ($result)  {
   header("Location: ../matter.php?ID=" .  $matterID);
