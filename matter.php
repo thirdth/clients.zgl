@@ -59,7 +59,7 @@ $claims = get_claims_byID($matterID);
             echo "<div class='col-md-12 claim'>
                     <div class='col-md-12'>
                       <p>Description: " . $claim['Description'] . "
-                      <a href='/editClaim.php?ID=" . $claim['ID'] . "&matterID=" . $matterID . "' class=' pull-right'>edit Claim</a>
+                      <a href='/editClaim.php?ID=" . $claim['ID'] . "&MatterID=" . $matterID . "' class=' pull-right'>edit Claim</a>
                       </p>
                     </div>
                   <form class='form-group'>
