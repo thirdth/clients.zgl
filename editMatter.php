@@ -78,23 +78,15 @@ $advAddress = get_address_byID($adverse['AddressID']);
       <hr>
       <h3>Matter Information</h3>
       <form action="edits/updateMatter.php" method="post">
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-12">
               <input type="hidden" name="ID" value="<?php echo $matterID; ?>">
-              <label>Name:</label>
+              <label>Caption:</label>
               <input type="text" name="Name" class="form-control" value="<?php echo $matter['Name']; ?>">
               <span class="help-block"></span>
           </div>
-          <div class="form-group col-md-6">
-            <select class="form-control" name="Type" value="<?php echo $matter['CategoryID']; ?>">
-              <option value="0">Landord/Tenant</option>
-              <option value="1">Breach of Contract</option>
-              <option value="2">Tort</option>
-            </select>
-          </div>
           <div class="form-group">
               <label>Notes</label>
-              <input type="text" name="Notes" class="form-control" value="<?php echo $matter['Notes']; ?>">
-              <span class="help-block"></span>
+              <textarea class="form-control" rows="3" name="Notes" value="<?php echo $matter['Notes']; ?>"></textarea>
           </div>
           <div class="form-group">
               <button type="submit" class="btn btn-success" name="submit" value="Submit">Submit</button>
