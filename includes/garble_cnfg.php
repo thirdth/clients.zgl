@@ -261,12 +261,35 @@ function update_phone($phone, $clientId)  {
   return $phoneId;
 }
 
+function update_phone_byID($phone, $phoneId)  {
+  $phone = $phone;
+  $phoneId = $phoneId;
+  $conn = get_connected();
+  $query = "UPDATE Phones
+              SET Number='$phone' WHERE ID = '$phoneId'";
+  $result = mysqli_query($conn, $query);
+  mysqli_close($conn);
+  return $phoneId;
+}
+
 function update_email($email, $clientId)  {
   $email = $email;
   $clientId = $clientId;
   $conn = get_connected();
   $client = get_client_byId($clientId);
   $emailId = $client['EmailID'];
+  $query = "UPDATE Emails
+              SET Email='$email'
+              WHERE ID = '$emailId'";
+  $result = mysqli_query($conn, $query);
+  mysqli_close($conn);
+  return $emailId;
+}
+
+function update_email_byID($email, $emailId)  {
+  $email = $email;
+  $emailId = $emailId;
+  $conn = get_connected();
   $query = "UPDATE Emails
               SET Email='$email'
               WHERE ID = '$emailId'";
@@ -294,6 +317,25 @@ function update_address($street1, $street2, $city, $state, $zip, $clientId)  {
   mysqli_close($conn);
   return $addressId;
 }
+
+function update_address_byID($addressID, $street1, $street2, $city, $state, $zip,)
+  $street1 = $street1;
+  $street2 = $street2;
+  $city = $city;
+  $state = $state;
+  $zip = $zip;
+  $addressId = $addressId;
+  $conn = get_connected();
+  $query = "UPDATE Addresses
+              SET Street1='$street1', Street2='$street2', City='$city', State='$state',
+              Zip='$zip'
+              WHERE ID = '$addressId'";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  mysqli_close($conn);
+  return $addressId;
+}
+
 
 function update_client($clientId, $FName, $MName, $LName, $contact, $address_id, $phone_id, $email_id) {
   $clientId = $clientId;
@@ -332,6 +374,8 @@ function update_claim($claimId, $description, $typeID) {
     print(mysqli_error($conn));
   }
 }
+
+
 
 // Get Info Functions
 

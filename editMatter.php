@@ -38,8 +38,10 @@ $advAddress = get_address_byID($adverse['AddressID']);
         </div>
         <div class="col-md-8 OtherParties">
           <h3 class="text-center">Adverse</h3>
-          <form action="/updatePerson.php" method="POST">
+          <form action="edits/updatePerson.php" method="POST">
             <div class="form-group col-md-6">
+                <input type="hidden" name="AdverseID" value="<?php echo $matter['AdverseID']; ?>">
+                <input type="hidden" name="ID" value="<?php echo $matterID; ?>">
                 <label>First Name</label>
                 <input type="text" name="FName" class="form-control" value="<?php echo $adverse['FName']; ?>">
                 <span class="help-block"></span>
@@ -50,6 +52,7 @@ $advAddress = get_address_byID($adverse['AddressID']);
                 <span class="help-block"></span>
             </div>
             <div class="form-group col-md-12">
+                <input type="hidden" name="advAddressID" value="<?php echo $advAddress['ID']; ?>">
                 <label>Street</label>
                 <input type="text" name="Street1" class="form-control" value="<?php echo $advAddress['Street1']; ?>">
                 <span class="help-block"></span>
@@ -70,6 +73,14 @@ $advAddress = get_address_byID($adverse['AddressID']);
                 <span class="help-block"></span>
             </div>
             <div class="form-group col-md-4">
+                <label>Phone</label>
+                <input type="text" name="Phone" class="form-control" value="<?php echo $phone['Number']; ?>">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="text" name="Email" class="form-control" value="<?php echo $email['Email']; ?>">
+            </div>
+            <div class="form-group col-md-6">
                 <label>Zip</label>
                 <input type="text" name="Zip" class="form-control" value="<?php echo $advAddress['Zip']; ?>">
                 <span class="help-block"></span>
