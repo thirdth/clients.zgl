@@ -46,7 +46,7 @@ $claims = get_claims_byID($matterID);
             <textarea class="form-control" rows="3" name="body"></textarea>
           </div>
           <div class="form-group">
-            <button type="submit" class="btn btn-primary pull-right" name="submit">add Note</button>
+            <button type="submit" class="btn btn-primary btn-sm pull-right" name="submit">add Note</button>
           </div>
         </form>
       </div>
