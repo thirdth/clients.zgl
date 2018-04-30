@@ -5,5 +5,6 @@ include '../includes/garble_cnfg.php';
 print_r($_POST);
 
 $claimID = $_POST['ID'];
-print($claimID);
+$description = $_POST['Description'];
+print($description);
 ?>
