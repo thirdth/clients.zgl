@@ -32,8 +32,8 @@ $appointments = get_dates_byMatter($matterID);
         $phpdate = strtotime($appointment['Date']);
         $date = date('M-d-Y', $phpdate);
         echo "<div class='dates text-center'>
-                <p>" . $date . "</p>
-                <small><p>" . $appointment['Description'] . "</p></small>
+                <p>" . $date . "</br>
+                <small>" . $appointment['Description'] . "</small></p>
               </div>";
       }
        ?>
