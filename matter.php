@@ -44,10 +44,10 @@ $claims = get_claims_byID($matterID);
             echo "<div class='col-md-10' style='border-bottom: 1px dotted lightgrey; margin-bottom: 5px;'><p><small>" . $note['Body'] . "</small></p></div>
             <div class='col-md-2'>
               <div class='col-md-12'>
-                <a href='mailto:" . $email['Email'] . "?Body=" . $note['Body'] . "' class='btn btn-success btn-sm pull-right'>Email</a>
+                <a href='mailto:" . $email['Email'] . "?Body=" . $note['Body'] . "' class='text-success pull-right'>Email</a>
               </div>
               <div class='col-md-12'>
-                <a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a>
+                <a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='text-danger pull-right'>Delete</a>
               </div>
             </div>";
           }
