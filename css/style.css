@@ -64,7 +64,7 @@ footer{
 }
 
 .sidebar  {
-
+  min-height: 100%;
 }
 
 .navbar {
