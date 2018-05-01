@@ -23,7 +23,21 @@ $documents = get_documents_byMatter($matterID);
 ?>
 <div class="wrapper container-fluid">
   <div class="col-md-2 sidebar">
-    sidebar column
+    <div class='col-md-12'>
+      <table style="border-bottom: 1px solid black;">
+      <?php
+      foreach ($documents as $document) {
+        echo "<tr><td><a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a></td></tr>";
+      }
+      ?>
+      </table>
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select file to upload:
+        <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+      </form>
+    </div>
   </div>
   <div class='col-md-10'>
     <div class="col-md-12">
@@ -31,21 +45,7 @@ $documents = get_documents_byMatter($matterID);
         <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong>  (<?php echo $matter['CourtNO']; ?>)</h3>
       </div>
       <div class='col-md-4'>
-        <div class='col-md-12'>
-          <table style="border-bottom: 1px solid black;">
-          <?php
-          foreach ($documents as $document) {
-            echo "<tr><td><a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a></td></tr>";
-          }
-          ?>
-          </table>
-          <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select file to upload:
-            <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
-          </form>
-        </div>
+
       </div>
       <hr>
         <div class="col-md-3">
