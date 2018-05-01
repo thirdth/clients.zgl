@@ -34,7 +34,7 @@ $documents = get_documents_byMatter($matterID);
         <div class='col-md-12'>
           <?php
           foreach ($documents as $document) {
-            echo $document['Location'];
+            echo "<a href='" . $document['Location'] . "'>Document</a>";
           }
           ?>
           <form action="upload.php" method="post" enctype="multipart/form-data">
