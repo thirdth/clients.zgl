@@ -246,6 +246,24 @@ function insert_xaction($claimID, $note, $amount, $type) {
   }
 }
 
+function insert_file_byName($fileName, $matterID, $fileType, $creator, $target_file)  {
+  $fileName = $fileName;
+  $target_file = $target_file;
+  $matterID = $matterID;
+  $fileType = $fileType;
+  $creator = $creator;
+  $conn = get_connected();
+  $query = "INSERT into Documents
+              (Name, MatterID, Type, CreatorID, Location)
+              VALUES ('$fileName', '$matterID', '$fileType', '$creator', '$target_file')";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
+
 // Update functions
 
 function update_phone($phone, $clientId)  {

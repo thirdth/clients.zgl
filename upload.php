@@ -1,9 +1,11 @@
 <?php
 $target_dir = "uploads/";
+$fileName = $_FILES['filetoUpload'];
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
+$fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$matterID = $_POST['MatterID'];
+print_r($_SESSION);
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
@@ -21,7 +23,13 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        $fileInfo = insert_file_byName($fileName, $matterID, $fileType, 'Zack', $target_file)
+        if ($fileInfo) {
+          header("Location: ../matter.php?ID=" .  $fileInfo['MatterID']);
+        }else {
+          echo "Bam! Errored!";
+        }
+        }
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

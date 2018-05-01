@@ -32,6 +32,7 @@ $clientEmail = get_email_byID($client['EmailID']);
       <div class='col-md-4'>
         <form action="upload.php" method="post" enctype="multipart/form-data">
           Select file to upload:
+          <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">
         </form>
