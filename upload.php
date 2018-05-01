@@ -28,7 +28,11 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         $result = insert_file_byName($fileName, $matterID, $fileType, $target_file);
-        print_r($result);        
+        if($result) {
+          header("Location: ../matter.php?ID=" .  $matterID);
+        } else {
+          echo "damn";
+        }
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
