@@ -36,7 +36,7 @@ $clientEmail = get_email_byID($client['EmailID']);
             <input type="file" id="file" class="custom-file-input">
             <span class="custom-file-control"></span>
           </label>
-          <button type="submit" name="submitDoc" value="submitDoc" class="btn btn-primary btn-sm">Submit</button>
+          <button type="submit" name="submitDoc" value="submitDoc" class="btn btn-primary btn-sm">Upload</button>
         </form>
       </div>
       <hr>
