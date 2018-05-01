@@ -33,11 +33,12 @@ $documents = get_documents_byMatter($matterID);
       }
       ?>
       </table>
+      <hr>
       <form action="upload.php" method="post" enctype="multipart/form-data">
         Select file to upload:
         <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
         <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
+        <input type="submit" value="Upload File" name="submit">
       </form>
     </div>
   </div>
