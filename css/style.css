@@ -173,6 +173,15 @@ footer{
   padding: 5px;
 }
 
+.dates {
+  max-width: 100%;
+  background-color: lightgrey;
+  margin:2px;
+  border-radius: 5px;
+  padding: 5px;
+  color: yellow;
+}
+
 .infoPod  {
   padding-right: 30px;
   padding-left: 30px;

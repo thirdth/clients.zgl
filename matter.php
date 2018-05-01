@@ -29,7 +29,7 @@ $appointments = get_dates_byMatter($matterID);
       <h3>Calendar:</h3>
       <?php
       foreach ($appointments as $appointment) {
-        echo "<div class='documents text-center'>
+        echo "<div class='dates text-center'>
                 <p>" . $appointment['Date'] . "</p>
                 <p>" . $appointment['Description'] . "</p>
               </div>";
