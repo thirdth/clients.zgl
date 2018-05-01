@@ -34,7 +34,7 @@ $claims = get_claims_byID($matterID);
           } ?>
           <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
           <?php echo $phone['Number']; ?></br>
-          <?php echo $email['Email']; ?></p>
+          <a href="mailto:<?php echo $email['Email']; ?>"><?php echo $email['Email']; ?></a></p>
           <a class="pull-left" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
         </div>
         <div class='col-md-9 notes'>
