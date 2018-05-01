@@ -409,6 +409,23 @@ function update_claim($claimId, $description, $typeID) {
   }
 }
 
+function update_date_byID($dateID, $date, $description, $note) {
+  $dateID = $dateID;
+  $date = $date;
+  $description = $description;
+  $note = $note;
+  $conn = get_connected();
+  $query = "UPDATE Dates
+              SET Date = '$date', Description='$description', Note = '$note'
+              WHERE ID='$dateID'";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
+
 function update_matter_byID($matterID, $name, $courtNO, $notes) {
   $matterID = $matterID;
   $name = $name;
