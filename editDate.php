@@ -13,7 +13,7 @@ $date = date('m/d/Y', $phpdate);
   <div class="col-md-3">
   </div>
   <div class="col-md-6">
-    <form action="edits/editDate.php" method="POST" class="form-group">
+    <form action="edits/updateDate.php" method="POST" class="form-group">
       <input type="hidden" name="MatterID" value="<? echo $appointment['MatterID']; ?>">
       <input type="hidden" name="DateID" value="<? echo $dateID; ?>">
       <input type="date" name="Date" value="<?php echo $date; ?>">
