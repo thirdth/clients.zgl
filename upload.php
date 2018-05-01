@@ -7,7 +7,6 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 $matterID = $_POST['MatterID'];
-echo $matterID;
 $fileName = basename($_FILES['fileToUpload']['name']);
 
 
