@@ -32,8 +32,8 @@ $clientEmail = get_email_byID($client['EmailID']);
       <div class='col-md-4'>
         <form class='form-group' action="upload.php" method="post" enctype="multipart/form-data">
           <p>Upload Doc:</p>
-          <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
-          <button class="form-control" type="submit" value="Upload Image" name="submit"></button>
+          <input class="btn btn-secondary btn-sm pull-left" type="file" name="fileToUpload" id="fileToUpload">
+          <button class="btn btn-primary btn-sm pull-left" type="submit" value="Upload Image" name="submit"></button>
         </form>
       </div>
         <hr>
