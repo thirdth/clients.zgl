@@ -168,6 +168,8 @@ footer{
 .documents {
   max-width: 100%;
   background-color: lightgrey;
+  margin:2px;
+  border-radius: 5px;
 }
 
 .infoPod  {
