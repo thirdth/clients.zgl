@@ -25,7 +25,7 @@ $documents = get_documents_byMatter($matterID);
   <div class="col-md-2 sidebar">
     <div class='col-md-12'>
       <h3>Calendar:</h3>
-      <a href="/addDate?ID=<?php echo $matterID; ?>" class="btn btn-success btn-sm">add Date</a>
+      <a href="/addDate.php?ID=<?php echo $matterID; ?>" class="btn btn-success btn-sm">add Date</a>
     </div>
     <div class='col-md-12'>
       <h3>Documents:</h3>
