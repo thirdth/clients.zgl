@@ -18,6 +18,7 @@ $notes = get_notes_byID($matterID);
 $claims = get_claims_byID($matterID);
 $client = get_client_byID($matter['ClientID']);
 $clientEmail = get_email_byID($client['EmailID']);
+$documents = get_documents_byMatter($matterID);
 // TODO: add matters here
 ?>
 <div class="wrapper container-fluid">
@@ -30,12 +31,19 @@ $clientEmail = get_email_byID($client['EmailID']);
         <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong>  (<?php echo $matter['CourtNO']; ?>)</h3>
       </div>
       <div class='col-md-4'>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-          Select file to upload:
-          <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
+        <div class='col-md-12'>
+          <?php
+          foreach ($documents as $document) {
+            echo "<a href=" . $document['Location'] . ">" . $document['Name'] . "</a>"
+          }
+          ?>
+          <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select file to upload:
+            <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+          </form>
+        </div>
       </div>
       <hr>
         <div class="col-md-3">
