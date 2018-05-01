@@ -261,7 +261,7 @@ function update_phone($phone, $clientId)  {
   return $phoneId;
 }
 
-function update_phone_byID($phone, $phoneId)  {
+function update_phone_byID($phoneId, $phone)  {
   $phone = $phone;
   $phoneId = $phoneId;
   $conn = get_connected();
