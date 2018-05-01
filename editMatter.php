@@ -96,13 +96,18 @@ $advEmail = get_email_byID($adverse['EmailID']);
       <hr>
       <h3>Matter Information</h3>
       <form action="edits/updateMatter.php" method="post">
-          <div class="form-group">
+          <div class="form-group col-md-6">
               <input type="hidden" name="ID" value="<?php echo $matterID; ?>">
               <label>Caption:</label>
               <input type="text" name="Name" class="form-control" value="<?php echo $matter['Name']; ?>">
               <span class="help-block"></span>
           </div>
-          <div class="form-group">
+          <div class="form-group col-md-6">
+              <label>Docket No:</label>
+              <input type="text" name="CourtNO" class="form-control" value="<?php echo $matter['CourtNO']; ?>">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group col-md-12">
               <label>Notes</label>
               <textarea class="form-control" rows="3" name="Notes" value="<?php echo $matter['Notes']; ?>"></textarea>
           </div>

@@ -375,6 +375,23 @@ function update_claim($claimId, $description, $typeID) {
   }
 }
 
+function update_matter_byID($matterID, $name, $courtNO, $notes) {
+  $matterID = $matterID;
+  $name = $name;
+  $courtNO = $courtNO;
+  $notes = $notes;
+  $conn = get_connected();
+  $query = "UPDATE matters
+              SET Name = '$name', CourtNO = '$courtNO', Notes = '$notes'
+              WHERE ID = '$matterID'";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $matterID;
+  } else {
+    print(mysql_error($conn));
+  }
+}
+
 function update_person_byID($ID, $FName, $LName, $AddressID, $PhoneID, $EmailID)  {
   $ID = $ID;
   $FName = $FName;
