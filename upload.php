@@ -5,7 +5,6 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 $matterID = $_POST['MatterID'];
-print_r($_SESSION);
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
