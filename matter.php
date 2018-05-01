@@ -24,7 +24,7 @@ $claims = get_claims_byID($matterID);
   </div>
   <div class='col-md-10'>
     <div class="col-md-12">
-        <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong></h3>
+        <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong> <?php echo $matter['CourtNO']; ?></h3>
         <hr>
         <div class="col-md-3">
           <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
