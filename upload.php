@@ -1,4 +1,7 @@
 <?php
+error_reporting(-1);
+ini_set('display_errors', 'On');
+include 'includes/garble_cnfg.php';
 $target_dir = "uploads/";
 $fileName = $_FILES['fileToUpload'];
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
