@@ -1,6 +1,6 @@
 <?php
 $target_dir = "uploads/";
-$fileName = $_FILES['filetoUpload'];
+$fileName = $_FILES['fileToUpload'];
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
