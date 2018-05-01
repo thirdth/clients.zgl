@@ -552,7 +552,7 @@ function get_xaction_byClaimId($claimID)  {
   return $all;
 }
 
-function get_people_byMatter($matterID) {
+function get_documents_byMatter($matterID) {
   $conn = get_connected();
   $query = "SELECT * from Documents where MatterID='$matterID'";
   $result = mysqli_query($conn, $query);
