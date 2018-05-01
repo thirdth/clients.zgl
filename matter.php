@@ -35,7 +35,7 @@ $documents = get_documents_byMatter($matterID);
           <table>
           <?php
           foreach ($documents as $document) {
-            echo "<tr><a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a></tr>";
+            echo "<tr><td><a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a></td></tr>";
           }
           ?>
           </table>
