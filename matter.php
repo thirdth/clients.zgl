@@ -38,7 +38,7 @@ $documents = get_documents_byMatter($matterID);
         Select file to upload:
         <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
         <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload File" name="submit">
+        <input class="btn btn-success" type="submit" value="Upload File" name="submit">
       </form>
     </div>
   </div>
