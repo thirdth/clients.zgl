@@ -263,6 +263,23 @@ function insert_file_byName($fileName, $matterID, $fileType, $target_file)  {
   }
 }
 
+function insert_date_byMatterID($matterID, $date, $description, $note)  {
+  $matterID = $matterID;
+  $date = $date;
+  $description = $description;
+  $note = $note;
+  $conn = get_connected();
+  $query = "INSERT into Dates
+              (MatterID, Date, Description, Note)
+              VALUES ('$matterID', '$date', '$description', '$note')";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+  }
+}
+
 // Update functions
 
 function update_phone($phone, $clientId)  {
