@@ -32,8 +32,8 @@ $appointments = get_dates_byMatter($matterID);
         $phpdate = strtotime($appointment['Date']);
         $date = date('M-d-Y', $phpdate);
         echo "<div class='dates text-center'>
-                <p>" . $date . "</br>
-                <small>" . $appointment['Description'] . "</small></p>
+                <a href='editDate.php?ID=" . $appointment['ID'] . "'><p>" . $date . "</br>
+                <small>" . $appointment['Description'] . "</small></p></a>
               </div>";
       }
        ?>
