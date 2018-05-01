@@ -32,11 +32,13 @@ $documents = get_documents_byMatter($matterID);
       </div>
       <div class='col-md-4'>
         <div class='col-md-12'>
+          <table>
           <?php
           foreach ($documents as $document) {
-            echo "<a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a>";
+            echo "<tr><a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a></tr>";
           }
           ?>
+          </table>
           <form action="upload.php" method="post" enctype="multipart/form-data">
             Select file to upload:
             <input type="hidden" name="MatterID" value="<?php echo $matterID; ?>">
