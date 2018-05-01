@@ -27,8 +27,8 @@ $documents = get_documents_byMatter($matterID);
       <h3>Documents:</h3>
       <?php
       foreach ($documents as $document) {
-        echo "<div class='col-md-12'>
-                <a href='" . $document['Location'] . "' target='_blank' class='btn btn-outline-secondary'>" . $document['Name'] . "</a>
+        echo "<div class='documents'>
+                <a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a>
               </div>";
       }
       ?>
