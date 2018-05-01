@@ -41,11 +41,14 @@ $claims = get_claims_byID($matterID);
           <small class="text-center">Notes:</small>
           <p><?php
           foreach ($notes as $note) {
-            echo "<div class='col-md-10' style='border-bottom: 1px dotted lightgrey; margin-bottom: 5px;'><p><small>" . $note['Body'] . "</small></p></div>
-            <div class='col-md-2'>
-                <a href='mailto:" . $email['Email'] . "?Body=" . $note['Body'] . "' class='text-success'>Email</a> | 
-                <a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='text-danger'>Delete</a>
-            </div>";
+            echo "<div class='col-md-10' style='border-bottom: 1px dotted lightgrey; margin-bottom: 5px;'>
+                    <p><small>Created: " . $note['Create_Date'] . " By: " . $note['CreatorID'] . "</small></p>
+                    <p><small>" . $note['Body'] . "</small></p>
+                  </div>
+                  <div class='col-md-2'>
+                      <a href='mailto:" . $email['Email'] . "?Body=" . $note['Body'] . "' class='text-success'>Email</a> |
+                      <a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='text-danger'>Delete</a>
+                  </div>";
           }
           ?></p>
           <form class="form-group" action="inserts/insertNote.php" method="POST">
