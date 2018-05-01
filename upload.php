@@ -28,12 +28,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         $document = insert_file_byName($fileName, $matterID, $fileType, $target_file)
-        if ($document)  {
-          echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-          print_r($document);
-        } else {
-          echo "goddamn!";
-        }
+        print_r($document);
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
