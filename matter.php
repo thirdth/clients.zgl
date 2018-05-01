@@ -41,7 +41,7 @@ $claims = get_claims_byID($matterID);
           <small class="text-center">Notes:</small>
           <p><?php
           foreach ($notes as $note) {
-            echo "<div class='col-md-11'><p><small>" . $note['Body'] . "</small></p></div>
+            echo "<div class='col-md-11' style='border-bottom: 1px dotted lightgrey'><p><small>" . $note['Body'] . "</small></p></div>
             <div class='col-md-1'>
               <a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a>
               </div>";
