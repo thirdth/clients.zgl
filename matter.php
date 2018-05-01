@@ -44,7 +44,7 @@ $claims = get_claims_byID($matterID);
             $phpdate = strtotime($note['Edit_Date']);
             $date = date('M-d-Y', $phpdate);
             echo "<div class='col-md-10' style='border-bottom: 1px dotted lightgrey; margin-bottom: 5px;'>
-                    <p><small>Last Edit: " . $date . " | By: " . $note['CreatorID'] . "</small></p>
+                    <p class='text-muted'><small>Last Edit: " . $date . " | By: " . $note['CreatorID'] . "</small></p>
                     <p><small>" . $note['Body'] . "</small></p>
                   </div>
                   <div class='col-md-2'>
