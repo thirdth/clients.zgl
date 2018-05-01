@@ -41,8 +41,10 @@ $claims = get_claims_byID($matterID);
           <small class="text-center">Notes:</small>
           <p><?php
           foreach ($notes as $note) {
+            $phpdate = strtotime($note['Edit_Date']);
+            $date = date('M-d-Y', $phpdate);
             echo "<div class='col-md-10' style='border-bottom: 1px dotted lightgrey; margin-bottom: 5px;'>
-                    <p><small>Last Edit: " . $note['Edit_Date'] . " By: " . $note['CreatorID'] . "</small></p>
+                    <p><small>Last Edit: " . $date . " | By: " . $note['CreatorID'] . "</small></p>
                     <p><small>" . $note['Body'] . "</small></p>
                   </div>
                   <div class='col-md-2'>
