@@ -26,12 +26,16 @@ $clientEmail = get_email_byID($client['EmailID']);
   </div>
   <div class='col-md-10'>
     <div class="col-md-12">
+      <div class='col-md-8'>
         <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong>  (<?php echo $matter['CourtNO']; ?>)</h3>
+      </div>
+      <div class='col-md-4'>
         <form action="upload.php" method="post" enctype="multipart/form-data">
           Select image to upload:
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">
         </form>
+      </div>
         <hr>
         <div class="col-md-3">
           <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
