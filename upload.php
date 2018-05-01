@@ -3,7 +3,7 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 include 'includes/garble_cnfg.php';
 $target_dir = "uploads/";
-$fileName = $_FILES['fileToUpload'];
+$fileName = basename($_FILES['fileToUpload'];'name']);
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
