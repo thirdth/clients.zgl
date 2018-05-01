@@ -24,6 +24,10 @@ $documents = get_documents_byMatter($matterID);
 <div class="wrapper container-fluid">
   <div class="col-md-2 sidebar">
     <div class='col-md-12'>
+      <h3>Calendar:</h3>
+      
+    </div>
+    <div class='col-md-12'>
       <h3>Documents:</h3>
       <?php
       foreach ($documents as $document) {
