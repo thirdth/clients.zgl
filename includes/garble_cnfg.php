@@ -381,14 +381,14 @@ function update_matter_byID($matterID, $name, $courtNO, $notes) {
   $courtNO = $courtNO;
   $notes = $notes;
   $conn = get_connected();
-  $query = "UPDATE matters
+  $query = "UPDATE Matters
               SET Name = '$name', CourtNO = '$courtNO', Notes = '$notes'
               WHERE ID = '$matterID'";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $matterID;
   } else {
-    print(mysql_error($conn));
+    print(mysqli_error($conn));
   }
 }
 
@@ -407,7 +407,7 @@ function update_person_byID($ID, $FName, $LName, $AddressID, $PhoneID, $EmailID)
   if ($result)  {
     return $result;
   } else {
-    print(mysql_error($conn));
+    print(mysqli_error($conn));
   }
 }
 
