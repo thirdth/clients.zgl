@@ -16,7 +16,7 @@ $phone = get_phone_byID($phoneID);
 $email = get_email_byID($emailID);
 $notes = get_notes_byID($matterID);
 $claims = get_claims_byID($matterID);
-$client = get_clietn_byID($matter['ClientID']);
+$client = get_client_byID($matter['ClientID']);
 $clientEmail = get_email_byID($client['EmailID']);
 // TODO: add matters here
 ?>
