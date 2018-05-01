@@ -41,11 +41,11 @@ $claims = get_claims_byID($matterID);
           <small class="text-center">Notes:</small>
           <p><?php
           foreach ($notes as $note) {
-            echo "<div class='col-md-11' style='border-bottom: 1px dotted lightgrey; margin-bottom: 5px;'><p><small>" . $note['Body'] . "</small></p></div>
-            <div class='col-md-1'>
+            echo "<div class='col-md-10' style='border-bottom: 1px dotted lightgrey; margin-bottom: 5px;'><p><small>" . $note['Body'] . "</small></p></div>
+            <div class='col-md-2'>
               <a href='mailto:" . $email['Email'] . "?Body=" . $note['Body'] . "' class='btn btn-success btn-sm pull-right'>Email</a>
               <a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='btn btn-danger btn-sm pull-right'>Delete</a>
-              </div>";
+            </div>";
           }
           ?></p>
           <form class="form-group" action="inserts/insertNote.php" method="POST">
@@ -55,7 +55,6 @@ $claims = get_claims_byID($matterID);
             </div>
             <div class="form-group col-md-2">
               <button type="submit" class="btn btn-primary btn-sm pull-right" name="submit" value="note">add Note</button>
-              <button type="submit" class="btn btn-success btn-sm pull-right" name="submit" value="email">send Email</button>
             </div>
           </form>
         </div>
