@@ -28,10 +28,12 @@ $appointments = get_dates_byMatter($matterID);
     <div class='col-md-12'>
       <h3>Calendar:</h3>
       <?php
+      $phpdate = strtotime($appointment['Date']);
+      $date = date('M-d-Y', $phpdate);
       foreach ($appointments as $appointment) {
         echo "<div class='dates text-center'>
-                <p>" . $appointment['Date'] . "</p>
-                <p>" . $appointment['Description'] . "</p>
+                <p>" . $date . "</p>
+                <small><p>" . $appointment['Description'] . "</p></small>
               </div>";
       }
        ?>
