@@ -17,3 +17,6 @@ $matterID = $_GET['ID'];
     </form>
   </div>
 </div>
+<?php
+include 'includes/footer';
+ ?>

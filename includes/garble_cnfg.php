@@ -587,6 +587,15 @@ function get_dates_byMatter($matterID) {
   return $all;
 }
 
+function get_date_byId($ID)  {
+  $conn = get_connected();
+  $query = "SELECT * from Dates where ID='$ID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
+
 
 
 // Delete functions
