@@ -2,7 +2,7 @@
 include 'includes/garble_cnfg.php';
 protected_page();
 header_check();
-$matterID = $_GET['MatterID'];
+$matterID = $_GET['ID'];
 ?>
 <div class="wrapper container">
   <div class="col-md-3">
