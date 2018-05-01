@@ -31,13 +31,14 @@ $clientEmail = get_email_byID($client['EmailID']);
       </div>
       <div class='col-md-4'>
         <form class='form-group' action="upload.php" method="post" enctype="multipart/form-data">
+          <p>Upload Document</p>
           <label class="custom-file">
             <input type="file" id="file" class="custom-file-input">
             <span class="custom-file-control"></span>
           </label>
         </form>
       </div>
-        <hr>
+      <hr>
         <div class="col-md-3">
           <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
           <p><?php echo $address['Street1']; ?></br>
