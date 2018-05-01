@@ -30,10 +30,10 @@ $clientEmail = get_email_byID($client['EmailID']);
         <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong>  (<?php echo $matter['CourtNO']; ?>)</h3>
       </div>
       <div class='col-md-4'>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-          Select image to upload:
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
+        <form class='form-group' action="upload.php" method="post" enctype="multipart/form-data">
+          <p>Upload Doc:</p>
+          <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
+          <button class="form-control" type="submit" value="Upload Image" name="submit"></button>
         </form>
       </div>
         <hr>
