@@ -32,7 +32,7 @@ $documents = get_documents_byMatter($matterID);
       </div>
       <div class='col-md-4'>
         <div class='col-md-12'>
-          <table>
+          <table style="border-bottom: 1px solid black;">
           <?php
           foreach ($documents as $document) {
             echo "<tr><td><a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a></td></tr>";
