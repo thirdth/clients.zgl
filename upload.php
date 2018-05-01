@@ -3,11 +3,13 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 include 'includes/garble_cnfg.php';
 $target_dir = "uploads/";
-$fileName = basename($_FILES['fileToUpload'];'name']);
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 $matterID = $_POST['MatterID'];
+$fileName = basename($_FILES['fileToUpload']['name']);
+
+
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
@@ -25,13 +27,8 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        $fileInfo = insert_file_byName($fileName, $matterID, $fileType, 'Zack', $target_file)
-        if ($fileInfo) {
-          header("Location: ../matter.php?ID=" .  $fileInfo['MatterID']);
-        }else {
-          echo "Bam! Errored!";
-        }
-        }
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        echo $fileName . " . " . $matterID;
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
