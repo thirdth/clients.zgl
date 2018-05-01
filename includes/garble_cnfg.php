@@ -578,6 +578,15 @@ function get_documents_byMatter($matterID) {
   return $all;
 }
 
+function get_dates_byMatter($matterID) {
+  $conn = get_connected();
+  $query = "SELECT * from Dates where MatterID='$matterID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all;
+}
+
 
 
 // Delete functions

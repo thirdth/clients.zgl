@@ -19,12 +19,22 @@ $claims = get_claims_byID($matterID);
 $client = get_client_byID($matter['ClientID']);
 $clientEmail = get_email_byID($client['EmailID']);
 $documents = get_documents_byMatter($matterID);
+$appointments = get_dates_byMatter($matterID);
+
 // TODO: add matters here
 ?>
 <div class="wrapper container-fluid">
   <div class="col-md-2 sidebar">
     <div class='col-md-12'>
       <h3>Calendar:</h3>
+      <?php
+      foreach ($appointments as $appointment) {
+        echo "<div class='documents text-center'>
+                <p>" . $appointment['Date'] . "</p>
+                <p>" . $appointment['Description'] . "</p>
+              </div>";
+      }
+       ?>
       <a href="/addDate.php?ID=<?php echo $matterID; ?>" class="btn btn-success btn-sm">add Date</a>
     </div>
     <div class='col-md-12'>
