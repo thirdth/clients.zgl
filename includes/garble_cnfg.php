@@ -254,7 +254,7 @@ function insert_file_byName($fileName, $matterID, $fileType, $target_file)  {
   $conn = get_connected();
   $query = "INSERT into Documents
               (Name, MatterID, Type, Location)
-              VALUES ('$fileName', '$matterID', '$fileType', '$creatorID', '$target_file')";
+              VALUES ('$fileName', '$matterID', '$fileType', '$target_file')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;
