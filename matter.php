@@ -24,10 +24,12 @@ $documents = get_documents_byMatter($matterID);
 <div class="wrapper container-fluid">
   <div class="col-md-2 sidebar">
     <div class='col-md-12'>
-      <table style="border-bottom: 1px solid black;">
+      <h3>Documents:</h3>
       <?php
       foreach ($documents as $document) {
-        echo "<tr><td><a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a></td></tr>";
+        echo "<div class='col-md-12'>
+                <a href='" . $document['Location'] . "' target='_blank'>" . $document['Name'] . "</a>
+              </dv>";
       }
       ?>
       </table>
