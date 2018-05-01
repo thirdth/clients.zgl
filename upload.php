@@ -27,8 +27,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        $document = insert_file_byName($fileName, $matterID, $fileType, $target_file)
-        print_r($document);
+        print_r($fileName, $matterID, $fileType, $target_file);        
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
