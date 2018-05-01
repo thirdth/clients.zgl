@@ -16,6 +16,8 @@ $phone = get_phone_byID($phoneID);
 $email = get_email_byID($emailID);
 $notes = get_notes_byID($matterID);
 $claims = get_claims_byID($matterID);
+$client = get_clietn_byID($matter['ClientID']);
+$clientEmail = get_email_byID($client['EmailID']);
 // TODO: add matters here
 ?>
 <div class="wrapper container-fluid">
@@ -48,7 +50,7 @@ $claims = get_claims_byID($matterID);
                     <p><small>" . $note['Body'] . "</small></p>
                   </div>
                   <div class='col-md-2'>
-                      <a href='mailto:" . $email['Email'] . "?Body=" . $note['Body'] . "' class='text-success'>Email</a> |
+                      <a href='mailto:" . $clientEmail['Email'] . "?Body=" . $note['Body'] . "' class='text-success'>Email</a> |
                       <a href='deletes/deleteNote.php?ID=" . $note['ID'] . "' class='text-danger'>Delete</a>
                   </div>";
           }
