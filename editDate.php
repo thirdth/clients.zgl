@@ -7,7 +7,7 @@ header_check();
 $dateID = $_GET['ID'];
 $appointment = get_date_byID($dateID);
 $phpdate = strtotime($appointment['Date']);
-$date = date('M-d-Y', $phpdate);
+$date = date('m/d/Y', $phpdate);
 ?>
 <div class="wrapper container">
   <div class="col-md-3">
