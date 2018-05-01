@@ -246,15 +246,14 @@ function insert_xaction($claimID, $note, $amount, $type) {
   }
 }
 
-function insert_file_byName($fileName, $matterID, $fileType, $creatorID, $target_file)  {
+function insert_file_byName($fileName, $matterID, $fileType, $target_file)  {
   $fileName = $fileName;
   $target_file = $target_file;
   $matterID = $matterID;
   $fileType = $fileType;
-  $creatorID = $creatorID;
   $conn = get_connected();
   $query = "INSERT into Documents
-              (Name, MatterID, Type, CreatorID, Location)
+              (Name, MatterID, Type, Location)
               VALUES ('$fileName', '$matterID', '$fileType', '$creatorID', '$target_file')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
