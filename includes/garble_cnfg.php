@@ -469,7 +469,7 @@ function update_person_byID($ID, $FName, $LName, $AddressID, $PhoneID, $EmailID)
 // Get Info Functions
 
 function get_parties_byMatter($matterID) {
-  $conn = get_connected()
+  $conn = get_connected();
   $query = "SELECT * from Parties, People
               JOIN Parties.PersonID ON People.ID
               WHERE Parties.MatterID = '$matterID'";
