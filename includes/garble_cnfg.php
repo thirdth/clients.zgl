@@ -597,7 +597,7 @@ function get_documents_byMatter($matterID) {
 
 function get_dates_byMatter($matterID) {
   $conn = get_connected();
-  $query = "SELECT * from Dates where MatterID='$matterID'";
+  $query = "SELECT * from Appointments where MatterID='$matterID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
@@ -606,7 +606,7 @@ function get_dates_byMatter($matterID) {
 
 function get_date_byId($ID)  {
   $conn = get_connected();
-  $query = "SELECT * from Dates where ID='$ID'";
+  $query = "SELECT * from Appointments where ID='$ID'";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
