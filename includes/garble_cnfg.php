@@ -182,6 +182,10 @@ function insert_matter($Name, $clientID, $AdverseID, $Notes) {
   }
 }
 
+function insert_party_byMatter($matterID) {
+
+}
+
 function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id) {
   $Fname = $Fname;
   $Mname = $Mname;
@@ -463,6 +467,17 @@ function update_person_byID($ID, $FName, $LName, $AddressID, $PhoneID, $EmailID)
 }
 
 // Get Info Functions
+
+function get_parties_byMatter($matterID) {
+  $conn = get_connected()
+  $query = "SELECT * from Parties, People
+              JOIN Parties.PersonID ON People.ID
+              WHERE Parties.MatterID = '$matterID'";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all;
+}
 
 function get_clients()  {
   $conn = get_connected();
