@@ -10,25 +10,31 @@ protected_page();
 header_check();
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$callSid= $_GET['callSid']
-print_r($_GET);
 $client = new Client($TWsid, $TWtoken);
 
-echo $callSid;
-
-$recordings = $client->recordings->read(
-    array(
-        "callSid" => $callSid,
-    )
-);
-
-//print_r($client->recordings->read());
 // Loop over the list of recordings and echo a property for each one
-foreach ($recordings as $recording) {
+/*foreach ($client->recordings->read() as $recording) {
+    print_r($recording);
     echo "<div>
-            <a href='https://api.twilio.com/2010-04-01/Accounts/" . $TWsid . "/Recordings/" . $recording->sid . "'>" . $recording->sid . "</a>
+            <a href='https://tel.tech4lawyers.com/recordings.php?callSid=" . $recording->sid . "'>" . $recording->sid . "</a>
           </div>";
-}
+}*/
+
+foreach ($client->calls->read() as $call) {
+  print_r($call->direction);
+  echo "  |  \n";
+  print_r($call->recordings);
+  echo "  |  \n";
+  echo "\n<div>
+          <p>" . $call->direction . " | " . $call->startTime->date . " | " . $call->from . "</p>
+          <a href='recordings.php?callSid=" . $call->sid . "'>Call SID: " . $call->sid . "</a>
+        </div>";
+  if (!empty($call->recordings->read())) {
+    $recording = $call->recordings->read();
+    echo "<a href='https://api.twilio.com/2010-04-01/Accounts/" . $TWsid . "/Recordings/" . $recording->sid . "'>Recording SID: " . $recording->sid . "</a>";
+  }
+}      </div>";
+
 
 
 ?>
