@@ -24,8 +24,8 @@ foreach ($client->calls->read() as $call) {
   //print_r($call->direction);
   //echo "  |  \n";
   //echo "\n";
-  //print_r($call);
-  //echo "  |  \n";
+  print_r($call);
+  echo "  |  \n";
   echo "\n<div>
           <p>" . $call->direction . " | " . $call->startTime->date . " | " . $call->from . "</p>
           <a href='recordings.php?callSid=" . $call->sid . "'>Call SID: " . $call->sid . "</a>
