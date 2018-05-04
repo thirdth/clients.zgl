@@ -8,6 +8,7 @@ $matterID = $_GET['ID'];
 $matter = get_matter_byId($matterID);
 $adverseID = $matter['AdverseID'];
 $person = get_person_byID($adverseID);
+$parties = get_parties_byMatter($matterID);
 $addressID = $person['AddressID'];
 $phoneID = $person['PhoneID'];
 $emailID = $person['EmailID'];

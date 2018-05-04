@@ -12,19 +12,19 @@ $matterID = $_GET['ID'];
   <div class="col-md-6">
     <form action="inserts/insertParty.php" method="POST" class="form-group">
         <input type="hidden" name="MatterID" value="<? echo $matterID; ?>">
-      <div class='col-md-4'>
+      <div class='col-md-4 form-group'>
         <input type="text" name="FName">
       </div>
-      <div class='col-md-4'>
+      <div class='col-md-4 form-group'>
         <input type="text" name="MName">
       </div>
-      <div class='col-md-4'>
+      <div class='col-md-4 form-group'>
         <input type="text" name="LName">
       </div>
-      <div class='col-md-12'>
+      <div class='col-md-12 form-group'>
         <input type="text" name="Street1">
       </div>
-      <div class='col-md-12'>
+      <div class='col-md-12 form-group'>
         <input type="text" name="Street2">
       </div>
       <div class='col-md-7'>
