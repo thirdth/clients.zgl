@@ -10,7 +10,8 @@ protected_page();
 header_check();
 
 // Your Account Sid and Auth Token from twilio.com/user/account
-$callSid= $_GET['callSid'];
+$callSid= $_GET['callSid']
+print_r($_GET);
 $client = new Client($TWsid, $TWtoken);
 
 echo $callSid;
