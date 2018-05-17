@@ -9,10 +9,10 @@ header_check();
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <h3 class="text-center">Create Document</h3>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <h3 class="text-center">Login/Signup</h3>
       <form action="verify.php" method="post">
           <div class="form-group">
