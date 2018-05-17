@@ -25,8 +25,8 @@ header_check();
       </div>
       <div class="col-md-10">
         <h3><strong>1. Create an account, Login, or Continue as a Guest</strong></h3>
-      </div>
         <p>When you create an account, you will have the ability to save your documents and access them at a later date. You can also save time through auto-fill options.</p>
+      </div>
         <h3><strong>2. Browse and Select a Document</strong></h3>
         <p>Search through the documents that we offer. When you find one that will fit your needs, select it and begin tayloring it to your needs. If you need help at any time, you can always set-up a consultation with one of our lawyers.</p>
         <h3><strong>3. Answer the Questions</strong></h3>
