@@ -21,14 +21,14 @@ header_check();
     <div class="col-md-8">
       <p class="text-center">Create professional looking leagal documents in 5 easy steps.</p>
       <div class="col-md-2">
-        <h1 class="text-center" style="font-size: 5em;">&#128100;&#xFE0E;</h1>
+        <h1 class="text-center" style="font-size: 4em;">&#128100;&#xFE0E;</h1>
       </div>
       <div class="col-md-10">
         <h3><strong>1. Create an account, Login, or Continue as a Guest</strong></h3>
         <p>When you create an account, you will have the ability to save your documents and access them at a later date. You can also save time through auto-fill options.</p>
       </div>
       <div class="col-md-2">
-        <h1 class="text-center" style="font-size: 5em;">&#128452;;&#xFE0E;</h1>
+        <h1 class="text-center" style="font-size: 4em;">&#128452;&#xFE0E;</h1>
       </div>
       <div class="col-md-10">
         <h3><strong>2. Browse and Select a Document</strong></h3>
