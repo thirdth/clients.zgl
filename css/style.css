@@ -91,6 +91,10 @@ footer{
   min-height: 600px;
 }
 
+.Welcome{
+  margin-top: 10px;
+}
+
 .welcome img{
   object-fit: contain;
 }
