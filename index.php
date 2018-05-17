@@ -10,10 +10,28 @@ header_check();
   </div>
   <div class="row">
     <div class="col-md-6">
-      <h3>Create Document</h3>
+      <h3 class="text-center">Create Document</h3>
     </div>
     <div class="col-md-6">
-      <h3>Login/Signup</h3>
+      <h3 class="text-center">Login/Signup</h3>
+      <form action="verify.php" method="post">
+          <div class="form-group">
+              <label>Username</label>
+              <input type="text" name="username"class="form-control">
+              <span class="help-block"></span>
+          </div>
+          <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <input type="checkbox" name="remember">Remember me
+          </div>
+          <div class="form-group">
+              <input type="submit" class="btn btn-primary" name="submit" value="Login">
+          </div>
+          <p>Don't have an account? <a href="signup.php">Sign up now</a>.</p>
+      </form>
     </div>
   </div>
 <div>
