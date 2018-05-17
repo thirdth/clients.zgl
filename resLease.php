@@ -61,6 +61,7 @@ header_check();
           <label>How many dependant residents</label>
           <input class="form-control" type="text" name="numDep">
         </div>
+        <button class="btn btn-success">Next>></button>
       </form>
     </div>
     <div class="col-md-4 login">
