@@ -11,14 +11,20 @@ header_check();
   <div class="row">
     <div class="col-md-8">
       <h3 class="text-center">Create Document</h3>
-      <div class="col-md-4 docButton">
-        <h3>Residential Lease</h3>
+      <div class="col-md-4">
+        <div class="col-md-12 docButton">
+          <h3>Residential Lease</h3>
+        </div>
       </div>
-      <div class="col-md-4 docButton">
-        <h3>Simple Will</h3>
+      <div class="col-md-4">
+        <div class="col-md-12 docButton">
+          <h3>Simple Will</h3>
+        </div>
       </div>
-      <div class="col-md-4 docButton">
-        <h3>Non-Discolure Agreement</h3>
+      <div class="col-md-4">
+        <div class="col-md-12 docButton">
+          <h3>Non-Discolure Agreement</h3>
+        </div>
       </div>
     </div>
     <div class="col-md-4 login">
