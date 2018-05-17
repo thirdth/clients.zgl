@@ -99,6 +99,7 @@ footer{
 
 .welcome img{
   object-fit: contain;
+  margin-top: 15px;
 }
 
 .welcome  p{
