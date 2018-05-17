@@ -4,7 +4,7 @@ header_check();
 ?>
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 welcome">
       <h2 class="text-center">Welcome<h2>
       <p>Welcome to Zack Glaser Legal self-service portal. If you don't already have an account, you can either create one now, or you can create one at checkout.
 
