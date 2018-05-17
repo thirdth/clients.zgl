@@ -57,19 +57,19 @@ header_check();
       <div class="col-md-6">
         <div class="col-md-12 docButton">
           <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
-          <h3>Residential Lease</h3></a>
+          <h4>Residential Lease</h4></a>
         </div>
       </div>
       <div class="col-md-6">
         <div class="col-md-12 docButton">
           <a href="/simpWill"><h1>&#128462;&#xFE0E;</h1>
-          <h3>Simple Will</h3></a>
+          <h4>Simple Will</h4></a>
         </div>
       </div>
       <div class="col-md-6">
         <div class="col-md-12 docButton">
           <a href="/NDA"><h1>&#128172;&#xFE0E;</h1>
-          <h3>Non-Discolure Agreement</h3></a>
+          <h4>Non-Disclosure Agreement</h4></a>
         </div>
       </div>
     </div>
