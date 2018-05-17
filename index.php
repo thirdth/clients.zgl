@@ -5,10 +5,10 @@ header_check();
 <div class="container">
   <div class="row">
     <div class="col-md-12 welcome">
-      <div class="col-md-4">
-        <img src="/img/walker.jpg" width="300" height="200">
+      <div class="col-md-5">
+        <img src="/img/walker.jpg" width="500" height="300">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-7">
         <h2 class="text-center">Welcome<h2>
         <p>Welcome to Zack Glaser Legal self-service portal. If you don't already have an account, you can either create one now, or you can create one at checkout.
         </p>
