@@ -6,7 +6,7 @@ header_check();
   <div class="row">
     <div class="col-md-12 welcome">
       <div class="col-md-5">
-        <img src="/img/walker.jpg" width="1000" height="600">
+        <img src="/img/walker.jpg" width="450" height="250">
       </div>
       <div class="col-md-7">
         <h2 class="text-center">Welcome<h2>
