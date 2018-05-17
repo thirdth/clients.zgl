@@ -113,14 +113,8 @@ footer{
   color: white;
 }
 
-/*.docButton  {
-  background-color: #264242;
-  border-radius: 5px;
-  border: 2px solid black;
-  color: white;
-  text-align: center;
-  min-height: 100px;
-/*  margin: 5px; */
+.docButton  {
+  margin-top: 2px;
 }
 
 .callout  {
