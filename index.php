@@ -5,9 +5,14 @@ header_check();
 <div class="container">
   <div class="row">
     <div class="col-md-12 welcome">
-      <h2 class="text-center">Welcome<h2>
-      <p>Welcome to Zack Glaser Legal self-service portal. If you don't already have an account, you can either create one now, or you can create one at checkout.
-      </p>
+      <div class="col-md-4">
+        <img src="/img/walker.jpg" width="600" height="300">
+      </div>
+      <div class="col-md-8">
+        <h2 class="text-center">Welcome<h2>
+        <p>Welcome to Zack Glaser Legal self-service portal. If you don't already have an account, you can either create one now, or you can create one at checkout.
+        </p>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -45,7 +50,7 @@ header_check();
       </form>
     </div>
     <div class="col-md-4">
-      <h3 class="text-center">Find Document</h3>
+      <h3 class="text-center">Find a Document</h3>
       <div class="col-md-4">
         <div class="col-md-12 docButton">
           <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
