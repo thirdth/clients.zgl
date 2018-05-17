@@ -19,7 +19,7 @@ header_check();
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <p>Create professional looking leagal documents in 5 easy steps.</p>
+      <p class="text-center">Create professional looking leagal documents in 5 easy steps.</p>
       <h3>1. Create an account, Login, or Continue as a Guest</h3>
       <p>When you create an account, you will have the ability to save your documents and access them at a later date. You can also save time through auto-fill options.</p>
       <h3>2. Browse and Select a Document</h3>
