@@ -7,9 +7,7 @@ header_check();
     <div class="col-md-12 welcome">
       <div class="col-md-7">
         <h2 class="text-center">Welcome<h2>
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8 text-center">
+        <div class="col-md-12 text-center">
           <p>The self-service portal is a way to create Tennessee specific documents on your own time. Once purchased, you can download your document for immediate use or opt to have it emailed to you and up to two other parties. If you have any questions along the way, or you just want to have your document reviewed by an experienced attorney, set-up an online consultation at any time or add it on to your purchase at checkout.</p>
         </div>
       </div>
