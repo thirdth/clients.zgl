@@ -18,7 +18,7 @@ header_check();
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <h1 class="text-center">Create professional looking leagal documents in 5 easy steps.</h1>
+      <h2 class="text-center">Create professional looking legal documents in 5 easy steps.</h2>
       <div class="col-md-2">
         <h1 class="text-center" style="font-size: 4em;">&#128100;&#xFE0E;</h1>
       </div>
