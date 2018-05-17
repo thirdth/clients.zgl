@@ -8,9 +8,9 @@ header_check();
       <div class="col-md-1">
       </div>
       <div class="col-md-10">
-        <h2 style="color: #224468; margin-left: 40px;">Self-service Document Solutions<h2>
+        <h2 style="color: #224468; margin-left: 40px;">Residential Lease Agreement<h2>
         <div class="col-md-12">
-          <p>The self-service portal is a great way to create Tennessee specific documents on your own time. Whether you are running your own business, or just planning for the future, these fast and flexible documents are easy to get started, and simple to finish. Once purchased, you can download your document for immediate use or opt to have it emailed to you and up to two other parties. If you have any questions along the way, or you just want to have your document reviewed by an experienced attorney, set-up an online consultation at any time or add it on to your purchase at checkout.</p>
+          <p>This lease is intended to be used in conjuction with competent legal advice. If you would like to meet with one of our attorneys you can schedule an on-line consultation at any time.</p>
         </div>
       </div>
     </div>
