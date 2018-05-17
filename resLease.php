@@ -19,7 +19,7 @@ header_check();
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <h3 class="text-center">Please answer a few preliminary questions before we begin.</32>
+      <h3 class="text-center">Please answer a few preliminary questions before we begin.</h2>
       <form class="form-group" action="/resLeaseInput.php" method="POST">
         <div class="col-md-6">
           <label>How many landlords?</label>
