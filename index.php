@@ -54,7 +54,7 @@ header_check();
     </div>
     <div class="col-md-4 docFind">
       <h3 class="text-center">Find a Document</h3><hr>
-      <div class="col-md-4">
+      <div class="col-md-4 docInside">
         <div class="col-md-12 docButton">
           <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
           <h4>Residential Lease</h4></a>
