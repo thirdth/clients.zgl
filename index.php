@@ -45,7 +45,7 @@ header_check();
       </form>
     </div>
     <div class="col-md-4">
-      <h3 class="text-center">Create Document</h3>
+      <h3 class="text-center">Find Document</h3>
       <div class="col-md-4">
         <div class="col-md-12 docButton">
           <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
