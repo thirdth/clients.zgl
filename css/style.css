@@ -91,6 +91,10 @@ footer{
   min-height: 600px;
 }
 
+.welcome img{
+  object-fit: contain;
+}
+
 .welcome  p{
   font-size: .8em;
 }
