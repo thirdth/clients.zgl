@@ -38,7 +38,7 @@ header_check();
           <input class="form-control" type="text" name="Street1">
         </div>
         <div class="col-md-12">
-          <label>Street</label>
+          <label>Street 2</label>
           <input class="form-control" type="text" name="Street2">
         </div>
         <div class="col-md-7">
@@ -61,7 +61,7 @@ header_check();
           <label>How many dependant residents</label>
           <input class="form-control" type="text" name="numDep">
         </div>
-        <div class="form-control">
+        <div class="col-md-12">
           <button class="btn btn-primary">Next>></button>
         </div>
       </form>
