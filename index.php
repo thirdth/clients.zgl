@@ -7,8 +7,11 @@ header_check();
     <div class="col-md-12 welcome">
       <div class="col-md-7">
         <h2 class="text-center">Welcome<h2>
-        <p>Welcome to Zack Glaser Legal self-service portal. If you don't already have an account, you can either create one now, or you can create one at checkout.
-        </p>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8 text-center">
+          <p>The self-service portal is a way to create Tennessee specific documents on your own time. Once purchased, you can download your document for immediate use or opt to have it emailed to you and up to two other parties. If you have any questions along the way, or you just want to have your document reviewed by an experienced attorney, set-up an online consultation at any time or add it on to your purchase at checkout.</p>
+        </div>
       </div>
       <div class="col-md-5">
         <img src="/img/walker.jpg" width="450" height="250">
@@ -19,6 +22,7 @@ header_check();
 <div class="container">
   <div class="row">
     <div class="col-md-8">
+      <p>Create professional looking leagal documents in 5 easy steps.</p>
       <h3>1. Create an account, Login, or Continue as a Guest</h3>
       <p>When you create an account, you will have the ability to save your documents and access them at a later date. You can also save time through auto-fill options.</p>
       <h3>2. Browse and Select a Document</h3>
