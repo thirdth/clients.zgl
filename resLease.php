@@ -58,7 +58,7 @@ header_check();
           <input class="form-control" type="text" name="numTen">
         </div>
         <div class="col-md-6">
-          <label>How many dependant residents</label>
+          <label>How many dependant residents?</label>
           <input class="form-control" type="text" name="numDep">
         </div>
         <div class="col-md-12">
