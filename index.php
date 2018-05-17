@@ -13,6 +13,14 @@ header_check();
       <div class="col-md-8">
         <h3>1. Create an account, Login, or Continue as a Guest</h3>
         <p>When you create an account, you will have the ability to save your documents and access them at a later date. You can also save time through auto-fill options.</p>
+        <h3>2. Browse and Select a Document</h3>
+        <p>Search through the documents that we offer. When you find one that will fit your needs, select it and begin tayloring it to your needs. If you need help at any time, you can always set-up a consultation with one of our lawyers.</p>
+        <h3>3. Answer the Questions</h3>
+        <p>Once you have selected your document, you will be able to fill out the form by answering a series of questions that are asked. Once you are done, you will be asked to verify the answers to your questions before moving on.</p>
+        <h3>4. Select Add-ons</h3>
+        <p>Once you have completed your document, you will be presented with some options that others found helpful when creating the same document. At that time, you can elect to have a licensed Tennessee attorney review your document and your specific situation.</p>
+        <h3>5. Pay and Download</h3>
+        <p>Once you have selected any extra services or related documents you may pay for and download your purchases.</p>
       </div>
     </div>
   </div>
