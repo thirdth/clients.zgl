@@ -6,6 +6,11 @@ header_check();
   <div class="row">
     <div class="col-md-12">
       <h2 class="text-center">Welcome<h2>
+      <div class="col-md-12 docButton">
+        <h3>Residential Lease</h3>
+      </div>
+
+
     </div>
   </div>
   <div class="row">
