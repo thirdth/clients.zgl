@@ -6,7 +6,7 @@ header_check();
   <div class="row">
     <div class="col-md-12 welcome">
 
-      <div class="col-md-12">
+      <div class="col-md-10">
         <h2 style="color: #224468; margin-left: 40px;">Residential Lease Agreement<h2>
         <div class="col-md-12">
           <p>This lease is intended to be used in conjuction with competent legal advice. If you would like to meet with one of our attorneys you can schedule an on-line consultation at any time.</p>
