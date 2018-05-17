@@ -41,7 +41,7 @@ header_check();
           <label>Street</label>
           <input class="form-control" type="text" name="Street2">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
           <label>City</label>
           <input class="form-control" type="text" name="City">
         </div>
@@ -49,7 +49,7 @@ header_check();
           <label>State</label>
           <input class="form-control" type="text" name="State">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3">
           <label>Zip Code</label>
           <input class="form-control" type="text" name="Zip">
         </div>
