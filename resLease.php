@@ -21,23 +21,46 @@ header_check();
     <div class="col-md-8">
       <h2 class="text-center">Please answer a few preliminary questions before we begin.</h2>
       <form class="form-group" action="/resLeaseInput.php" method="POST">
-        <label>How many landlords?</label>
-        <input class="form-control" type="text" name="LLNum">
-        <label>What county is the property located in?</label>
-        <select class="form-control">
-          <option>Select a county . . .</option>
-          <option>Anderson</option>
-        </select>
-        <label>Address of Property</label>
-        <input class="form-control" type="text" name="Street1">
-        <input class="form-control" type="text" name="Street2">
-        <input class="form-control" type="text" name="City">
-        <input class="form-control" type="text" name="State">
-        <input class="form-control" type="text" name="Zip">
-        <label>How many tenants signing the lease?</label>
-        <input class="form-control" type="text" name="numTen">
-        <label>How many dependant residents</label>
-        <input class="form-control" type="text" name="numDep">
+        <div class="col-md-6">
+          <label>How many landlords?</label>
+          <input class="form-control" type="text" name="LLNum">
+        </div>
+        <div class="col-md-6">
+          <label>What county is the property located in?</label>
+          <select class="form-control">
+            <option>Select a county . . .</option>
+            <option>Anderson</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <label>Address of Property</label>
+          <label>Street</label>
+          <input class="form-control" type="text" name="Street1">
+        </div>
+        <div class="col-md-12">
+          <label>Street</label>
+          <input class="form-control" type="text" name="Street2">
+        </div>
+        <div class="col-md-8">
+          <label>City</label>
+          <input class="form-control" type="text" name="City">
+        </div>
+        <div class="col-md-2">
+          <label>State</label>
+          <input class="form-control" type="text" name="State">
+        </div>
+        <div class="col-md-2">
+          <label>Zip Code</label>
+          <input class="form-control" type="text" name="Zip">
+        </div>
+        <div class="col-md-6">
+          <label>How many tenants signing the lease?</label>
+          <input class="form-control" type="text" name="numTen">
+        </div>
+        <div class="col-md-6">
+          <label>How many dependant residents</label>
+          <input class="form-control" type="text" name="numDep">
+        </div>
       </form>
     </div>
     <div class="col-md-4 login">
