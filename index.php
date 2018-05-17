@@ -12,7 +12,7 @@ header_check();
     <div class="col-md-8">
       <h3 class="text-center">Create Document</h3>
       <div class="col-md-4">
-        <div class="col-md-12 text-center docButton">
+        <div class="col-md-12 docButton">
           <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
           <h3>Residential Lease</h3></a>
         </div>
@@ -25,7 +25,8 @@ header_check();
       </div>
       <div class="col-md-4">
         <div class="col-md-12 docButton">
-          <h3>Non-Discolure Agreement</h3>
+          <a href="/NDA"><h1>&#128172;&#xFE0E;</h1>
+          <h3>Non-Discolure Agreement</h3></a>
         </div>
       </div>
     </div>
