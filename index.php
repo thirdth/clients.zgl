@@ -4,6 +4,11 @@ header_check();
 ?>
 <div class="container">
   <div class="row">
+    <div class="col-md-12">
+      <h2>Welcome<h2>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-6">
       <h3>Create Document</h3>
     </div>
