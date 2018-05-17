@@ -23,27 +23,6 @@ header_check();
       <h3>5. Pay and Download</h3>
       <p>Once you have selected any extra services or related documents you may pay for and download your purchases.</p>
     </div>
-    <div class="col-md-4">
-      <h3 class="text-center">Create Document</h3>
-      <div class="col-md-4">
-        <div class="col-md-12 docButton">
-          <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
-          <h3>Residential Lease</h3></a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="col-md-12 docButton">
-          <a href="/simpWill"><h1>&#128462;&#xFE0E;</h1>
-          <h3>Simple Will</h3></a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="col-md-12 docButton">
-          <a href="/NDA"><h1>&#128172;&#xFE0E;</h1>
-          <h3>Non-Discolure Agreement</h3></a>
-        </div>
-      </div>
-    </div>
     <div class="col-md-4 login">
       <h3 class="text-center">Login/Signup</h3>
       <form action="verify.php" method="post">
@@ -64,6 +43,27 @@ header_check();
           </div>
           <p>Don't have an account? <a href="signup.php">Sign up now</a>.</p>
       </form>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-center">Create Document</h3>
+      <div class="col-md-4">
+        <div class="col-md-12 docButton">
+          <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
+          <h3>Residential Lease</h3></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="col-md-12 docButton">
+          <a href="/simpWill"><h1>&#128462;&#xFE0E;</h1>
+          <h3>Simple Will</h3></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="col-md-12 docButton">
+          <a href="/NDA"><h1>&#128172;&#xFE0E;</h1>
+          <h3>Non-Discolure Agreement</h3></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
