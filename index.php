@@ -34,12 +34,27 @@ header_check();
         <h3><strong>2. Browse and Select a Document</strong></h3>
         <p>Search through the documents that we offer. When you find one that will fit your needs, select it and begin tayloring it to your needs. If you need help at any time, you can always set-up a consultation with one of our lawyers.</p>
       </div>
+      <div class="col-md-2">
+        <h1 class="text-center" style="font-size: 4em;">&#10067;&#xFE0E;</h1>
+      </div>
+      <div class="col-md-10">
         <h3><strong>3. Answer the Questions</strong></h3>
         <p>Once you have selected your document, you will be able to fill out the form by answering a series of questions that are asked. Once you are done, you will be asked to verify the answers to your questions before moving on.</p>
+      </div>
+      <div class="col-md-2">
+        <h1 class="text-center" style="font-size: 4em;">&#10133;&#xFE0E;</h1>
+      </div>
+      <div class="col-md-10">
         <h3><strong>4. Select Add-ons</strong></h3>
         <p>Once you have completed your document, you will be presented with some options that others found helpful when creating the same document. At that time, you can elect to have a licensed Tennessee attorney review your document and your specific situation.</p>
+      </div>
+      <div class="col-md-2">
+        <h1 class="text-center" style="font-size: 4em;">&#9660;&#xFE0E;</h1>
+      </div>
+      <div class="col-md-10">
         <h3><strong>5. Pay and Download</strong></h3>
         <p>Once you have selected any extra services or related documents you may pay for and download your purchases.</p>
+      </div>
     </div>
     <div class="col-md-4 login">
       <h3 class="text-center">Login/Signup</h3>
