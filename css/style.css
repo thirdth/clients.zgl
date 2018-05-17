@@ -87,6 +87,10 @@ footer{
   font-size: 1.3em;
 }
 
+.container  {
+  min-height: 600px;
+}
+
 .sidebar  {
   border-right: 1px solid lightgrey;
   min-height: 100%;
