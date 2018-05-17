@@ -52,7 +52,7 @@ header_check();
           <p>Don't have an account? <a href="signup.php">Sign up now</a>.</p>
       </form>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 docFind">
       <h3 class="text-center">Find a Document</h3>
       <div class="col-md-4">
         <div class="col-md-12 docButton">
