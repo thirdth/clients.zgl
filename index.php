@@ -11,19 +11,19 @@ header_check();
   <div class="row">
     <div class="col-md-8">
       <h3 class="text-center">Create Document</h3>
-      <div class="col-md-4">
+      <div class="col-md-12">
         <div class="col-md-12 docButton">
           <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
           <h3>Residential Lease</h3></a>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-12">
         <div class="col-md-12 docButton">
           <a href="/simpWill"><h1>&#128462;&#xFE0E;</h1>
           <h3>Simple Will</h3></a>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-12">
         <div class="col-md-12 docButton">
           <a href="/NDA"><h1>&#128172;&#xFE0E;</h1>
           <h3>Non-Discolure Agreement</h3></a>
