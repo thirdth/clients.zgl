@@ -113,7 +113,7 @@ footer{
   color: white;
 }
 
-.docButton  {
+.docButton h1, h2, h3  {
   margin-top: 2px;
 }
 
