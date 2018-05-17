@@ -94,6 +94,7 @@ footer{
 .welcome  {
   padding: 10px;
   background-color: lightgrey;
+  margin-bottom: 20px;
 }
 
 .welcome img{
