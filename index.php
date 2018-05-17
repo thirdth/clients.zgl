@@ -13,7 +13,7 @@ header_check();
       <h3 class="text-center">Create Document</h3>
       <div class="col-md-4">
         <div class="col-md-12 docButton">
-          <h3>&#f015; Residential Lease</h3>
+          <h3>&#127968; Residential Lease</h3>
         </div>
       </div>
       <div class="col-md-4">
