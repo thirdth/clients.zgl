@@ -7,8 +7,13 @@ header_check();
     <div class="col-md-12 welcome">
       <h2 class="text-center">Welcome<h2>
       <p>Welcome to Zack Glaser Legal self-service portal. If you don't already have an account, you can either create one now, or you can create one at checkout.
-
       </p>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8">
+        <h3>1. Create an account, Login, or Continue as a Guest</h3>
+        <p>When you create an account, you will have the ability to save your documents and access them at a later date. You can also save time through auto-fill options.</p>
+      </div>
     </div>
   </div>
   <div class="row">
