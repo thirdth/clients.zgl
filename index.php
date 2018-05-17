@@ -19,7 +19,8 @@ header_check();
       </div>
       <div class="col-md-4">
         <div class="col-md-12 docButton">
-          <h3>Simple Will</h3>
+          <a href="/simpWill"><h1>&#128462;&#xFE0E;</h1>
+          <h3>Simple Will</h3></a>
         </div>
       </div>
       <div class="col-md-4">
