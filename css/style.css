@@ -113,6 +113,10 @@ footer{
   color: white;
 }
 
+.docButton  {
+  text-align: center;
+}
+
 .docButton h1 {
   margin-top: 2px;
 }
