@@ -2,7 +2,7 @@
 include 'includes/garble_cnfg.php';
 header_check();
 ?>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-12 welcome">
       <div class="col-md-7">
@@ -15,6 +15,8 @@ header_check();
       </div>
     </div>
   </div>
+</div>
+<div class="container">
   <div class="row">
     <div class="col-md-8">
       <h3>1. Create an account, Login, or Continue as a Guest</h3>
