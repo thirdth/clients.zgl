@@ -12,7 +12,7 @@ header_check();
     <div class="col-md-8">
       <h3 class="text-center">Create Document</h3>
       <div class="col-md-4">
-        <div class="col-md-12 text-center .docButton">
+        <div class="col-md-12 text-center docButton">
           <a href="/resLease"><h1>&#127968;&#xFE0E;</h1>
           <h3>Residential Lease</h3></a>
         </div>
