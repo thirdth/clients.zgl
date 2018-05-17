@@ -20,7 +20,25 @@ header_check();
   <div class="row">
     <div class="col-md-8">
       <h2 class="text-center">Please answer a few preliminary questions before we begin.</h2>
-
+      <form class="form-group" action="/resLeaseInput.php" method="POST">
+        <label>How many landlords?</label>
+        <input class="form-control" type="text" name="LLNum">
+        <label>What county is the property located in?</label>
+        <select class="form-control">
+          <option>Select a county . . .</option>
+          <option>Anderson</option>
+        </select>
+        <label>Address of Property</label>
+        <input class="form-control" type="text" name="Street1">
+        <input class="form-control" type="text" name="Street2">
+        <input class="form-control" type="text" name="City">
+        <input class="form-control" type="text" name="State">
+        <input class="form-control" type="text" name="Zip">
+        <label>How many tenants signing the lease?</label>
+        <input class="form-control" type="text" name="numTen">
+        <label>How many dependant residents</label>
+        <input class="form-control" type="text" name="numDep">
+      </form>
     </div>
     <div class="col-md-4 login">
       <h3 class="text-center">Login/Signup</h3>
