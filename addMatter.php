@@ -18,6 +18,7 @@ $client = get_client_byId($clientID);
     $phone = get_phone_byID($client['PhoneID']);
     echo "<h5>" . $phone['Number'] . "</h5>";
     ?>
+    <hr>
       <h2>New Matter</h2>
       <p>Please enter Matter information.</p>
       <form action="inserts/insertMatter.php" method="post">
