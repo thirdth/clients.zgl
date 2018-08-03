@@ -73,7 +73,7 @@ $appointments = get_dates_byMatter($matterID);
         $email = get_email_byID($client['EmailID']);
         echo "<h5>" . $email['Email'] . "</h5>";
         ?>
-        <a class="btn btn-primary btn-sm" href="/addParty">+ Party</a>
+        <a class="btn btn-primary btn-sm" href="/addParty.php">+ Party</a>
         </div>
         <div class='col-md-9 notes'>
           <small class="text-center">Notes:</small>
