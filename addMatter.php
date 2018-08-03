@@ -9,7 +9,6 @@ $client = get_client_byId($clientID);
 
   <div class="col-md-3">
     <h2>Client Info</h2>
-    <hr>
     <?php
     echo "<h5><a href='/clientPage.php?ID=" . $client['ID'] . "'>" . $client['FName'] . " " . $client['LName'] . "</a></h5>";
     $address = get_address_byID($client['AddressID']);
