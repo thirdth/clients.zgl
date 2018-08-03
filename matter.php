@@ -103,7 +103,7 @@ $appointments = get_dates_byMatter($matterID);
         </div>
         <hr>
       <div class="col-md-12">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <strong class="text-center">Claims:</strong>
           <?php
             foreach ($claims as $claim) {
