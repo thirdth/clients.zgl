@@ -504,7 +504,9 @@ function get_address_byID($addressID) {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all[0];
+  if ($all) {
+    return $all[0];
+  }
 }
 
 function get_phone_byID($phoneID) {
