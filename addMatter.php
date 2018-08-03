@@ -12,6 +12,8 @@ $client = get_client_byId($clientID);
   <div class="col-md-6">
     <?php
     echo "<h5><a href='/clientPage.php?ID=" . $client['ID'] . "'>" . $client['FName'] . " " . $client['LName'] . "</a></h5>";
+    echo "<h5>" . $client['Street1'] . "</h5>";
+    echo "<h5>" . $client['City'] . ", " . $client['State'] . " " . $client['Zip'] . "<h5>"; 
     ?>
       <h2>New Matter</h2>
       <p>Please enter Matter information.</p>
