@@ -6,15 +6,7 @@ protected_page();
 header_check();
 $matterID = $_GET['ID'];
 $matter = get_matter_byId($matterID);
-$adverseID = $matter['AdverseID'];
-$person = get_person_byID($adverseID);
-$parties = get_parties_byMatter($matterID);
-$addressID = $person['AddressID'];
-$phoneID = $person['PhoneID'];
-$emailID = $person['EmailID'];
-$address = get_address_byID($addressID);
-$phone = get_phone_byID($phoneID);
-$email = get_email_byID($emailID);
+
 $notes = get_notes_byID($matterID);
 $claims = get_claims_byID($matterID);
 $client = get_client_byID($matter['ClientID']);
