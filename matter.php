@@ -63,16 +63,6 @@ $appointments = get_dates_byMatter($matterID);
       </div>
       <hr>
         <div class="col-md-3">
-<!--Party stuff
-          <h3><?php echo $person['FName'] . " " . $person['LName']; ?></h3>
-          <p><?php echo $address['Street1']; ?></br>
-          <?php if ($address['Street2']){
-            echo $address['Street2'] . "</br>";
-          } ?>
-          <?php echo $address['City'] . ", " . $address['State'] . " " . $address['Zip']; ?></br>
-          <?php echo $phone['Number']; ?></br>
-          <a href="mailto:<?php echo $email['Email']; ?>"><?php echo $email['Email']; ?></a></p>
-        -->
         <?php
         echo "<h5><a href='/clientPage.php?ID=" . $client['ID'] . "'>" . $client['FName'] . " " . $client['LName'] . "</a></h5>";
         $address = get_address_byID($client['AddressID']);
@@ -83,6 +73,7 @@ $appointments = get_dates_byMatter($matterID);
         $email = get_email_byID($client['EmailID']);
         echo "<h5>" . $email['Email'] . "</h5>";
         ?>
+        <a class="btn btn-primary" href="/addParty">Add Party</a>
         </div>
         <div class='col-md-9 notes'>
           <small class="text-center">Notes:</small>
