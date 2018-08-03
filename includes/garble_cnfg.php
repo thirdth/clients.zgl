@@ -474,6 +474,7 @@ function get_parties_byMatter($matterID) {
               JOIN Parties.PersonID ON People.ID
               WHERE Parties.MatterID = '$matterID'";
   $result = mysqli_query($conn, $query);
+  print_r($result);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
   return $all;
