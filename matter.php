@@ -85,7 +85,7 @@ $appointments = get_dates_byMatter($matterID);
         echo "<h5>" . $address['Street1'] . "</h5>";
         echo "<h5>" . $address['City'] . "<?h5>" . ", " . $address['State'] . " " . $address['Zip'] . "</h5>";
         $phone = get_phone_byID($client['PhoneID']);
-        echo "<h5>" . $phone['Number'] . "</h5>";
+        echo "<h5><a href='skype:+" . $phone['Number'] . "?call'>" . $phone['Number'] . "</a></h5>";
         $email = get_email_byID($client['EmailID']);
         echo "<h5>" . $email['Email'] . "</h5>";
         ?>
