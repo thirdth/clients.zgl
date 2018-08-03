@@ -8,8 +8,7 @@ $client = get_client_byId($clientID);
 <div class="wrapper container">
 
   <div class="col-md-3">
-  </div>
-  <div class="col-md-6">
+    <h2>Client Info</h2>
     <?php
     echo "<h5><a href='/clientPage.php?ID=" . $client['ID'] . "'>" . $client['FName'] . " " . $client['LName'] . "</a></h5>";
     $address = get_address_byID($client['AddressID']);
@@ -19,6 +18,9 @@ $client = get_client_byId($clientID);
     echo "<h5>" . $phone['Number'] . "</h5>";
     ?>
     <hr>
+  </div>
+  <div class="col-md-6">
+
       <h2>New Matter</h2>
       <p>Please enter Matter information.</p>
       <form action="inserts/insertMatter.php" method="post">
