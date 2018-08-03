@@ -58,7 +58,7 @@ $appointments = get_dates_byMatter($matterID);
     <div class="col-md-12">
       <div class='col-md-12'>
         <h3 class="text-center"><strong><?php echo $matter['Name']; ?></strong>  (<?php echo $matter['CourtNO']; ?>)</h3>
-        <a class="pull-left" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
+        <a class="text-center" href='editMatter.php?ID=<?php echo $matterID; ?>'>Edit Matter</a>
       </div>
       <hr>
         <div class="col-md-3">
