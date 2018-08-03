@@ -5,7 +5,7 @@ include '../includes/garble_cnfg.php';
 $Name = $_POST['Name'];
 $Description = $_POST['Description'];
 $MatterNum = $_POST['MatterNum'];
-$clientID = $_POST['ClientID'];
+$clientID = $_POST['clientID'];
 
 
 $result = insert_matter($Name, $clientID, $Description, $MatterNum);
