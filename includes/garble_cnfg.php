@@ -165,15 +165,15 @@ function insert_client($Fname, $Mname, $Lname, $contact, $address_id, $phone_id,
   }
 }
 
-function insert_matter($Name, $clientID, $AdverseID, $Notes) {
+function insert_matter($Name, $clientID, $Description, $MatterNum) {
   $Name = $Name;
-  $AdverseID = $AdverseID;
+  $Description = $Description;
   $clientID = $clientID;
-  $Notes = $Notes;
+  $MatterNum = $MatterNum;
   $conn = get_connected();
   $query = "INSERT into Matters
-              (Name, AdverseID, ClientID, Notes)
-              VALUES ('$Name', '$AdverseID', '$clientID', '$Notes')";
+              (Name, Description, ClientID, MatterNum)
+              VALUES ('$Name', '$Description', '$clientID', '$MatterNum')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;

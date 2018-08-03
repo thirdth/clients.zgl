@@ -4,7 +4,8 @@ ini_set('display_errors', 'On');
 include '../includes/garble_cnfg.php';
 $Name = $_POST['Name'];
 $Description = $_POST['Description'];
-$MatterNumber = $_POST['MatterNum'];
+$MatterNum = $_POST['MatterNum'];
+$clientID = $_POST['ClientID'];
 
 
 $result = insert_matter($Name, $clientID, $Description, $MatterNum);
