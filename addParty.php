@@ -13,7 +13,7 @@ $partyTypes = get_party_types();
   <div class="col-md-6">
     <form action="inserts/insertParty.php" method="POST" class="form-group">
         <input type="hidden" name="MatterID" value="<? echo $matterID; ?>">
-      <div class='col-md-4 form-group'>
+      <div class='col-md-12 form-group'>
         <select>
           <?php
             foreach ($partyTypes as $party) {
