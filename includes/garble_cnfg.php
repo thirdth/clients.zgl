@@ -639,7 +639,7 @@ function get_party_types()  {
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
-  return $all[0];
+  return $all;
 }
 
 

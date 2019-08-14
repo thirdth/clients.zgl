@@ -6,6 +6,7 @@ protected_page();
 header_check();
 $matterID = $_GET['ID'];
 $partyTypes = get_party_types();
+print_r($partyTypes);
 ?>
 <div class="wrapper container">
   <div class="col-md-3">
@@ -15,11 +16,7 @@ $partyTypes = get_party_types();
         <input type="hidden" name="MatterID" value="<? echo $matterID; ?>">
       <div class='col-md-12 form-group'>
         <select>
-          <?php
-            foreach ($partyTypes as $party) {
-              echo "<option value='" . $party['ID'] . "'>". $party['name'] . "</option>"
-            }
-          ?>
+
         </select>
       </div>
       <div class='col-md-4 form-group'>
