@@ -16,7 +16,8 @@ $partyTypes = get_party_types();
     <hr>
     <form action="inserts/insertParty.php" method="POST" class="form-group">
         <input type="hidden" name="MatterID" value="<? echo $matterID; ?>">
-      <div class='col-md-12 form-group'>
+      <div class='col-md-8 form-group'>
+        <label>Party Type</label>
         <select class='form-control' name='PartyType'>
           <?php
             foreach ($partyTypes as $party) {
