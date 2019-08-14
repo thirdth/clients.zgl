@@ -15,8 +15,12 @@ print_r($partyTypes);
     <form action="inserts/insertParty.php" method="POST" class="form-group">
         <input type="hidden" name="MatterID" value="<? echo $matterID; ?>">
       <div class='col-md-12 form-group'>
-        <select>
-
+        <select name='PartyType'>
+          <?php
+            foreach ($partyTypes as $party) {
+              echo "<option value='" . $party['ID'] . "'>". $party['name'] . "</option>"
+            }
+          ?>
         </select>
       </div>
       <div class='col-md-4 form-group'>
