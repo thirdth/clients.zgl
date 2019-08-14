@@ -635,7 +635,7 @@ function get_date_byId($ID)  {
 
 function get_party_types()  {
   $conn = get_connected();
-  $query = "SELECT * from PartyTypes";
+  $query = "SELECT * from PartyType";
   $result = mysqli_query($conn, $query);
   $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
