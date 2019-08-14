@@ -18,7 +18,7 @@ print_r($partyTypes);
         <select name='PartyType'>
           <?php
             foreach ($partyTypes as $party) {
-              echo "<option value='" . $party['ID'] . "'>". $party['name'] . "</option>"
+              echo print_r($party);
             }
           ?>
         </select>
