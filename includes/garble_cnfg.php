@@ -633,6 +633,15 @@ function get_date_byId($ID)  {
   return $all[0];
 }
 
+function get_party_types()  {
+  $conn = get_connected();
+  $query = "SELECT * from PartyTypes";
+  $result = mysqli_query($conn, $query);
+  $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $all[0];
+}
+
 
 
 // Delete functions
