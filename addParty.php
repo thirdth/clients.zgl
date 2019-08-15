@@ -18,7 +18,7 @@ $partyTypes = get_party_types();
         <input type="hidden" name="MatterID" value="<? echo $matterID; ?>">
       <div class='col-md-12 form-group'>
         <label>Party Type</label>
-        <select class='form-control' name='PartyType'>
+        <select class='form-control' name='PartyTypeID'>
           <?php
             foreach ($partyTypes as $party) {
               echo "<option value='" . $party['ID'] . "'>". $party['Name'] . "</option>";

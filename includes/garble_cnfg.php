@@ -179,7 +179,7 @@ function insert_address_1($Street1, $Street2, $City, $State, $Zip, $PersonID)  {
   $conn = get_connected();
   $query = "INSERT into Addresses
               (Street1, Street2, City, State, Zip, PersonID)
-              VALUES ('$Street1', '$Street2', '$City', '$State', '$Zip', $PersonID)";
+              VALUES ('$Street1', '$Street2', '$City', '$State', '$Zip', '$PersonID')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   mysqli_close($conn);
