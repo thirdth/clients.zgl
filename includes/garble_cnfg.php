@@ -223,14 +223,14 @@ function insert_matter($Name, $clientID, $Description, $MatterNum) {
   }
 }
 
-function insert_party($PartyType, $MatterID, $PersonID) {
-  $PartyType = $PartyType;
+function insert_party($PartyTypeID, $MatterID, $PersonID) {
+  $PartyTypeID = $PartyTypeID;
   $MatterID = $MatterID;
   $PersonID = $PersonID;
   $conn = get_connected();
   $query = "INSERT into Parties
-              (PartyType, MatterID, PersonID)
-              VALUES ('$PartyType', '$MatterID', '$PersonID')";
+              (PartyTypeID, MatterID, PersonID)
+              VALUES ('$PartyTypeID', '$MatterID', '$PersonID')";
   $result = mysqli_query($conn, $query);
   if ($result)  {
     return $result;
