@@ -107,11 +107,35 @@ function protected_page() {
 
 // Insert functions
 
+function insert_phone_1($phone, $PersonID) {
+  $phone = $phone;
+  $PersonID = $PersonID;
+  $conn = get_connected();
+  $query = "INSERT into Phones (Type, Number, PersonID)
+              Values ('1', '$phone', '$PersonID')";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  mysqli_close($conn);
+  return $last_id;
+}
+
 function insert_phone($phone) {
   $phone = $phone;
   $conn = get_connected();
   $query = "INSERT into Phones (Type, Number)
               Values ('1', '$phone')";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  mysqli_close($conn);
+  return $last_id;
+}
+
+function insert_email($email, $PersonID) {
+  $email = $email;
+  $PersonID = $PersonID;
+  $conn = get_connected();
+  $query = "INSERT into Emails (Email, PersonID)
+              Values ('$email', '$PersonID')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   mysqli_close($conn);
@@ -139,6 +163,23 @@ function insert_address($street1, $street2, $city, $state, $zip)  {
   $query = "INSERT into Addresses
               (Street1, Street2, City, State, Zip)
               VALUES ('$street1', '$street2', '$city', '$state', '$zip')";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  mysqli_close($conn);
+  return $last_id;
+}
+
+function insert_address_1($street1, $street2, $city, $state, $zip, $PersonID)  {
+  $street1 = $street1;
+  $street2 = $street2;
+  $city = $city;
+  $state = $state;
+  $zip = $zip;
+  $PersonID = $PersonID;
+  $conn = get_connected();
+  $query = "INSERT into Addresses
+              (Street1, Street2, City, State, Zip, PersonID)
+              VALUES ('$street1', '$street2', '$city', '$state', '$zip', $PersonID)";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   mysqli_close($conn);
@@ -182,8 +223,33 @@ function insert_matter($Name, $clientID, $Description, $MatterNum) {
   }
 }
 
-function insert_party_byMatter($matterID) {
+function insert_party($PartyType, $MatterID, $PersonID) {
+  $PartyType = $PartyType;
+  $MatterID = $MatterID;
+  $PersonID = $PersonID;
+  $conn = get_connected();
+  $query = "INSERT into Parties
+              (PartyType, MatterID, PersonID)
+              VALUES ('$PartyType', '$MatterID', '$PersonID')";
+  $result = mysqli_query($conn, $query);
+  if ($result)  {
+    return $result;
+  } else {
+    print(mysqli_error($conn));
+}
 
+function insert_person_1($Fname, $Mname, $Lname, $SSN) {
+  $Fname = $Fname;
+  $Mname = $Mname;
+  $Lname = $Lname;
+  $SSN = $SSN;
+  $conn = get_connected();
+  $query = "INSERT into People
+              (Fname, Mname, Lname, SSN)
+              VALUES ('$Fname', '$Mname', '$Lname', '$SSN')";
+  $result = mysqli_query($conn, $query);
+  $last_id = mysqli_insert_id($conn);
+  return $last_id;
 }
 
 function insert_person($Fname, $Mname, $Lname, $address_id, $phone_id, $email_id) {
