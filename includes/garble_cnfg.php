@@ -768,5 +768,4 @@ function delete_matter($matterID) {
   }
   $conn->close();
 }
-
 ?>
