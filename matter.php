@@ -102,7 +102,7 @@ $appointments = get_dates_byMatter($matterID);
           </form>
         </div>
         <hr>
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="col-md-12">
           <strong class="text-center">Claims:</strong>
           <?php
