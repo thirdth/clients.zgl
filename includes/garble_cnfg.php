@@ -107,12 +107,12 @@ function protected_page() {
 
 // Insert functions
 
-function insert_phone_1($phone, $PersonID) {
-  $phone = $phone;
+function insert_phone_1($Phone, $PersonID) {
+  $Phone = $Phone;
   $PersonID = $PersonID;
   $conn = get_connected();
   $query = "INSERT into Phones (Type, Number, PersonID)
-              Values ('1', '$phone', '$PersonID')";
+              Values ('1', '$Phone', '$PersonID')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   mysqli_close($conn);
@@ -130,12 +130,12 @@ function insert_phone($phone) {
   return $last_id;
 }
 
-function insert_email($email, $PersonID) {
-  $email = $email;
+function insert_email($Email, $PersonID) {
+  $Email = $Email;
   $PersonID = $PersonID;
   $conn = get_connected();
   $query = "INSERT into Emails (Email, PersonID)
-              Values ('$email', '$PersonID')";
+              Values ('$Email', '$PersonID')";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   mysqli_close($conn);
@@ -169,17 +169,17 @@ function insert_address($street1, $street2, $city, $state, $zip)  {
   return $last_id;
 }
 
-function insert_address_1($street1, $street2, $city, $state, $zip, $PersonID)  {
-  $street1 = $street1;
-  $street2 = $street2;
-  $city = $city;
-  $state = $state;
-  $zip = $zip;
+function insert_address_1($Street1, $Street2, $City, $State, $Zip, $PersonID)  {
+  $Street1 = $Street1;
+  $Street2 = $Street2;
+  $City = $City;
+  $State = $State;
+  $Zip = $Zip;
   $PersonID = $PersonID;
   $conn = get_connected();
   $query = "INSERT into Addresses
               (Street1, Street2, City, State, Zip, PersonID)
-              VALUES ('$street1', '$street2', '$city', '$state', '$zip', $PersonID)";
+              VALUES ('$Street1', '$Street2', '$City', '$State', '$Zip', $PersonID)";
   $result = mysqli_query($conn, $query);
   $last_id = mysqli_insert_id($conn);
   mysqli_close($conn);
@@ -766,6 +766,7 @@ function delete_matter($matterID) {
   } else {
       echo "Error deleting record: " . $conn->error;
   }
+  $conn->close();
 }
 
 ?>
